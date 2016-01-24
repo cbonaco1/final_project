@@ -1,0 +1,86 @@
+User Auth
+-Sign Up
+-Sign In
+-Log Out
+-Need BCrypt gem
+
+-----------Notes-------------
+-Add note
+-View note
+-Edit note
+-Delete note
+
+React Components:
+NoteIndex
+  NoteIndexItem
+NoteForm
+
+Utils:
+-fetchAllNotes()
+-fetchNote(id)
+-createNote(note)
+-editNote(note)
+-deleteNote(note)
+
+Actions:
+-receiveAllNotes()
+-receiveNote(note)
+-createNote(note)
+-editNote(note)
+-deleteNote(note)
+
+-May need some third party text editor tool
+
+
+------------Notebooks-----------
+-View notebooks
+-Add notebook
+-Delete notebooks
+-May need some third party text editor tool
+
+React Components
+NotebookIndex
+  NotebookIndexItem
+
+Utils
+-fetchAllNotebooks()
+-fetchNotebook(id)
+-createNotebook(notebook)
+-editNotebook(notebook)
+-deleteNotebook(notebook)
+
+Actions
+-receiveNotebooks()
+-receiveNotebook(notebook)
+-createNotebook(notebook)
+-editNotebook(notebook)
+-deleteNotebook(notebook)
+
+-------------Tags----------------
+-View tags
+-Add tags
+-Delete tags
+
+ReactComponents
+TagIndex
+  TagIndexItem
+
+Utils
+-fetchTags()
+-fetchTag(id)
+-createTag(tag)
+-editTag(tag)
+-deleteTag(tag)
+
+Actions
+-receiveTags()
+-receiveTag(tag)
+-createTag(tag)
+-editTag(tag)
+-deleteTag(tag)
+
+
+-------------Sidebar-------------
+-3rd party for widgets
+
+Search

@@ -1,4 +1,4 @@
-# Phase 4: Allow Complex Styling in Notes (1 day)
+# Phase 4: Sidebar (1.5 days)
 
 ## Rails
 ### Models
@@ -9,10 +9,10 @@
 
 ## Flux
 ### Views (React Components)
-
+* Sidebar
 ### Stores
 
 ### Actions
 
 ## Gems/Libraries
-* react-quill (npm)
+* Bootstrap

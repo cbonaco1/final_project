@@ -1,0 +1,5 @@
+Today I started working on the FeatherNote application.
+The features I added include user authentication using
+BCrypt and Rails. I also applied CSS styling to the new user
+and new session url. Tomorrow I will look to make these
+forms into React components.

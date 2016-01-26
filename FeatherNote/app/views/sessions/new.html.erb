@@ -1,19 +1,26 @@
-<h2 class="form-header">Sign in</h2>
-<form class="new-form" action="<%= session_url %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<div class="user-form">
+  <h2 class="form-header">Sign in</h2>
+  <form class="new-form" action="<%= session_url %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <div class="input-field">
-    <label>Username:
-      <input type="text" name="user[username]" value="" autofocus>
-    </label>
+    <div class="input-field">
+      <label>Username:
+        <input type="text" name="user[username]" value="" autofocus>
+      </label>
+    </div>
+
+    <div class="input-field">
+      <label>Password:
+        <input type="password" name="user[password]" value="">
+      </label>
+    </div>
+
+    <button class="form-button">Sign In</button>
+  </form>
+
+  <!-- These will render new React components on click -->
+  <div class="sign-in-msg">
+    <p>Don't have an account?<p>
+    <a href="">Create account</a>
   </div>
-
-  <div class="input-field">
-    <label>Password:
-      <input type="password" name="user[password]" value="">
-    </label>
-  </div>
-
-  <button class="form-button">Sign In</button>
-
-</form>
+</div>

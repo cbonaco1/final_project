@@ -11,7 +11,7 @@
 
 <% if flash[:errors] %>
   <% flash[:errors].each do |error| %>
-    <p><%= error %></p>
+    <p class="error-msg"><%= error %></p>
   <% end %>
 <% end %>
 
@@ -21,7 +21,7 @@
   <form action="<%= session_url %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <button>Log Out</button>
+    <button class="form-button">Log Out</button>
   </form>
 <% end %>
 

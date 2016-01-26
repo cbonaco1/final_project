@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, h2, h3, body, p {
+html, h2, h3, body, p, a {
   padding: 0;
   margin: 0;
   border: 0;
@@ -33,13 +33,20 @@ button {
   border: 0;
 }
 
-.new-form {
+.error-msg {
+  color: #f00;
+}
+
+.user-form {
   margin: 20px auto;
   width: 400px;
+  color: #848484;
+}
+
+.new-form {
   border: 1px solid #aaa;
   background: #fff;
   font-size: 24px;
-  /*#848484*/
 }
 
 .new-form input {
@@ -52,13 +59,17 @@ button {
   margin-top: 5px;
 }
 
+.form-header {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 24px;
+  color: #848484;
+  margin-bottom: 15px;
+}
+
 .input-field {
   width: 200px;
   margin: 25px auto;
-}
-
-.input-field label {
-  color: #848484;
 }
 
 .form-button {
@@ -77,9 +88,16 @@ button {
   background: #27964E;
 }
 
-.form-header {
+.sign-in-msg {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 15px;
+}
+
+.sign-in-msg p {
+  font-size: 14px;
+}
+
+.sign-in-msg a {
   font-size: 24px;
-  color: #848484;
+  color: #2DBE60;
 }

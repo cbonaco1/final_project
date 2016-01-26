@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/featherNote.jsx",
   output: {
-    path: path.name(__dirname, 'app', 'assests', 'javascripts'),
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
     filename: "bundle.js"
   },
   module: {

@@ -1,15 +1,19 @@
-<h2>Welcome to FeatherNote!</h2>
-
-<form class="new-user-form" action="<%= users_url %>" method="post">
+<h2 class="form-header">Create Account</h2>
+<form class="new-form" action="<%= users_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Username:
-    <input type="text" name="user[username]" value="">
-  </label>
 
-  <label>Password:
-    <input type="password" name="user[password]" value="">
-  </label>
+  <div class="input-field">
+    <label>Username:
+      <input type="text" name="user[username]" value="" autofocus>
+    </label>
+  </div>
 
-  <button class="sign-in-button">Create Account!</button>
+  <div class="input-field">
+    <label>Password:
+      <input type="password" name="user[password]" value="">
+    </label>
+  </div>
+
+  <button class="form-button">Create Account!</button>
 
 </form>

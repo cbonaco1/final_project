@@ -1,7 +1,8 @@
-<h2>Welcome to FeatherNote!</h2>
+<h2>Log In</h2>
 
-<form class="new-user-form" action="<%= users_url %>" method="post">
+<form class="sign-in-form" action="<%= session_url %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
   <label>Username:
     <input type="text" name="user[username]" value="">
   </label>
@@ -10,6 +11,6 @@
     <input type="password" name="user[password]" value="">
   </label>
 
-  <button class="sign-in-button">Create Account!</button>
+  <button class="sign-in-button">Sign In</button>
 
 </form>

@@ -8,7 +8,23 @@
 </head>
 <body>
 
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <p><%= error %></p>
+  <% end %>
+<% end %>
+
 <%= yield %>
+
+<% if current_user %>
+  <form action="<%= session_url %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <button>Log Out</button>
+  </form>
+<% end %>
+
 
 </body>
 </html>

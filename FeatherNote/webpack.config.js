@@ -1,8 +1,10 @@
+var path = require("path");
+
 module.exports = {
   context: __dirname,
-  entry: "./hello_world.jsx",
+  entry: "./frontend/featherNote.jsx",
   output: {
-    path: "./",
+    path: path.name(__dirname, 'app', 'assests', 'javascripts'),
     filename: "bundle.js"
   },
   module: {

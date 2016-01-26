@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   attr_reader :password
   validates :username, :session_token, presence: true
-  validtes :password_digest, presence: { message: "Please enter a password" }
+  validates :password_digest, presence: { message: "Please enter a password" }
   validates :password, length: { minimum: 6, allow_nil: true }
-  valides :username, unique: true
+  validates :username, uniqueness: true
   after_initialize :ensure_session_token
 
 
@@ -13,7 +13,13 @@ class User < ActiveRecord::Base
   end
 
   def is_password?(password)
-    BCrypt.Password.create(self.password_digest).is_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
+  end
+
+  def reset_session_token!
+    self.session_token = User.generate_session_token
+    self.save!
+    self.session_token
   end
 
   def self.generate_session_token

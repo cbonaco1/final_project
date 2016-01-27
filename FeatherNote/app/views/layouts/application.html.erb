@@ -8,13 +8,6 @@
 </head>
 <body>
 
-
-<% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <p class="error-msg"><%= error %></p>
-  <% end %>
-<% end %>
-
 <%= yield %>
 
 <% if current_user %>

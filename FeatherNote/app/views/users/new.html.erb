@@ -19,6 +19,15 @@
 
   </form>
 
+  <% if flash[:errors] %>
+    <div class="error-msgs">
+      <% flash[:errors].each do |error| %>
+        <p><%= error %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+
   <!-- These will render new React components on click -->
   <div class="sign-in-msg">
     <p>Already have an account?<p>

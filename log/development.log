@@ -1177,3 +1177,629 @@ Migrations are pending. To resolve this issue, run:
   Rendered /home/christian/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
   Rendered /home/christian/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /home/christian/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.8ms)
+  [1m[36m (105.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160126163325')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160126161154')[0m
+  [1m[35m (9.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160126163325')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160126161154')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNotes (20160127115120)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "notes" ("id" serial primary key, "title" character varying, "body" text, "author_id" integer NOT NULL, "notebook_id" integer NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_notes_on_author_id" ON "notes"  ("author_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_notes_on_notebook_id" ON "notes"  ("notebook_id")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160127115120"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateNotebooks (20160127115840)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "notebooks" ("id" serial primary key, "author_id" integer NOT NULL, "title" text, "description" text) [0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX  "index_notebooks_on_author_id" ON "notebooks"  ("author_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160127115840"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (14.4ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notebooks'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (15.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (25.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "fjTYd_rCPPf7LcVJcLNf9g"], ["password_digest", "$2a$10$8w4ZDvl.xCHRDihWNVtZweAPG9SFCofGRjX7wG.ULjnOfZdd4GqKC"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "jEYLCykGNWujrgDVNUpRng"], ["password_digest", "$2a$10$sP3FSp3DReoNrEDTKO49LO4ylwV/fxErylpzC3GrBi07DzGDl/5Dq"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "3W-iFI17oq-yX0CbAXIXzA"], ["password_digest", "$2a$10$KdXzZZtFlo29iva7XHkcpunvNDfWR5GCqkdryGKFe8L06NhRnLuR2"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'johnsmith' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "johnsmith"], ["session_token", "Ri6R2S6P8Ff6_rXi3XyrGQ"], ["password_digest", "$2a$10$yFe9iJsf8nmyMGI0GrIZheBUTyww0gBBLyfnzTRpWkB3mh.RXFsV6"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-01-27 10:58:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (20.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :signed_in? rendered or redirected
+Completed 302 Found in 69ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 10:58:34 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 1929ms (Views: 1922.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 10:58:36 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 10:58:36 -0500
+
+
+Started GET "/assets/bundle.self-9bb8542f378489ea699212c5da2d95bc59ac2746a8d049b542854012fd891e16.js?body=1" for ::1 at 2016-01-27 10:58:36 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 10:58:36 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 10:58:36 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-27 10:58:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"+hXHMFef9P+xpFdulVHxA+2QhgBQzz2HogFotlN/ayiMGiTmMUBM91u2EiVvtl3yTa5H9sOtellAJEgSUud1EQ==", "user"=>{"username"=>"christian", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "christian"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 2) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2[0m  [["session_token", "Y0ZD6roHulClIBBKnZRJpA"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 10:58:44 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Y0ZD6roHulClIBBKnZRJpA"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "Y0ZD6roHulClIBBKnZRJpA"]]
+Completed 200 OK in 67ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/session" for ::1 at 2016-01-27 10:58:46 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PL20FW87GnksjYl1GjxSQlnLJwHW0Qg8YCWQQpnv+q5KslfDCeSiccafzD7g2/6z+fXm90WzT+KCALDmmHfklw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "Y0ZD6roHulClIBBKnZRJpA"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "q5pE7L5wxe9GSZkwpfk1rw"], ["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 10:58:46 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2016-01-27 10:58:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"6blgpmsya1nAW7wxXO2X44XY1RSITu9nUXu2HuOl4p2ftoNwDe3TUSpJ+XqmCjsSJeYU4hssqLmzXpa64j38pA==", "user"=>{"username"=>"safsfasf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "safsfasf"]]
+  Rendered sessions/new.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 10:59:59 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :signed_in? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 10:59:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 270ms (Views: 268.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 11:00:08 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :signed_in? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 11:00:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/session" for ::1 at 2016-01-27 11:00:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"YmfCs88gHs66La805wSx9eDiiYEo5YJZ/oKvGXOsxykUaCFlqf+mxlA/6n8d4x0EQNxId7uHxYccp4+9cjTZEA==", "user"=>{"username"=>"christian", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "christian"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "f_FEQ4MEU86fklQRx9imFg"], ["id", 2]]
+  [1m[36m (128.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 211ms (ActiveRecord: 129.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 11:00:16 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 11:00:31 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 11:01:14 -0500
+Processing by StaticPagesController#root as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+Completed 200 OK in 556ms (Views: 553.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.self-c525ef97b4de2a1bd9c505ee116c75a55718c3f692018e3a85245c84ca5a1f82.js?body=1" for ::1 at 2016-01-27 11:01:15 -0500
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 11:02:42 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "f_FEQ4MEU86fklQRx9imFg"]]
+Completed 200 OK in 287ms (Views: 286.4ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "fEVXpWB2PzlxAMucXvI8qA"], ["password_digest", "$2a$10$8j87lBGvgMLYX77sZLKt4uRz8FtGg9WlV4FrN6wnNROSAEy/dq8Ya"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "Q7Y-WQv6dXTdqfXM8lL6lg"], ["password_digest", "$2a$10$4t1HgXa.22BX7.HcFUPcwOpDGgk1RdqEoIb2soLucCP9p1N5soYWi"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "sqDhIBmfswmtZS_RxQ9Q8A"], ["password_digest", "$2a$10$pvMnrM6GyvhhfVejKJ3hxejKH1nr2D7E2ECBBn5gifXA1fL4ye5wq"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "qyUUkceo9RMG7EthWyMx2g"], ["password_digest", "$2a$10$UxyC4HpGYAurlAYXUlbTpeyO4tTHr.a4DWkUv.6QhgIrDvE2qFqWu"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (3.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "Y3HeLS7688L8MuSLa5tIKA"], ["password_digest", "$2a$10$OQipCI/ns5427Wt11Ut2eua5j4QKUYWmt7CelgrlXSBLGOStiUCSC"]]
+  [1m[35m (33.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "WNSQsv0atq2bKhDJRravbw"], ["password_digest", "$2a$10$WGqw8LpVQGeSfuuIrvlKF.nad3PgPcLKky9uc6WVdKmGMUbCDLL2e"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "u8AF2S5KaIsTNbzjdjvITA"], ["password_digest", "$2a$10$D1QZtKmeR/4KGPAEQocYjOK9tDcMqLRLkF8.tkIKk8NPDEBVLxm8G"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "UWtFKYhPV-dSqwaYHdWswA"], ["password_digest", "$2a$10$SAjIIS.vfEvzaRr4a6wgE.Xhq.aomLVI2wzwbI/7LO845CPZ8uNkS"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mNotebook Load (11.5ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 9]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 11]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "pcg5iIlbO7G2I92NGWwy9A"], ["password_digest", "$2a$10$orANTBFK/FVno9RyFAzrFOfBTjQjJ3BNSW.tQO26YZnw91q75IC02"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "27kFsdIHAP8qfCYrPg8hQw"], ["password_digest", "$2a$10$7VNwODFLHeipg/0xURa0ouQQrvMR5HW3rhNwvB5eqRRYHaw57Ozpy"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "_yO5Qvkf_Jj_ZEC-tsxEjA"], ["password_digest", "$2a$10$bXrpnshiRCCeLOpUZiMNPeSrNe/BH4sTbbWgMu3faGKuom1xzr5J6"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "HuIXUNVs5_yXeuWl1D2oPA"], ["password_digest", "$2a$10$i9ClDs8cu1aeb5KCx.gkKeLBN3QTep6.zs0EF89d8NwAsAxCD/8I."]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mNotebook Load (0.6ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35mNote Load (13.5ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mNote Load (0.9ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36mNotebook Load (0.9ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 13]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[35m (4.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 15]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "OzpGqGOTvHnAOQxntS4NWw"], ["password_digest", "$2a$10$ITHq5xio4Nd4dJh6BLAWReH8qRfAIfL/vRshLcWtstEh1WacJI.XK"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "UGw8VdwrpaB9_aSXqvomcA"], ["password_digest", "$2a$10$B/ZTVZ5B/1dAZyUwkxMSJOOTgpu.lC4AVJZQoCaf1TkMWFPNTNbk6"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "oR-A4BBkLiRWzCwjMpLoCA"], ["password_digest", "$2a$10$FS9oGaRvJ71GUP13vcgt6OIbyUZ7V6RE0vMdP2.8xJ0uNS6LpUHUW"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "jTllhuSN0Lq5JKnnw5qcOQ"], ["password_digest", "$2a$10$I5bh7RUeqQvBkgszESTsN.1gVsitS5SOnZ6/P4J2e0veHZqv3NMNG"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mNotebook Load (0.6ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35mNote Load (0.6ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36mNotebook Load (0.8ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 17]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 19]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "zOq_JaRJDakC2KCTSCxSrg"], ["password_digest", "$2a$10$wMfby2Ccd3k31RQx.7Vk4uUPbo/e7.cmXhIcztk4XgCedK8hDQmRe"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "6kGYgO3mkqj5eKPNkxPnww"], ["password_digest", "$2a$10$mLn.ZfCnP5qO8D8wSXDaSuOSBl9A/HdMEkBTpu56yT8GANCb/pXta"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "7rR8s5rDEjrhC4KyZ5fnOg"], ["password_digest", "$2a$10$A.w6qyF1UI4oPtj6EGE6OOPDD5qnObHg/CWU5ElC3VnHNNdTknzQu"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "6oOz0rovyCdmhTG-5BilEQ"], ["password_digest", "$2a$10$pz0INJYCWLbd7RJe1Sqf5ucwfVNybBSg7WjqFv5ag7At1cuZ2XIiy"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mNotebook Load (0.6ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (17.1ms)[0m  [1mINSERT INTO "notebooks" ("author_id", "title") VALUES ($1, $2) RETURNING "id"[0m  [["author_id", 22], ["title", "CB First Notebook"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "notebooks" ("author_id", "title", "description") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 22], ["title", "Yoda's Notebook"], ["description", "Notes from Jedi training"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notebooks" ("author_id") VALUES ($1) RETURNING "id"[0m  [["author_id", 24]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mNote Load (0.6ms)[0m  [1mSELECT "notes".* FROM "notes"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 22], ["title", "Christian's Note"], ["body", "This is my first note"], ["notebook_id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 22], ["title", "Reminder"], ["body", "Take out the trash"], ["notebook_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 23], ["title", "Yoda's Note"], ["body", "A note by Yoda"], ["notebook_id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "body", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 23], ["body", "Unititled note by Yoda"], ["notebook_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 24], ["title", "John's reminder"], ["notebook_id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mNotebook Load (0.9ms)[0m  SELECT "notebooks".* FROM "notebooks"
+  [1m[36mNote Load (0.9ms)[0m  [1mSELECT "notes".* FROM "notes"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mNote Load (1.2ms)[0m  [1mSELECT  "notes".* FROM "notes"  ORDER BY "notes"."id" ASC LIMIT 1[0m
+  [1m[35mNotebook Load (0.3ms)[0m  SELECT  "notebooks".* FROM "notebooks" WHERE "notebooks"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mNotebook Load (0.6ms)[0m  [1mSELECT  "notebooks".* FROM "notebooks" WHERE "notebooks"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mNote Load (2.3ms)[0m  [1mSELECT  "notes".* FROM "notes"  ORDER BY "notes"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mNotebook Load (1.9ms)[0m  [1mSELECT  "notebooks".* FROM "notebooks" WHERE "notebooks"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mNote Load (1.4ms)[0m  SELECT  "notes".* FROM "notes"  ORDER BY "notes"."id" ASC LIMIT 1
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 21]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 23]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "6dwBcsoNKaXaXNQJtPi4eA"], ["password_digest", "$2a$10$0kaQ1mYoOGXu/jAA0SyW...1FFqkj5xaMcvdC51gX/q11yuWSDYKS"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "GLgKqhHi4xwpSaHTW1PdcA"], ["password_digest", "$2a$10$3wj3agsJWxEQzmNjeTH1DOJpXP3CGnQ8oZiAThnx2MwAoSWJD8L5O"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "hKHN4sOpNQx4Ak7GexCExA"], ["password_digest", "$2a$10$zSMADu3HOAX1QYCk6Yim/.hG2VgWhi2z7xPj5mpgMLk0EXpnJLoky"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "vA7uXzWRbFrrjEAQ7bLMdA"], ["password_digest", "$2a$10$q5wSW.WohsJZHB8F2emYM.mGs2lP9neH8PJsNFKtGcEBFXK8c9iqi"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mNotebook Load (0.6ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notebooks" WHERE "notebooks"."id" = $1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notebooks" ("author_id", "title") VALUES ($1, $2) RETURNING "id"  [["author_id", 26], ["title", "CB First Notebook"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notebooks" ("author_id", "title", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 26], ["title", "Yoda's Notebook"], ["description", "Notes from Jedi training"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notebooks" ("author_id") VALUES ($1) RETURNING "id"  [["author_id", 28]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mNote Load (0.6ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 26], ["title", "Christian's Note"], ["body", "This is my first note"], ["notebook_id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 26], ["title", "Reminder"], ["body", "Take out the trash"], ["notebook_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 27], ["title", "Yoda's Note"], ["body", "A note by Yoda"], ["notebook_id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "body", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 27], ["body", "Unititled note by Yoda"], ["notebook_id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 28], ["title", "John's reminder"], ["notebook_id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mNote Load (1.0ms)[0m  SELECT  "notes".* FROM "notes"  ORDER BY "notes"."id" ASC LIMIT 1
+  [1m[36mNote Load (0.4ms)[0m  [1mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35mNote Load (0.4ms)[0m  SELECT  "notes".* FROM "notes"  ORDER BY "notes"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35mNotebook Load (0.7ms)[0m  SELECT  "notebooks".* FROM "notebooks"  ORDER BY "notebooks"."id" ASC LIMIT 1
+  [1m[36mNote Load (0.4ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."notebook_id" = $1[0m  [["notebook_id", 4]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 26]]
+  [1m[36mNotebook Load (0.3ms)[0m  [1mSELECT "notebooks".* FROM "notebooks" WHERE "notebooks"."author_id" = $1[0m  [["author_id", 26]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 25]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 26]]
+  [1m[35m (3.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 27]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "_bFcuZwXF35oxZ-rUwbF7g"], ["password_digest", "$2a$10$Rsim07iD7wgzU6aAp7XG4OQUrR2rfARfKPTyJb92vw4JpduaDqqZW"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "cHBymYTahXkOjjTOGTlsSg"], ["password_digest", "$2a$10$YACAXLWt.8tTCWrMbcWjLeLb1yrT2y6Ihw/BnfItUh5GtnY2TS5mO"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "dbrGXRn2TleHjIjHqdLNzQ"], ["password_digest", "$2a$10$iddGbNAGCzyV9qUDVpwmduzxAYyao1.4OKjMdLVe1BDnx3cHioSAO"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "TrgBkxv5t4-08QFoqI_dZQ"], ["password_digest", "$2a$10$crtP2Ey7O2r8daTR3GmHIObjHduNdM9aDwj/9GyZPdf7a1IxqBa8G"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mNotebook Load (1.0ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notebooks" WHERE "notebooks"."id" = $1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notebooks" ("author_id", "title") VALUES ($1, $2) RETURNING "id"  [["author_id", 30], ["title", "CB First Notebook"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notebooks" ("author_id", "title", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 31], ["title", "Yoda's Notebook"], ["description", "Notes from Jedi training"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notebooks" ("author_id") VALUES ($1) RETURNING "id"  [["author_id", 32]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mNote Load (0.6ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 8]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 10]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 30], ["title", "Christian's Note"], ["body", "This is my first note"], ["notebook_id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 30], ["title", "Reminder"], ["body", "Take out the trash"], ["notebook_id", 7]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 31], ["title", "Yoda's Note"], ["body", "A note by Yoda"], ["notebook_id", 8]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "body", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 31], ["body", "Unititled note by Yoda"], ["notebook_id", 8]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 32], ["title", "John's reminder"], ["notebook_id", 9]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mNotebook Load (0.4ms)[0m  [1mSELECT "notebooks".* FROM "notebooks" WHERE "notebooks"."author_id" = $1[0m  [["author_id", 30]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mNote Load (0.6ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 32]]
+  [1m[35mNotebook Load (0.6ms)[0m  SELECT "notebooks".* FROM "notebooks" WHERE "notebooks"."author_id" = $1  [["author_id", 32]]

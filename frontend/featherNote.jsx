@@ -48,5 +48,5 @@ var router = (
 
 document.addEventListener("DOMContentLoaded", function(e) {
   var root = document.getElementById("content");
-  //ReactDOM.render(router, root);
+  ReactDOM.render(router, root);
 });

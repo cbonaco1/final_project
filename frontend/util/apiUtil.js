@@ -4,7 +4,7 @@ var apiUtil = {
   fetchAllNotes: function() {
     $.ajax({
       type: 'GET',
-      url: '/notes',
+      url: '/api/notes',
       dataType: 'json',
       success: function(data) {
         NoteActions.receiveNotes(data);

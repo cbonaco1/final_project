@@ -8726,3 +8726,3153 @@ Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:19:04 -0500
+
+
+Started GET "/" for ::1 at 2016-01-27 17:21:39 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 209ms (Views: 206.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:21:40 -0500
+
+
+Started GET "/" for ::1 at 2016-01-27 17:21:53 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:21:53 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :signed_in? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 17:21:53 -0500
+Processing by SessionsController#new as JSON
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:22:02 -0500
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 17:22:05 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/bundle.self-48e6e4ad5129c5b82ad43b0b7730f02b88bc342ce92b6008943dbfe7e5ff2887.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:22:05 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-27 17:22:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4raROgar7TEJWwQx8ndZVXapX4K5uLNxMQjCs0e/fLOUuXLsYHRVOeNJQXoIkPWk1peedCra9K/TLeIXRidiig==", "user"=>{"username"=>"christian", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "christian"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 30) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "OGTmYgOpySQMZbPeHa9otw"], ["id", 30]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/api/notes
+Completed 302 Found in 86ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:22:10 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (6.1ms)
+Completed 200 OK in 69ms (Views: 9.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:22:18 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:22:18 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:22:18 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:22:18 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:22:25 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/bundle.self-48e6e4ad5129c5b82ad43b0b7730f02b88bc342ce92b6008943dbfe7e5ff2887.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:22:25 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:22:26 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (4.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:23:22 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/bundle.self-48e6e4ad5129c5b82ad43b0b7730f02b88bc342ce92b6008943dbfe7e5ff2887.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:23:22 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:23:22 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.8ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:23:32 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 351ms (Views: 350.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/bundle.self-7bba57b1356ebe36f0d5eb24f26a1054d2b05a6126e0ce222287dc5064b30a65.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:23:32 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:23:32 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.3ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:24:02 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/application.self-a5fa3a1ace5a9eb64c04e0601e5a51b6aaf0cbd2609b737e2dd862d4757b08a4.css?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/bundle.self-7bba57b1356ebe36f0d5eb24f26a1054d2b05a6126e0ce222287dc5064b30a65.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:24:02 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.4ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:24:02 -0500
+
+
+Started GET "/" for ::1 at 2016-01-27 17:29:20 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 780ms (Views: 779.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:29:20 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:29:20 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:29:20 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:29:20 -0500
+
+
+Started GET "/assets/application.self-7aa959524751ae88dd59c71fced40f91f0b3b91fd039fe0864d3741be6359193.css?body=1" for ::1 at 2016-01-27 17:29:20 -0500
+
+
+Started GET "/assets/bundle.self-67b77b09b7593c6feceaf4735d5324284635b92702a53123c452d7e038370c84.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:29:21 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:29:21 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (10.8ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:31:27 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 776ms (Views: 775.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/application.self-3588bd074aa44d0244fbcd4b7a30143c5a3175347f835da8c155aacb92c79def.css?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/bundle.self-cdb20a4b0b5e312fbb429574c88b85d8d9523434f80374c7e46cb5c5a7efc555.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:31:28 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:31:29 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:31:29 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:32:23 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+Completed 200 OK in 469ms (Views: 468.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/application.self-3588bd074aa44d0244fbcd4b7a30143c5a3175347f835da8c155aacb92c79def.css?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:32:24 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:32:24 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35mNote Load (0.4ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.6ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/session" for ::1 at 2016-01-27 17:34:10 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"erLZp0E7Aa7bT9dSY8Hrjzrw36aBbMBQFLGowgnUUGAMvTpxJ+S5pjFdkhmZJkd+ms4eUBIOh472lIhmCExOWQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "OGTmYgOpySQMZbPeHa9otw"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 30) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "GmHaqlm-VNVxYmVTobB_qg"], ["id", 30]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 29ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 17:34:10 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 137ms (Views: 136.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:34:10 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-27 17:34:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"fSyB5B/euzqgVOEtd9XFNtSbDVLV2p0wJHUjiFin5ZwLI2IyeQEDMkpGpGaNMmnHdKXMpEa42u7GUAMsWT/7pQ==", "user"=>{"username"=>"john", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "john"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'john' AND "users"."id" != 32) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"], ["id", 32]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/api/notes
+Completed 302 Found in 80ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:34:16 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 32]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/index.json.jbuilder (13.1ms)
+Completed 200 OK in 48ms (Views: 28.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:34:21 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+Completed 200 OK in 200ms (Views: 199.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:34:21 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 32]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (1.9ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:34:21 -0500
+
+
+Started GET "/" for ::1 at 2016-01-27 17:37:31 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+Completed 200 OK in 225ms (Views: 224.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/application.self-3f769ad4c557c9014673b43355861bc88e0da184e64b11aeb66df39dd6ffdcb6.css?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:37:31 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:37:31 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 32]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/index.json.jbuilder (14.5ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/session" for ::1 at 2016-01-27 17:37:40 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xi+A/B4eXbrwzLWLoQcsBkBctWVN2f06C+yzJKU28Z8oIGMqeMHlshre8MBb4ID34GJ0k967uuTpyZOApK7vpg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "gkO62Cpbgjq0PFX8IVt8TQ"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'john' AND "users"."id" != 32) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "edExbC3gFNvltzAe-UX6nw"], ["id", 32]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 17:37:40 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:37:40 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-27 17:37:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t2XPOrCyJpPt9VyH+RbIUillpgIv57fyOD8swXPyU9rBaizs1m2emwfnGcwD8WSjiVtn9LyF8CzaGgxlcmpN4w==", "user"=>{"username"=>"christian", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "christian"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 30) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"], ["id", 30]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/api/notes
+Completed 302 Found in 85ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:37:48 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.2ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.0ms)
+  Rendered api/notes/index.json.jbuilder (1.9ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:37:53 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:37:53 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:37:53 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.7ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:38:07 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 166ms (Views: 165.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-4b140c03dcc1855720977a69bc86b6774bf645035d0f9bf6b9cea17e1671ab87.css?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:38:07 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:38:07 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.7ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:41:30 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 280ms (Views: 279.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-0f9ea3b36fdd53fc0321db8d2d5a89bac2d2e63a06749964f0e12406636dd839.css?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:41:31 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:41:31 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.6ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.6ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:44:27 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 280ms (Views: 279.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/application.self-d5553bbc90793f996a71705444062ef498d415bb141e692f383633558c02dfd0.css?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:44:27 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:44:27 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.5ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:45:32 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 267ms (Views: 266.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:45:32 -0500
+
+
+Started GET "/assets/application.self-6f101804e21b93308d8e7f641ace81f3810a85fe26c9adfe34498e0f602c1d09.css?body=1" for ::1 at 2016-01-27 17:45:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:45:32 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:45:33 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:45:33 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.4ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (14.6ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:46:54 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 247ms (Views: 246.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/application.self-560332c3312f534129a54937cd4375a4c8eba16a3294dee5843b9951564fdb2c.css?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:46:54 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:46:54 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.4ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (14.0ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:47:14 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 167ms (Views: 166.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/application.self-23585739db66b173e909d14e5719988ef2aa68cbf9d4c54eb6bf367277986b8e.css?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/bundle.self-32f1e8f6eed19927a3f5a2670e8757046a04b65acb0fa0a5298c8c9353544629.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:47:15 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:47:15 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:48:53 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 743ms (Views: 742.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/application.self-6687830ad211c292b197ea8b957403ac0ae1b269a9f44d96ba63e2941d1c3b37.css?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/bundle.self-51595086888f372ac6da86dee8bca5f0d04bee988c4b04253515b5be2b802159.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:48:54 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:48:54 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (14.1ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:50:26 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 136ms (Views: 135.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-122d88e14ced49f8107fd6dd5c124c7c8bebeddeb53703c4bd908dab462d47a1.css?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/bundle.self-51595086888f372ac6da86dee8bca5f0d04bee988c4b04253515b5be2b802159.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:50:27 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:50:27 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:50:37 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/application.self-36cf7d8ce6c960114bd20bb35edd019de5d5216a05bedc1a7b8463fa1ce75606.css?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/bundle.self-51595086888f372ac6da86dee8bca5f0d04bee988c4b04253515b5be2b802159.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:50:37 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:50:37 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.0ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:52:13 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 537ms (Views: 536.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/application.self-57d9b50dd7b713ad3fd862ac86a6c981eb53a4a4e142e4b8411fe7450dab7028.css?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:52:13 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:52:14 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:52:14 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:52:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:52:14 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:52:14 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:52:14 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.5ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/index.json.jbuilder (14.2ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:53:45 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/application.self-1b99339aecb76e47a722a2a0fd412902131ce2480fc101ba435fa426c8f97c99.css?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:53:45 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:53:45 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.2ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:56:32 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 262ms (Views: 261.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-279a5e7d0c7abc04e4855c411e7d78bee8b2c63b715b217b950363b5b1d172a0.css?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:56:33 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:56:33 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (14.1ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:57:32 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 206ms (Views: 205.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:57:32 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:57:32 -0500
+
+
+Started GET "/assets/application.self-99a815503f7212d097f6dd15a7941a9976adb6a70ab2f7afe9f863ea4004ea69.css?body=1" for ::1 at 2016-01-27 17:57:32 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:57:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:57:32 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:57:33 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:57:33 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/index.json.jbuilder (14.2ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:58:11 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 255ms (Views: 254.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-d85d01b3046855b83a7b23d25243ef61ab7913bcd7844f3edae4bbd61f03af03.css?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:58:11 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:58:11 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 17:58:56 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 241ms (Views: 240.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/application.self-a0f34a6b63e0b0c45d6566a917c3dea3e10587f96e24aa29559c0eb3d0f58c66.css?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 17:58:57 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 17:58:57 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.7ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:00:29 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 172ms (Views: 171.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/application.self-d85d01b3046855b83a7b23d25243ef61ab7913bcd7844f3edae4bbd61f03af03.css?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:00:29 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:00:29 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (13.9ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:01:48 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 198ms (Views: 197.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-a5bb87e1dc92fb83d34ed2cbfdc27c426f8cc06ac5da393c44e6e3c9c9ac2ed1.css?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:01:48 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:01:49 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:04:53 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 211ms (Views: 210.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/application.self-3d7dac95373ef7c847aa79090fa52a0f7808566d659aaaba8f71fcc43b3de59c.css?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:04:53 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:04:53 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.8ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:07:53 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 77ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-0fb7058392bfbc358f4daa3c0a4a391e545fb4e4bedb91051327cbf8d7b60e80.css?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:07:53 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:07:53 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.6ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:10:19 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 101ms (Views: 101.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/application.self-883fbc632772ef0e6e24c860f37c2668e9a7acae53dc4c8f985cae12b86145ed.css?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:10:19 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:10:20 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:10:40 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/application.self-a6e9cc43416405cad0abf3546c6ea2c126ae76845ceebcdb3d2a6a9558bfe386.css?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:10:40 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:10:40 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.6ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:12:25 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/application.self-a72e95b4d97cacfdb64707997c7a4579471b3992ceba4d2097e0cdf1aa289f7a.css?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:12:25 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:12:26 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:12:26 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:12:46 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 122ms (Views: 121.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/application.self-6f9bf9945de42af107050b907c86a90b317d8c2cdf625d881892e4abc7306ee4.css?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:12:46 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:12:46 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:13:41 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 174ms (Views: 173.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/application.self-265394e8e1769f2e66d24eae74f870b55c81c9e809bd6da3cc1a115e9e7703b2.css?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:13:41 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:13:41 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.7ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.7ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:13:54 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 48ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-847d686aa8e4d3148d1037e75325214c2e1e13175b66054122baca0bd6bb4b00.css?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:13:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:13:55 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:13:55 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.4ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:14:22 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 87ms (Views: 86.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/application.self-5c1f58c1bc8d9cbcdae5334101ef3a1ffaf8349d86a2e0fa37c83f1ad834c6b2.css?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:14:22 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:14:22 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:15:00 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-d72586b7ec066cf294dc4fac788c1e2b8e436f32d85fbfa685911c3d27fa1756.css?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:15:00 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:15:01 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:15:01 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.3ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:15:13 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/application.self-17067153db05d65bf01777e8821e21ad57b15d26f626137f4d81ba83cf956389.css?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/bundle.self-52094947ea1638b6437a9b1e6efa367feade57f716acedf16af883238a500b2a.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:15:13 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:15:13 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.2ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:16:40 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 572ms (Views: 571.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:16:40 -0500
+
+
+Started GET "/assets/application.self-aa009afc2853f2ab473b901721ccc3478b4c557da75e21b83220d1ef3718b4ec.css?body=1" for ::1 at 2016-01-27 18:16:40 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:16:40 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:16:40 -0500
+
+
+Started GET "/assets/bundle.self-c494427e01e99532b9d887923f19250957bb41e34cd89102c93653f1c515ffce.js?body=1" for ::1 at 2016-01-27 18:16:40 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:16:41 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:16:41 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:17:15 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-39e6366a51bb1367a1ad665456e7e72f470e3255bfcecadcb257bc653a1c15c6.css?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/bundle.self-c494427e01e99532b9d887923f19250957bb41e34cd89102c93653f1c515ffce.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:17:15 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:17:15 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (2.1ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (5.5ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:24:17 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 638ms (Views: 636.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-ec1625167bdc13f275132ba534c01fa7a251de1dc0a044950a8ace5ca3a281dc.css?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:24:17 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:24:18 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:24:18 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.4ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:24:33 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/application.self-39e6366a51bb1367a1ad665456e7e72f470e3255bfcecadcb257bc653a1c15c6.css?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:24:33 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:24:33 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:26:25 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/application.self-39e6366a51bb1367a1ad665456e7e72f470e3255bfcecadcb257bc653a1c15c6.css?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:26:25 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:26:25 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.6ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:26:41 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 193ms (Views: 192.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-c62bdf9273fe64b3cfde2fbd0f09a1a56844d083d4c882c8eb937e331307776f.css?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:26:41 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:26:41 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.1ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:27:04 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 158ms (Views: 158.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/application.self-62abcc120aabe02abf08279a208acd713e147654fdb5da25cfed275644eb3aa7.css?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:27:04 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:27:05 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 30]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (2.5ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 29]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 32]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'guest' LIMIT 1
+  [1m[36mSQL (22.1ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "guest"], ["session_token", "dzWpb5mbdcNqTnqBMUY8Yg"], ["password_digest", "$2a$10$hbTWlp1CjiGGw4JjfcVckuuLD7IRemsCDlO8WxgHDct9xrjWOTzjq"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'christian' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "christian"], ["session_token", "vo7l8CBWdMZMBK6c17bvLA"], ["password_digest", "$2a$10$0tzI00Lhrxevza.qjYVOS.5rQipJckb01US98TQl3wgXqy0OCQd/y"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'yoda' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "yoda"], ["session_token", "RfDP5woruIu0F5mE7JJrwQ"], ["password_digest", "$2a$10$zf71w4kvyvuCKGxdnHqlM.oIIgp5U.jOwFpJ7GsdOCii1Z.Z1czQS"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'john' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "session_token", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["username", "john"], ["session_token", "l7r8lFGx0HJ6UTGm2h94Nw"], ["password_digest", "$2a$10$lqt0nVTiSMKIET/DXvu4S.hSiEEDwzBbbHiNZqZVN7OhbY1NgADt2"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mNotebook Load (1.1ms)[0m  [1mSELECT "notebooks".* FROM "notebooks"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notebooks" WHERE "notebooks"."id" = $1  [["id", 8]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notebooks" WHERE "notebooks"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "notebooks" ("author_id", "title") VALUES ($1, $2) RETURNING "id"  [["author_id", 34], ["title", "CB First Notebook"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notebooks" ("author_id", "title", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 35], ["title", "Yoda's Notebook"], ["description", "Notes from Jedi training"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notebooks" ("author_id") VALUES ($1) RETURNING "id"  [["author_id", 36]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mNote Load (0.9ms)[0m  SELECT "notes".* FROM "notes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 11]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 13]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "notes" WHERE "notes"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "notes" WHERE "notes"."id" = $1  [["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 34], ["title", "Christian's Note"], ["body", "This is my first note"], ["notebook_id", 10]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 34], ["title", "Reminder"], ["body", "Take out the trash"], ["notebook_id", 10]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 34], ["title", "App Academy Project"], ["body", "Make a sweet application"], ["notebook_id", 10]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "body", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 34], ["body", "Unititled note"], ["notebook_id", 10]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "body", "notebook_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 35], ["title", "Yoda's Note"], ["body", "A note by Yoda"], ["notebook_id", 11]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "notes" ("author_id", "body", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"  [["author_id", 35], ["body", "Unititled note by Yoda"], ["notebook_id", 11]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "notes" ("author_id", "title", "notebook_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["author_id", 36], ["title", "John's reminder"], ["notebook_id", 12]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-01-27 18:29:51 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 176ms (Views: 174.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/notes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/application.self-62abcc120aabe02abf08279a208acd713e147654fdb5da25cfed275644eb3aa7.css?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/bundle.self-6e717c2dbd7cc4c9d48f78bb2a24acd653026dbecaa4660ab1a402e1d5f67350.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/notes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 18:29:51 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:29:52 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:29:52 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :signed_in? rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 18:29:52 -0500
+Processing by SessionsController#new as JSON
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/notes" for ::1 at 2016-01-27 18:30:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/notes"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/var/rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (75.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (97.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (221.0ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /usr/local/var/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (49.3ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-27 18:30:12 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "bKF5oCCuK8hiNDdqj5uB5w"]]
+Completed 200 OK in 188ms (Views: 186.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:30:12 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-27 18:30:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4W4Q7B36MesCJhqI0Ta6siVZrRS8ihnJDPIVagkEUJSXYfM6eyWJ4+g0X8Mr0RZDhWds4i/oXhfu1zXOCJxOrQ==", "user"=>{"username"=>"christian", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "christian"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'christian' AND "users"."id" != 34) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1 WHERE "users"."id" = $2  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"], ["id", 34]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/api/notes
+Completed 302 Found in 85ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:30:20 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1  [["author_id", 34]]
+  Rendered api/notes/_notes.json.jbuilder (0.2ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.0ms)
+  Rendered api/notes/_notes.json.jbuilder (0.0ms)
+  Rendered api/notes/index.json.jbuilder (15.0ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:30:24 -0500
+Processing by StaticPagesController#landing as HTML
+  Rendered static_pages/landing.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-27 18:30:24 -0500
+
+
+Started GET "/api/notes" for ::1 at 2016-01-27 18:30:24 -0500
+Processing by Api::NotesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "JjjyH0Mtsjb5Qn_9YPSOiw"]]
+  [1m[36mNote Load (0.3ms)[0m  [1mSELECT "notes".* FROM "notes" WHERE "notes"."author_id" = $1[0m  [["author_id", 34]]
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/_notes.json.jbuilder (0.1ms)
+  Rendered api/notes/index.json.jbuilder (3.8ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.6ms)

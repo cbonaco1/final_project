@@ -33,9 +33,10 @@ var NotesIndex = React.createClass({
     }
 
     return(
-      <div>
-        <h3>List of user's notes</h3>
-        <ul>
+      <div className="note-container">
+        <h3>Notes</h3>
+        <p className="note-count">{this.state.notes.length} notes</p>
+        <ul className="note-list">
           {noteList}
         </ul>
       </div>

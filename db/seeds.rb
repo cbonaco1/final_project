@@ -31,6 +31,8 @@ john_notebook = Notebook.create!(author_id: user3.id)
 Note.destroy_all
 note1 = Note.create!(author_id: user1.id, title:"Christian's Note", body:"This is my first note", notebook_id: cb_notebook.id)
 note2 = Note.create!(author_id: user1.id, title:"Reminder", body:"Take out the trash", notebook_id: cb_notebook.id)
+note2a = Note.create!(author_id: user1.id, title:"App Academy Project", body:"Make a sweet application", notebook_id: cb_notebook.id)
+note2b = Note.create!(author_id: user1.id, body:"Unititled note", notebook_id: cb_notebook.id)
 
 note3 = Note.create!(author_id: user2.id, title:"Yoda's Note", body:"A note by Yoda", notebook_id: yoda_notebook.id)
 

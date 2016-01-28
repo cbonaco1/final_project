@@ -1,5 +1,8 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var NoteStore = require('../../stores/note');
+var apiUtil = require('../../util/apiUtil');
+var NoteIndexItem = require('./notesIndexItem');
 
 var NotesIndex = React.createClass({
   getInitialState: function() {
@@ -12,7 +15,7 @@ var NotesIndex = React.createClass({
 
   componentDidMount: function() {
     this.listenerToken = NoteStore.addListener(this._onChange);
-    //apiutils.fetchNotes();
+    apiUtil.fetchAllNotes();
   },
 
   componentWillUnmount: function() {
@@ -20,20 +23,30 @@ var NotesIndex = React.createClass({
   },
 
   render: function() {
+
     var noteList = "";
 
     if (this.state.notes.length > 0) {
       noteList = this.state.notes.map(function(note){
         return <NoteIndexItem key={note.id} note={note} />;
-      });
+      }.bind(this));
     }
 
     return(
-      <ul>
-        {noteList}
-      </ul>
+      <div className="note-container">
+        <h3>Notes</h3>
+        <p className="note-count">{this.state.notes.length} notes</p>
+        <ul className="note-list">
+          {noteList}
+        </ul>
+      </div>
     );
   }
 });
+
+// document.addEventListener("DOMContentLoaded", function(e) {
+//   var root = document.getElementById("notes-index");
+//   ReactDOM.render(<NotesIndex />, root);
+// });
 
 module.exports = NotesIndex;

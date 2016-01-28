@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, h2, h3, body, p, a {
+html, h2, h3, body, ul, p, a {
   padding: 0;
   margin: 0;
   border: 0;
@@ -29,10 +29,16 @@ body {
   background: #eee;
 }
 
+ul {
+  list-style-type: none;
+}
+
 button {
   border: 0;
 }
 
+
+/*----Stuff for sign-in/sign-up forms ----*/
 .user-form {
   margin: 20px auto;
   width: 400px;
@@ -96,6 +102,54 @@ button {
   font-size: 24px;
   color: #2DBE60;
 }
+/*----------------*/
+
+/*---List of notes ---*/
+.note-container {
+  width: 339px;
+  border: 1px solid green;
+  background: #fff;
+  margin-left: 50px;
+}
+
+.note-container > h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #848484;
+  /*padding-left: 10px;*/
+}
+
+.note-count {
+  margin-bottom: 5px;
+  color:#ABA9A9;
+}
+
+.user-note-content {
+  padding-top: 5px;
+  border-bottom: 2px solid #eee;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.user-note {
+  width: 325px;
+  height: 120px;
+  color: #848484;
+  cursor: pointer;
+}
+
+.user-note-content h3 {
+  color: #585858;
+}
+
+.user-note:hover {
+  background: #2DBE60;
+  color: #fff;
+}
+/*--------------------*/
 
 .error-msgs {
   color: #f00;

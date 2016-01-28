@@ -6,6 +6,21 @@ class User < ActiveRecord::Base
   validates :username, uniqueness: true
   after_initialize :ensure_session_token
 
+  has_many(
+    :notes,
+    :class_name => 'Note',
+    :foreign_key => :author_id,
+    :primary_key => :id
+  )
+
+  has_many(
+    :notebooks,
+    :class_name => 'Notebook',
+    :foreign_key => :author_id,
+    :primary_key => :id
+  )
+
+
 
   def password=(password)
     @password = password

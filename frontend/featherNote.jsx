@@ -8,8 +8,9 @@ var History = ReactRouter.History;
 
 var NewUserForm = require('./components/user/newUserForm');
 var NewSessionForm = require('./components/user/newSessionForm');
+var NotesIndex = require('./components/notes/notesIndex');
 
-var App = React.createClass({
+var FeatherNote = React.createClass({
 
   goToSignUp: function() {
     this.props.history.pushState(null, 'users/new', {});
@@ -29,8 +30,9 @@ var App = React.createClass({
         simplify your life!</p>
       <p>FeatherNote is inspired by Evernote and is written using the Rails
       webframework and React.js</p>
-    <button className="form-button" onClick={this.goToSignUp}>Sign Up</button>
-    <button className="form-button" onClick={this.goToSignIn}>Sign In</button>
+
+      <button className="form-button" onClick={this.goToSignUp}>Sign Up</button>
+      <button className="form-button" onClick={this.goToSignIn}>Sign In</button>
         </header>
         {this.props.children}
       </div>
@@ -40,13 +42,14 @@ var App = React.createClass({
 
 var router = (
   <Router>
-    <Route path="/" component={App} />
+    <Route path="/" component={FeatherNote} />
+    <Route path="notes" component={NotesIndex} />
     <Route path="users/new" component={NewUserForm} />
     <Route path="session/new" component={NewSessionForm} />
   </Router>
 );
 
 document.addEventListener("DOMContentLoaded", function(e) {
-  var root = document.getElementById("content");
-  //ReactDOM.render(router, root);
+  var root = document.getElementById("landing-content");
+  ReactDOM.render(router, root);
 });

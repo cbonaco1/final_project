@@ -33,6 +33,12 @@ ul {
   list-style-type: none;
 }
 
+.group:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
 button {
   border: 0;
 }
@@ -109,21 +115,23 @@ header {
 
 /*---List of notes ---*/
 .note-container {
+  float: left;
   width: 350px;
   border: 1px solid green;
   background: #fff;
   margin-left: 50px;
   box-sizing: border-box;
+  padding-bottom: 10px;
 }
 
 .note-container > h3 {
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: 15px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   font-size: 21px;
   color: #848484;
-  margin-left: 15px;
 }
 
 .note-count {
@@ -134,7 +142,7 @@ header {
 }
 
 .user-note-content {
-  /*border-top: 1px solid blue;*/
+  border-bottom: 1px solid #eee;
   margin-left: 15px;
   height: 100%;
   margin-right: 15px;
@@ -156,6 +164,25 @@ header {
 
 .active-note {
   border: 4px solid #D4D1D1;
+}
+
+/*--------------------*/
+
+/*-----NoteDetails-----*/
+
+.note-detail {
+  float: left;
+  border: 1px solid blue;
+  width: 300px;
+  background: #fff;
+}
+
+.note-detail-title {
+  color: #2DBE60;
+}
+
+.note-detail-body {
+  color: #000;
 }
 
 /*--------------------*/

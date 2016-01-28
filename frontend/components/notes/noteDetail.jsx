@@ -22,7 +22,7 @@ var NoteDetail = React.createClass({
     apiUtil.fetchSingleNote(newProps.params.id);
   },
 
-  componentDidMount: function() {
+  componentWillMount: function() {
     this.listenerToken = NoteStore.addListener(this._changeNote);
     apiUtil.fetchSingleNote(this.props.params.id);
   },
@@ -36,11 +36,10 @@ var NoteDetail = React.createClass({
     var note = this.state.note;
     var content;
     if (note) {
-      debugger
       content =
         <div>
-          <h2>{note.title}</h2>
-          <p>{note.body}</p>
+          <h2 className="note-detail-title">{note.title}</h2>
+          <p className="note-detail-body">{note.body}</p>
         </div>
     }
 

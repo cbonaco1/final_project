@@ -49,9 +49,4 @@ var NotesIndex = React.createClass({
   }
 });
 
-// document.addEventListener("DOMContentLoaded", function(e) {
-//   var root = document.getElementById("notes-index");
-//   ReactDOM.render(<NotesIndex />, root);
-// });
-
 module.exports = NotesIndex;

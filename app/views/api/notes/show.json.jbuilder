@@ -1,1 +1,1 @@
-json.extract! @note, :id, :title, :body, :updated_at
+json.partial! 'api/notes/notes', note: @note

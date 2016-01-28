@@ -45,8 +45,9 @@ var FeatherNote = React.createClass({
 var router = (
   <Router>
     <Route path="/" component={FeatherNote} />
-    <Route path="notes" component={App} />
-    <Route path="notes/:id" component={NoteDetail} />
+    <Route path="notes" component={App}>
+      <Route path=":id" component={NoteDetail} />
+    </Route>
     <Route path="users/new" component={NewUserForm} />
     <Route path="session/new" component={NewSessionForm} />
   </Router>

@@ -7,8 +7,10 @@ var App = React.createClass({
   //sine both are side by side and NoteDetail is always present on right
   render: function() {
     return(
-
-      <NotesIndex />
+      <div>
+        <NotesIndex />
+        {this.props.children}
+      </div>
     );
   }
 });

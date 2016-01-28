@@ -1,0 +1,8 @@
+Today I got the details of a note to display when the user clicks
+on a note from the list.
+I had a bug in my Store where I was not actually returning the
+note fetched from the store.
+
+My next tasks include having the details for the first note from the list automatically
+be displayed when the user goes to the list of notes.
+I also need to implement the React auth we went over this afternoon.

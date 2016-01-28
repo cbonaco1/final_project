@@ -1,0 +1,6 @@
+Today I worked on the NotesIndex component, which displays
+the list of the current_user's notes.
+I had issues this morning with Heroku, and then issues with using
+Postgres on my Ubuntu machine. The Heroku issue was resovled by moving
+all files for my application under one folder. I resolved the Postgres
+issue later by changing the password for the postgres user.

@@ -7,6 +7,13 @@ var NoteActions = {
       actionType: "NOTES_RECEIVED",
       data: notes
     });
+  },
+
+  receiveSingleNote: function(note) {
+    Dispatcher.dispatch({
+      actionType: "NOTE_RECEIVED",
+      data: note
+    });
   }
 };
 

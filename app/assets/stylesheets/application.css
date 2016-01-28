@@ -37,6 +37,9 @@ button {
   border: 0;
 }
 
+header {
+  text-align: center;
+}
 
 /*----Stuff for sign-in/sign-up forms ----*/
 .user-form {

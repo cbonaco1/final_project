@@ -24,6 +24,7 @@ NoteStore.resetNotes = function(newNotes){
 
 NoteStore.find = function(noteId) {
   var id = parseInt(noteId);
+  //this is coming back nothing - note is not in store
   return _notes[id];
 };
 
@@ -32,6 +33,9 @@ NoteStore.__onDispatch = function(payload) {
     case "NOTES_RECEIVED":
     // TODO: make constants
       NoteStore.resetNotes(payload.data);
+      NoteStore.__emitChange();
+      break;
+   case "NOTE_RECEIVED":
       NoteStore.__emitChange();
       break;
     default:

@@ -10,7 +10,7 @@ var NoteDetail = React.createClass({
   },
 
   getStateFromStore: function() {
-    NoteStore.find(this.props.params.id);
+    return NoteStore.find(this.props.params.id);
   },
 
   _changeNote: function() {
@@ -22,8 +22,9 @@ var NoteDetail = React.createClass({
     apiUtil.fetchSingleNote(newProps.params.id);
   },
 
-  componentWillMount: function() {
+  componentDidMount: function() {
     this.listenerToken = NoteStore.addListener(this._changeNote);
+    apiUtil.fetchSingleNote(this.props.params.id);
   },
 
   componentWillUnmount: function() {
@@ -33,11 +34,20 @@ var NoteDetail = React.createClass({
   //this.props.params.id will contain the message id
   render: function() {
     var note = this.state.note;
+    var content;
+    if (note) {
+      debugger
+      content =
+        <div>
+          <h2>{note.title}</h2>
+          <p>{note.body}</p>
+        </div>
+    }
+
     return(
       <div className="note-detail">
         <h2>These are the note details</h2>
-        <h2>{note.title}</h2>
-        <p>{note.body}</p>
+        {content}
       </div>
     );
   }

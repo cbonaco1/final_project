@@ -6,4 +6,8 @@ class Api::NotesController < ApplicationController
     #TODO add timestamps to table and order by created_at desc;
     @notes = Note.where(author_id: current_user.id)
   end
+
+  def show
+    @note = Note.find(params[:id])
+  end
 end

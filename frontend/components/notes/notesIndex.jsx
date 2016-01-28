@@ -19,7 +19,7 @@ var NotesIndex = React.createClass({
   },
 
   componentWillUnmount: function() {
-    NoteStore.remove(this.listenerToken);
+    this.listenerToken.remove();
   },
 
   render: function() {

@@ -20,7 +20,7 @@ var apiUtil = {
       type: 'GET',
       url: 'api/notes/' + id,
       dataType: 'json',
-      success: function(data) {        
+      success: function(data) {
         NoteActions.receiveSingleNote(data);
       },
       error: function(data ) {

@@ -6,11 +6,16 @@ var NoteDetail = React.createClass({
 
   //state will be the note object
   getInitialState: function() {
-    return { note: this.getStateFromStore() };
+    //do something here to get the first one to display
+    return { note: this.getFirstNoteFromStore() };
   },
 
   getStateFromStore: function() {
     return NoteStore.find(this.props.params.id);
+  },
+
+  getFirstNoteFromStore: function() {
+    return NoteStore.firstNote();
   },
 
   _changeNote: function() {
@@ -23,6 +28,7 @@ var NoteDetail = React.createClass({
   },
 
   componentWillMount: function() {
+    // this.history.pushState(null, "/notes/" + this.state.note.id);
     this.listenerToken = NoteStore.addListener(this._changeNote);
     apiUtil.fetchSingleNote(this.props.params.id);
   },

@@ -3,8 +3,12 @@ var ReactDOM = require('react-dom');
 var NoteStore = require('../../stores/note');
 var apiUtil = require('../../util/apiUtil');
 var NoteIndexItem = require('./notesIndexItem');
+var History = require('react-router').History;
 
 var NotesIndex = React.createClass({
+
+  mixins: [History],
+
   getInitialState: function() {
     return { notes: NoteStore.all() };
   },
@@ -20,6 +24,14 @@ var NotesIndex = React.createClass({
 
   componentWillUnmount: function() {
     this.listenerToken.remove();
+  },
+
+  componentDidUpdate: function() {
+    // debugger
+    if (this.state.notes.length > 0) {
+      var firstNote = this.state.notes[0].toString();
+      // this.history.pushState(null, "/notes/" + firstNote.id);
+    }
   },
 
   render: function() {

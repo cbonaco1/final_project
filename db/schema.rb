@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126163325) do
+ActiveRecord::Schema.define(version: 20160127115840) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "notebooks", force: :cascade do |t|
+    t.integer "author_id",   null: false
+    t.text    "title"
+    t.text    "description"
+  end
+
+  add_index "notebooks", ["author_id"], name: "index_notebooks_on_author_id", using: :btree
+
+  create_table "notes", force: :cascade do |t|
+    t.string  "title"
+    t.text    "body"
+    t.integer "author_id",   null: false
+    t.integer "notebook_id", null: false
+  end
+
+  add_index "notes", ["author_id"], name: "index_notes_on_author_id", using: :btree
+  add_index "notes", ["notebook_id"], name: "index_notes_on_notebook_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string "username",        null: false
@@ -19,6 +40,6 @@ ActiveRecord::Schema.define(version: 20160126163325) do
     t.string "session_token",   null: false
   end
 
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end

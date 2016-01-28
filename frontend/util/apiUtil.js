@@ -13,6 +13,20 @@ var apiUtil = {
         alert("Error in fetchAllNotes");
       }
     });
+  },
+
+  fetchSingleNote: function(id) {
+    $.ajax({
+      type: 'GET',
+      url: 'api/notes/' + id,
+      dataType: 'json',
+      success: function(data) {
+        NoteActions.receiveSingleNote(data);
+      },
+      error: function(data ) {
+        alert("Error in fetchSingleNote");
+      }
+    });
   }
 };
 

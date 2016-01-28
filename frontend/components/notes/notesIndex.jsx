@@ -27,8 +27,13 @@ var NotesIndex = React.createClass({
     var noteList = "";
 
     if (this.state.notes.length > 0) {
-      noteList = this.state.notes.map(function(note){
-        return <NoteIndexItem key={note.id} note={note} />;
+      noteList = this.state.notes.map(function(note, index){
+        //add active-note class to the first item in list
+        var classes = "";
+        if (index === 0) {
+          classes = " active-note";
+        }
+        return <NoteIndexItem key={note.id} note={note} classes={classes}/>;
       }.bind(this));
     }
 

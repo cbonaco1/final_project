@@ -106,10 +106,11 @@ button {
 
 /*---List of notes ---*/
 .note-container {
-  width: 339px;
+  width: 350px;
   border: 1px solid green;
   background: #fff;
   margin-left: 50px;
+  box-sizing: border-box;
 }
 
 .note-container > h3 {
@@ -119,36 +120,41 @@ button {
   text-transform: uppercase;
   font-size: 21px;
   color: #848484;
-  /*padding-left: 10px;*/
+  margin-left: 15px;
 }
 
 .note-count {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
   color:#ABA9A9;
+  border-bottom: 1px solid #eee;
 }
 
 .user-note-content {
-  padding-top: 5px;
-  border-bottom: 2px solid #eee;
-  margin-left: 10px;
+  /*border-top: 1px solid blue;*/
+  margin-left: 15px;
   height: 100%;
+  margin-right: 15px;
 }
 
 .user-note {
-  width: 325px;
   height: 120px;
+  padding-top: 15px;
   color: #848484;
   cursor: pointer;
 }
 
-.user-note-content h3 {
-  color: #585858;
-}
 
 .user-note:hover {
   background: #2DBE60;
   color: #fff;
+  border: none;
 }
+
+.active-note {
+  border: 4px solid #D4D1D1;
+}
+
 /*--------------------*/
 
 .error-msgs {

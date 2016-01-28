@@ -9,6 +9,7 @@ var History = ReactRouter.History;
 var NewUserForm = require('./components/user/newUserForm');
 var NewSessionForm = require('./components/user/newSessionForm');
 var NotesIndex = require('./components/notes/notesIndex');
+var NoteDetail = require("./components/notes/noteDetail");
 
 var FeatherNote = React.createClass({
 
@@ -43,7 +44,9 @@ var FeatherNote = React.createClass({
 var router = (
   <Router>
     <Route path="/" component={FeatherNote} />
-    <Route path="notes" component={NotesIndex} />
+    <Route path="notes" component={NotesIndex}>
+      <Route path="/:id" component={NoteDetail} />
+    </Route>
     <Route path="users/new" component={NewUserForm} />
     <Route path="session/new" component={NewSessionForm} />
   </Router>

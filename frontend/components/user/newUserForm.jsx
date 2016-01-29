@@ -9,13 +9,13 @@ var NewUserForm = React.createClass({
 
           <div className="input-field">
             <label>Username:
-              <input type="text" name="user[username]" autofocus />
+              <input type="text" name="username" autoFocus />
             </label>
           </div>
 
           <div className="input-field">
             <label>Password:
-              <input type="password" name="user[password]" />
+              <input type="password" name="password" />
             </label>
           </div>
 

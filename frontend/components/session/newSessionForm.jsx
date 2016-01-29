@@ -1,8 +1,24 @@
 var React = require('react');
+var SessionsApiUti = require('./../../util/session_api_util');
+var History = require('react-router').History;
 
 var NewSessionForm = React.createClass({
 
-  submit: function() {
+  mixins: [History],
+
+  submit: function(e) {
+    e.preventDefault();
+    var fields = $(e.currentTarget).serializeArray();
+    var credentials = {};
+    fields.forEach(function(field){
+      credentials[field.name] = field.value;
+    });
+
+    //Go to notes page after successful login
+    SessionsApiUti.login(credentials, function(){
+      console.log("entered callback");
+      this.history.pushState(null, "/notes");
+    }.bind(this));
 
   },
 
@@ -14,13 +30,13 @@ var NewSessionForm = React.createClass({
 
           <div className="input-field">
             <label>Username:
-              <input type="text" name="user[username]" autofocus />
+              <input type="text" name="username" autoFocus />
             </label>
           </div>
 
           <div className="input-field">
             <label>Password:
-              <input type="password" name="user[password]" />
+              <input type="password" name="password" />
             </label>
           </div>
 

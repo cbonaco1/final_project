@@ -1,5 +1,6 @@
 var React = require('react');
 var NotesIndex = require('./notes/notesIndex');
+var Header = require('./header');
 
 var App = React.createClass({
   //eventually this will also render the sidebar and other stuff
@@ -8,6 +9,7 @@ var App = React.createClass({
   render: function() {
     return(
       <div>
+        <Header />
         <NotesIndex />
         {this.props.children}
       </div>

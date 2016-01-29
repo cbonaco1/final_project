@@ -153,8 +153,8 @@ header {
   padding-top: 15px;
   color: #848484;
   cursor: pointer;
+  box-sizing: border-box;
 }
-
 
 .user-note:hover {
   background: #2DBE60;
@@ -172,13 +172,29 @@ header {
 
 .note-detail {
   float: left;
-  border: 1px solid blue;
   width: 300px;
   background: #fff;
+  border: 1px solid green;
+}
+
+.note-detail > h2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.note-detail-content {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 15px;
+  border-top: 1px solid #eee;
 }
 
 .note-detail-title {
   color: #2DBE60;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .note-detail-body {

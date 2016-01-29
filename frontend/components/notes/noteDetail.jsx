@@ -41,9 +41,10 @@ var NoteDetail = React.createClass({
   render: function() {
     var note = this.state.note;
     var content;
+    //TODO add date here
     if (note) {
       content =
-        <div>
+        <div className="note-detail-content">
           <h2 className="note-detail-title">{note.title}</h2>
           <p className="note-detail-body">{note.body}</p>
         </div>

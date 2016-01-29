@@ -1,15 +1,25 @@
 var React = require('react');
 var CurrentUserStore = require('./../stores/currentUserStore');
+var SessionsApiUtil = require('./../util/session_api_util');
+
+var History = require('react-router').History;
 
 //Renders info about the logged in user --> "Logged in as:--",
 //and also log in/out button
 var Header = React.createClass({
+
+  mixins: [History],
+
   getInitialState: function() {
     return { currentUser: CurrentUserStore.currentUser() };
   },
 
   componentDidMount: function() {
-    CurrentUserStore.addListener(this._onChange);
+    this.listenerToken = CurrentUserStore.addListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    this.listenerToken.remove();
   },
 
   _onChange: function() {
@@ -17,7 +27,9 @@ var Header = React.createClass({
   },
 
   logout: function() {
-    console.log("Log out!");
+    SessionsApiUtil.logout(function(){
+      this.history.pushState(null, "/session/new");
+    }.bind(this));
   },
 
   render: function() {

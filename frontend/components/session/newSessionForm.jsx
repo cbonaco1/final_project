@@ -1,5 +1,5 @@
 var React = require('react');
-var SessionsApiUti = require('./../../util/session_api_util');
+var SessionsApiUtil = require('./../../util/session_api_util');
 var History = require('react-router').History;
 
 var NewSessionForm = React.createClass({
@@ -15,7 +15,7 @@ var NewSessionForm = React.createClass({
     });
 
     //Go to notes page after successful login
-    SessionsApiUti.login(credentials, function(){
+    SessionsApiUtil.login(credentials, function(){
       console.log("entered callback");
       this.history.pushState(null, "/notes");
     }.bind(this));

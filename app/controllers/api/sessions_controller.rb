@@ -2,15 +2,19 @@ class Api::SessionsController < ApplicationController
   def new
   end
 
+  # used by fetchCurrentUser
   def show
     if current_user
       @user = current_user
-      render "api/users/show" 
+
+      #returns the JSON of the current user
+      render "api/users/show"
     else
       render json: {}
     end
   end
 
+  #used by login
   def create
     @user = User.find_by_credentials(
       params[:username],
@@ -19,7 +23,8 @@ class Api::SessionsController < ApplicationController
 
     if @user
       sign_in_user(@user)
-      #instead of redirect_to api_notes_url
+
+      #returns the JSON of the new user
       render "api/users/show"
     else
       render json: ["Incorrect Username/Password"], status: 401
@@ -27,6 +32,9 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  #used by logout
   def destroy
+    sign_out_user(current_user)
+    render json: {}
   end
 end

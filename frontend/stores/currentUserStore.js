@@ -20,6 +20,11 @@ CurrentUserStore.__onDispatch = function(payload) {
     _currentUser = payload.currentUser;
     CurrentUserStore.__emitChange();
   }
+  else if (payload.actionType === "LOGGED_OUT_USER") {
+    _currentUserHasBeenFetched = false;
+    _currentUser = {};
+    CurrentUserStore.__emitChange();
+  }
 };
 
 CurrentUserStore.currentUserFetched = function () {

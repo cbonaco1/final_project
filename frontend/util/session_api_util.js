@@ -19,13 +19,29 @@ var SessionsApiUti = {
     });
   },
 
+  logout: function(callback) {
+    $.ajax({
+      type: 'DELETE',
+      url: 'api/session',
+      dataType: 'json',
+      success: function(data) {
+        console.log("Successful logout: " + data);
+        CurrentUserActions.receiveLogOut();
+        callback && callback();
+      },
+      error: function(data) {
+        alert("Error in logout");
+      }
+
+    });
+  },
+
   fetchCurrentUser: function(callback) {
     $.ajax({
       type: 'GET',
       url: 'api/session',
       dataType: 'json',
       success: function(data) {
-        debugger
         CurrentUserActions.receiveCurrentUser(data);
         callback && callback();
       },

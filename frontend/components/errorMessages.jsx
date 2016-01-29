@@ -24,11 +24,15 @@ var ErrorMessages = React.createClass({
 
   render: function() {
     var msgs = [];
+    var className = "error-msgs";
+    if (this.state.messages.length === 0) {
+      className += " hide";
+    }
     msgs = this.state.messages.map(function(error, index){
       return <p key={index}>{error}</p>;
     });
     return (
-      <div className="error-msgs">
+      <div className={className}>
         {msgs}
       </div>
     );

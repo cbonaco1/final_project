@@ -2,15 +2,11 @@ var React = require('react');
 var SessionsApiUtil = require('./../../util/session_api_util');
 var History = require('react-router').History;
 var ErrorMessages = require('./../errorMessages');
+var ErrorStore = require('./../../stores/errors');
 
 var NewSessionForm = React.createClass({
 
   mixins: [History],
-
-  //LoginStore.addListener(this.showErrors)
-    //var errors = LoginStore.errors()
-    ////<Errors message=errors/>
-
 
   redirectToNotes: function() {
     this.history.pushState(null, "/notes");

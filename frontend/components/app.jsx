@@ -8,9 +8,11 @@ var App = React.createClass({
   //sine both are side by side and NoteDetail is always present on right
   render: function() {
     return(
-      <div>
-        <Header />
-        <NotesIndex />
+      <div className="content-header">
+        <div className="content-sidebar">
+          <NotesIndex />
+          <Header />
+        </div>
         {this.props.children}
       </div>
     );

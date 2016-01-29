@@ -37,9 +37,9 @@ var Header = React.createClass({
     //if !!_currentUser.id
     if (CurrentUserStore.isLoggedIn()) {
       return(
-        <div>
-          Logged in as: {this.state.currentUser.username}
-          <button className="log-out-button" onClick={this.logout}>LOG OUT</button>
+        <div className="user-header">
+          <p>Logged in as: {this.state.currentUser.username}</p>
+          <button id="log-out-button" className="form-button" onClick={this.logout}>LOG OUT</button>
         </div>
       );
     }
@@ -47,7 +47,7 @@ var Header = React.createClass({
       return (
         <div>
           <p>No one is logged in</p>
-          <a href="#/session/new">Sign In</a>
+          <a className="form-button" href="#/session/new">Sign In</a>
         </div>
       );
     }

@@ -1,0 +1,11 @@
+Today I mainly worked on React auth.
+I referenced the demo done yesterday afternoon, and  was pleased with how it came out.
+With auth working for signing in and signing out, I edited how the
+error messages are displayed, since they are now React components.
+To do this, I created a ErrorMessage component, and an ErrorStore.
+When the login fails, this store is notified, which then tells the
+component to display a message.
+
+I need to work on creating a new user, and logging in under the guest
+account. I made better seed data for the guest account. The seed data acts
+like instructions for a new user.

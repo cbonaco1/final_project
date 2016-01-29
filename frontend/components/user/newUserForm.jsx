@@ -1,4 +1,5 @@
 var React = require('react');
+var ErrorMessages = require('./../errorMessages');
 
 var NewUserForm = React.createClass({
   render: function() {
@@ -22,6 +23,8 @@ var NewUserForm = React.createClass({
           <button className="form-button">Create Account!</button>
 
         </form>
+
+        <ErrorMessages />
 
         <div className="sign-in-msg">
           <p>Already have an account?</p>

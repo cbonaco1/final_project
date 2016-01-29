@@ -1,10 +1,20 @@
 var React = require('react');
 var SessionsApiUtil = require('./../../util/session_api_util');
 var History = require('react-router').History;
+var ErrorMessages = require('./../errorMessages');
 
 var NewSessionForm = React.createClass({
 
   mixins: [History],
+
+  //LoginStore.addListener(this.showErrors)
+    //var errors = LoginStore.errors()
+    ////<Errors message=errors/>
+
+
+  redirectToNotes: function() {
+    this.history.pushState(null, "/notes");
+  },
 
   submit: function(e) {
     e.preventDefault();
@@ -15,14 +25,12 @@ var NewSessionForm = React.createClass({
     });
 
     //Go to notes page after successful login
-    SessionsApiUtil.login(credentials, function(){
-      console.log("entered callback");
-      this.history.pushState(null, "/notes");
-    }.bind(this));
+    SessionsApiUtil.login(credentials, this.redirectToNotes);
 
   },
 
   render: function() {
+
     return(
       <div className="user-form">
         <h2 className="form-header">Sign in</h2>
@@ -42,6 +50,8 @@ var NewSessionForm = React.createClass({
 
           <button className="form-button">Sign In</button>
         </form>
+
+        <ErrorMessages />
 
         <div className="sign-in-msg">
           <p>Dont have an account?</p>

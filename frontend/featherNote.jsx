@@ -48,7 +48,7 @@ var FeatherNote = React.createClass({
 
 var router = (
   <Router>
-    <Route path="/" component={FeatherNote} onEnter={_ensureLoggedIn} />
+    <Route path="/" component={FeatherNote} />
     <Route path="notes" component={App} onEnter={_ensureLoggedIn}>
       <Route path=":id" component={NoteDetail} />
     </Route>
@@ -59,19 +59,18 @@ var router = (
 
 function _ensureLoggedIn(nextState, replace, callback) {
 
-  //note this is an inner function
-  function __redirectIfNotLoggedIn () {
-    if (!CurrentUserStore.isLoggedIn()) {
-      replace({}, "/session/new");
-    }
-    callback();
-  }
-
   if (CurrentUserStore.currentUserFetched()) {
     __redirectIfNotLoggedIn();
   }
   else {
     SessionsApiUtil.fetchCurrentUser(__redirectIfNotLoggedIn);
+  }
+
+  function __redirectIfNotLoggedIn () {
+    if (!CurrentUserStore.isLoggedIn()) {
+      replace({}, "/session/new");
+    }
+    callback();
   }
 };
 

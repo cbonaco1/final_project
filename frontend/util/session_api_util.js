@@ -1,4 +1,5 @@
 var CurrentUserActions = require("./../actions/currentUserActions");
+var ErrorStore = require('./../stores/errors');
 
 var SessionsApiUti = {
   login: function(credentials, callback){
@@ -9,12 +10,12 @@ var SessionsApiUti = {
       data: credentials,
       dataType: 'json',
       success: function(data) {
-        console.log("Logged in!: " + data.username);
+        ErrorStore.clearMessages();
         CurrentUserActions.receiveCurrentUser(data);
         callback && callback();
       },
       error: function(data) {
-        alert("Error in login");
+        CurrentUserActions.badLogin(data);
       }
     });
   },
@@ -25,7 +26,6 @@ var SessionsApiUti = {
       url: 'api/session',
       dataType: 'json',
       success: function(data) {
-        console.log("Successful logout: " + data);
         CurrentUserActions.receiveLogOut();
         callback && callback();
       },

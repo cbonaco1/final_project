@@ -27,6 +27,7 @@ var Header = React.createClass({
   },
 
   logout: function() {
+    //Redirect to login page after sign out
     SessionsApiUtil.logout(function(){
       this.history.pushState(null, "/session/new");
     }.bind(this));

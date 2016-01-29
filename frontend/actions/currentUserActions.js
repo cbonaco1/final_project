@@ -14,6 +14,13 @@ var CurrentUserActions = {
       actionType: "LOGGED_OUT_USER",
       data: {}
     });
+  },
+
+  badLogin: function(messages) {
+    AppDispatcher.dispatch({
+      actionType: "BAD_LOGIN",
+      data: messages
+    });
   }
 
 };

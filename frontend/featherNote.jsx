@@ -18,12 +18,20 @@ var SessionsApiUtil = require('./util/session_api_util');
 
 var FeatherNote = React.createClass({
 
+  mixins: [History],
+
   goToSignUp: function() {
     this.props.history.pushState(null, 'users/new', {});
   },
 
   goToSignIn: function() {
     this.props.history.pushState(null, 'session/new', {});
+  },
+
+  signInAsGuest: function() {
+    SessionsApiUtil.login({username: "guest", password: "guestpassword"}, function() {
+      this.history.pushState(null, "/notes");
+    }.bind(this));
   },
 
   render: function() {
@@ -33,14 +41,20 @@ var FeatherNote = React.createClass({
           <h1>Welcome to FeatherNote!</h1>
           <p>FeatherNote is a note-taking application designed
           to simplify a way for you to organize your notes and
-        simplify your life!</p>
-      <p>FeatherNote is inspired by Evernote and is written using the Rails
-      webframework and React.js</p>
+          simplify your life!</p>
+          <p>FeatherNote is inspired by Evernote and is written using the Rails
+          webframework and React.js</p>
 
-      <button className="form-button" onClick={this.goToSignUp}>Sign Up</button>
-      <button className="form-button" onClick={this.goToSignIn}>Sign In</button>
+          <button className="form-button" onClick={this.goToSignUp}>Sign Up</button>
+          <button className="form-button" onClick={this.goToSignIn}>Sign In</button>
+
+          <div className="sign-in-msg">
+            <p>Not sure if you want to join?</p>
+            <button className="form-button" onClick={this.signInAsGuest}>
+              Demo the app!
+            </button>
+          </div>
         </header>
-        {this.props.children}
       </div>
     );
   }

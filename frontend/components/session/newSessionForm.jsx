@@ -9,6 +9,7 @@ var NewSessionForm = React.createClass({
   mixins: [History],
 
   redirectToNotes: function() {
+    //history is defined in the mixin
     this.history.pushState(null, "/notes");
   },
 

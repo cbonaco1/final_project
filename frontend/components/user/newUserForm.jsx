@@ -1,12 +1,31 @@
 var React = require('react');
 var ErrorMessages = require('./../errorMessages');
+var UserApiAUtil = require('./../../util/user_api_util');
+var History = require('react-router').History;
 
 var NewUserForm = React.createClass({
+
+  mixins: [History],
+
+  addUser: function(e) {
+    e.preventDefault();
+    var fields = $(e.currentTarget).serializeArray();
+    var credentials = {};
+    fields.forEach(function(field){
+      credentials[field.name] = field.value;
+    });
+
+    UserApiAUtil.createUser(credentials, function(user) {
+      this.history.pushState(null, "/notes");
+    }.bind(this));
+
+  },
+
   render: function() {
     return(
       <div className="user-form">
         <h2 className="form-header">Create Account</h2>
-        <form className="new-form" action="<%= users_url %>" method="post">
+        <form className="new-form" onSubmit={this.addUser}>
 
           <div className="input-field">
             <label>Username:

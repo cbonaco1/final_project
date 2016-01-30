@@ -6,7 +6,18 @@ var History = require('react-router').History;
 var NotesIndexItem = React.createClass({
   mixins: [History],
 
+  //called before initial render
+  componentWillMount: function() {
+    if (this.props.active === true) {
+      this.history.pushState(null, "/notes/" + this.props.note.id);
+    }
+  },
+
   showNote: function(e) {
+    this.props.active = true;
+    //this.setState({active: true})
+    //need to trigger a re-render of the item
+
     //Whichever note is selected gets a border and is activenote
     $(".note-list li").removeClass("active-note");
     $(e.currentTarget).addClass("active-note");
@@ -21,8 +32,15 @@ var NotesIndexItem = React.createClass({
   },
 
   render: function() {
+
+    var classes = "user-note";
+
+    if (this.props.active === true) {
+      classes += " active-note";
+    }
+
     return(
-      <li className={"user-note" + this.props.classes} onClick={this.showNote}>
+      <li className={classes} onClick={this.showNote}>
         <div className="user-note-content">
           <h3>{this.props.note.title}</h3>
           <p>{this.props.note.body}</p>

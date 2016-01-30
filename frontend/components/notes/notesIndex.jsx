@@ -11,49 +11,36 @@ var NotesIndex = React.createClass({
 
   getInitialState: function() {
     var allNotes = NoteStore.all();
-    return { notes: allNotes, activeNoteIndex: 0 };
+    return { notes: allNotes };
   },
 
   _onChange: function() {
-    this.setState({ notes: NoteStore.all(), activeNoteIndex: 0 });
-
-    // var index = this.state.activeNoteIndex;
-    // var allNotes = this.state.notes;
-    // this.history.pushState(null, "/notes/" + allNotes[index].id);
+    this.setState({ notes: NoteStore.all() });
   },
 
   componentDidMount: function() {
     this.listenerToken = NoteStore.addListener(this._onChange);
     apiUtil.fetchAllNotes();
-
-
   },
 
   componentWillUnmount: function() {
     this.listenerToken.remove();
   },
 
-  // componentDidUpdate: function() {
-  //   // debugger
-  //   if (this.state.notes.length > 0) {
-  //     var firstNote = this.state.notes[0].toString();
-  //     // this.history.pushState(null, "/notes/" + firstNote.id);
-  //   }
-  // },
-
   render: function() {
 
     var noteList = "";
-    var activeNoteIndex = this.state.activeNoteIndex
 
     if (this.state.notes.length > 0) {
       noteList = this.state.notes.map(function(note, index){
         //add active-note class to the first item in list
         var classes = "";
-        if (index === activeNoteIndex) {
+        var active = false;
+        if (index === 0) {
+          active = true;
           classes = " active-note";
         }
-        return <NoteIndexItem key={note.id} note={note} classes={classes}/>;
+        return <NoteIndexItem key={note.id} note={note} active={active}/>;
       }.bind(this));
     }
 

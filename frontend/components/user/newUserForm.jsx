@@ -32,6 +32,7 @@ var NewUserForm = React.createClass({
     NotebookApiUtils.createNotebook(newNotebook);
 
     //TODO: Display some type of welcome message to the new user
+    //Maybe in NoteDetail header
     //Open up the new note field
   },
 

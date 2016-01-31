@@ -1,0 +1,8 @@
+var UserConstants = {
+  RECEIVE_CURRENT_USER: "RECEIVE_CURRENT_USER",
+  LOGGED_OUT_USER: "LOGGED_OUT_USER",
+  BAD_LOGIN: "BAD_LOGIN",
+  BAD_CREATE_USER: "BAD_CREATE_USER"
+};
+
+module.exports = UserConstants;

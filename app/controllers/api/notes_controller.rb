@@ -10,4 +10,18 @@ class Api::NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
   end
+
+  def create
+    @note = Note.new(note_params)
+    if @note.save
+      render 'api/notes/show'
+    else
+      render json: ["Error creating note"]
+    end
+  end
+
+  private
+  def note_params
+    params.permit(:author_id, :notebook_id, :title, :body)
+  end
 end

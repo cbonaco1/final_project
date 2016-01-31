@@ -10,6 +10,7 @@ var UserApiAUtil = {
       dataType: 'json',
       success: function(data) {
         callback && callback(data);
+        //Dont think I need this since no component needs to be updated/re-rendered
         //UserActions.receiveNewUser(data)
       },
       error: function(data) {

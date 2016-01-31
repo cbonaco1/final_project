@@ -1,6 +1,7 @@
 var React = require('react');
 var ErrorMessages = require('./../errorMessages');
 var UserApiAUtil = require('./../../util/user_api_util');
+var NotebookApiUtils = require('./../../util/notebooks_api_util');
 var History = require('react-router').History;
 
 var NewUserForm = React.createClass({
@@ -16,9 +17,19 @@ var NewUserForm = React.createClass({
     });
 
     UserApiAUtil.createUser(credentials, function(user) {
+      this.setUpUser(user);
       this.history.pushState(null, "/notes");
     }.bind(this));
 
+  },
+
+  setUpUser: function(user) {
+    var newNotebook = {author_id: user.id,
+                      title: "First Notebook",
+                      description: "This is your first notebook"};
+
+    //Create new user notes/notebook
+    NotebookApiUtils.createNotebook(newNotebook);
   },
 
   render: function() {

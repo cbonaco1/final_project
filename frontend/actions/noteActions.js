@@ -14,6 +14,13 @@ var NoteActions = {
       actionType: "NOTE_RECEIVED",
       data: note
     });
+  },
+
+  createNote: function(note) {
+    Dispatcher.dispatch({
+      actionType: "NOTE_CREATED",
+      data: note
+    })
   }
 };
 

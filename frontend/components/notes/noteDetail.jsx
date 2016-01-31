@@ -1,6 +1,6 @@
 var React  = require('react');
 var NoteStore = require('../../stores/note');
-var apiUtil = require('../../util/apiUtil');
+var NotesAPIUtil = require('../../util/notes_api_util');
 
 var NoteDetail = React.createClass({
 
@@ -24,13 +24,13 @@ var NoteDetail = React.createClass({
 
   //note sure why this is not componentDidMount
   componentWillReceiveProps: function(newProps) {
-    apiUtil.fetchSingleNote(newProps.params.id);
+    NotesAPIUtil.fetchSingleNote(newProps.params.id);
   },
 
   componentWillMount: function() {
     // this.history.pushState(null, "/notes/" + this.state.note.id);
     this.listenerToken = NoteStore.addListener(this._changeNote);
-    apiUtil.fetchSingleNote(this.props.params.id);
+    NotesAPIUtil.fetchSingleNote(this.props.params.id);
   },
 
   componentWillUnmount: function() {

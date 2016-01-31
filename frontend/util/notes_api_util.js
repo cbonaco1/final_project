@@ -1,6 +1,6 @@
 var NoteActions = require('../actions/noteActions');
 
-var apiUtil = {
+var NotesAPIUtil = {
   fetchAllNotes: function() {
     $.ajax({
       type: 'GET',
@@ -18,7 +18,7 @@ var apiUtil = {
   fetchSingleNote: function(id) {
     $.ajax({
       type: 'GET',
-      url: 'api/notes/' + id,
+      url: '/api/notes/' + id,
       dataType: 'json',
       success: function(data) {
         NoteActions.receiveSingleNote(data);
@@ -27,7 +27,8 @@ var apiUtil = {
         alert("Error in fetchSingleNote");
       }
     });
-  }
+  },
+
 };
 
-module.exports = apiUtil;
+module.exports = NotesAPIUtil;

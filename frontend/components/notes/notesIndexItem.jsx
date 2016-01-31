@@ -1,5 +1,4 @@
 var React = require('react');
-// var NoteDetail = require('./noteDetail');
 var History = require('react-router').History;
 
 

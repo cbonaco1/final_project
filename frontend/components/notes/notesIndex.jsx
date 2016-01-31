@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var NoteStore = require('../../stores/note');
-var apiUtil = require('../../util/apiUtil');
+var NotesAPIUtil = require('../../util/notes_api_util');
 var NoteIndexItem = require('./notesIndexItem');
 var History = require('react-router').History;
 
@@ -20,7 +20,7 @@ var NotesIndex = React.createClass({
 
   componentDidMount: function() {
     this.listenerToken = NoteStore.addListener(this._onChange);
-    apiUtil.fetchAllNotes();
+    NotesAPIUtil.fetchAllNotes();
   },
 
   componentWillUnmount: function() {

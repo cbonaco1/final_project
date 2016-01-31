@@ -25,6 +25,7 @@ var ErrorMessages = React.createClass({
   render: function() {
     var msgs = [];
     var className = "error-msgs";
+    //hide the component if there are no error messages to display
     if (this.state.messages.length === 0) {
       className += " hide";
     }

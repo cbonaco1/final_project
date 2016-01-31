@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
       sign_in_user(@user)
       render "api/users/new"
     else
-      render json: ["Please fill out form better"]
+      render json: @user.errors.full_messages, status: 400
     end
   end
 

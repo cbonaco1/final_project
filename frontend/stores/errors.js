@@ -20,6 +20,7 @@ ErrorStore.clearMessages = function() {
 ErrorStore.__onDispatch = function(payload) {
   switch (payload.actionType) {
     case "BAD_LOGIN":
+    case "BAD_CREATE_USER":
       ErrorStore.setMessages(payload.data);
       ErrorStore.__emitChange();
       break;

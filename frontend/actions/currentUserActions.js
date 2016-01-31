@@ -21,6 +21,13 @@ var CurrentUserActions = {
       actionType: "BAD_LOGIN",
       data: messages
     });
+  },
+
+  badCreateUser: function(messages) {
+    AppDispatcher.dispatch({
+      actionType: "BAD_CREATE_USER",
+      data: messages
+    })
   }
 
 };

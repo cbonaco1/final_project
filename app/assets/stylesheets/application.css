@@ -120,12 +120,11 @@ header {
 /*----------------*/
 
 .content-sidebar {
-  width: 400px;
+  width: 350px;
   float: left;
 }
 
 .user-header {
-  margin-left: 50px;
   text-align: center;
   padding: 10px;
   background: #fff;
@@ -149,11 +148,9 @@ header {
 
 /*---List of notes ---*/
 .note-container {
-  /*float: left;*/
-  width: 350px;
   border: 1px solid green;
   background: #fff;
-  margin-left: 50px;
+  /*margin-left: 50px;*/
   box-sizing: border-box;
   padding-bottom: 10px;
 }
@@ -206,7 +203,7 @@ header {
 
 .note-detail {
   float: left;
-  width: 300px;
+  width: 500px;
   background: #fff;
   border: 1px solid green;
 }
@@ -235,6 +232,18 @@ header {
   color: #000;
 }
 
+/*--------------------*/
+
+/*------Sidebar-------*/
+.sidebar-component {
+  border-left: 1px solid green;
+  float: left;
+  padding: 10px;
+}
+
+.sidebar-component-list li {
+  padding-bottom: 10px;
+}
 /*--------------------*/
 
 .error-msgs {

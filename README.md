@@ -1,4 +1,4 @@
-== README
+# README
 
 Welcome to the FeatherNote application. FeatherNote is a web-based
 application inspired by EverNote. This application is built using

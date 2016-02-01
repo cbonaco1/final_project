@@ -1,6 +1,7 @@
 var React  = require('react');
 var NoteStore = require('../../stores/note');
 var NotesAPIUtil = require('../../util/notes_api_util');
+var ReactQuill = require('react-quill');
 
 var NoteDetail = React.createClass({
 
@@ -45,8 +46,10 @@ var NoteDetail = React.createClass({
     if (note) {
       content =
         <div className="note-detail-content">
+          <h3>{note.notebook.title}</h3>
           <h2 className="note-detail-title">{note.title}</h2>
           <p className="note-detail-body">{note.body}</p>
+          <ReactQuill className="react-quill-editor" value={note.body} theme="snow"/>
         </div>
     }
 

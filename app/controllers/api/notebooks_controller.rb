@@ -8,6 +8,10 @@ class Api::NotebooksController < ApplicationController
     end
   end
 
+  def index
+    #get notebooks where author_id == current_user.id
+  end
+
 
   private
   def notebook_params

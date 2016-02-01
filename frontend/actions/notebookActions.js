@@ -7,6 +7,13 @@ var NotebookActions = {
       actionType: NotebookConstants.NOTEBOOK_CREATED,
       data: notebook
     });
+  },
+
+  receiveNotebooks: function(notebooks) {
+    Dispatcher.dispatch({
+      actionType: NotebookConstants.NOTEBOOKS_RECEIVED,
+      data: notebooks
+    });
   }
 };
 

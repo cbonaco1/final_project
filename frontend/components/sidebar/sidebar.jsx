@@ -1,4 +1,5 @@
 var React = require('react');
+var NotebookIndex = require('./../notebooks/notebookIndex');
 
 var Sidebar = React.createClass({
 
@@ -10,6 +11,7 @@ var Sidebar = React.createClass({
     //Display list of users notebooks
     //When user clicks on a notebook,
     //display all notes just for that notebook
+    <NotebookIndex />
   },
 
   render: function() {
@@ -19,7 +21,9 @@ var Sidebar = React.createClass({
           <li onClick={this.showNotes}>
             Notes
           </li>
-          <li>Notebooks</li>
+          <li>
+            <i class="fa fa-book fa-lg"></i>
+          </li>
           <li>Tags</li>
         </ul>
       </div>

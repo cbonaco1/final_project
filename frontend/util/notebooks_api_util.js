@@ -16,6 +16,22 @@ var NotebookApiUtils = {
         alert("Error in createNotebook");
       }
     });
+  },
+
+  fetchCurrentUserNotebooks: function(callback) {
+    $.ajax({
+      type: 'GET',
+      url: '/api/notebooks',
+      dataType: 'json',
+      success: function(data) {
+        //Make controller get the current_user notebooks
+        NotebookActions.receiveNotebooks(data);
+        callback && callback(data);
+      },
+      error: function(data) {
+        alert("Error in fetchUserNotebooks");
+      }
+    });
   }
 };
 

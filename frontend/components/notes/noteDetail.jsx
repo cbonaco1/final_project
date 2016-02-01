@@ -43,6 +43,7 @@ var NoteDetail = React.createClass({
     var note = this.state.note;
     var content;
     //TODO add date here
+    //note object doesnt have notebook here
     if (note) {
       content =
         <div className="note-detail-content">

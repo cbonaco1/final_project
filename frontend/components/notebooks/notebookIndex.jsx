@@ -1,6 +1,7 @@
 var React = require('react');
 var NotebookStore = require('./../../stores/notebook');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
+var NotebookIndexItem = require('./notebookIndexItem');
 
 var NotebookIndex = React.createClass({
 
@@ -12,12 +13,13 @@ var NotebookIndex = React.createClass({
     this.listenerToken = NotebookStore.addListener(this._onChange);
   },
 
+  componentWillUnmount: function() {
+    this.listenerToken.remove();
+  },
+
   _onChange: function() {
     this.setState({ notebooks: NotebookStore.all(), show: true });
   },
-
-  //props - show(true/false)
-
 
   render: function() {
     var notebooks = "";
@@ -28,14 +30,15 @@ var NotebookIndex = React.createClass({
 
     if (this.state.notebooks.length > 0) {
       notebooks = this.state.notebooks.map(function(notebook){
-        return <p>{notebook.title}</p>;
+        return <NotebookIndexItem key={notebook.id} notebook={notebook} />;
       }.bind(this));
     }
 
-    //onClick of NotebookIndexItem, display Notes from that notebook
     return (
       <div className={classes}>
-        {notebooks}
+        <ul className="notebook-list">
+          {notebooks}
+        </ul>
       </div>
     );
   }

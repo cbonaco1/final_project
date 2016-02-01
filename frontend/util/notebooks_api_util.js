@@ -24,7 +24,7 @@ var NotebookApiUtils = {
       url: '/api/notebooks',
       dataType: 'json',
       success: function(data) {
-        //Make controller get the current_user notebooks
+        //Controller gets the current_user notebooks
         NotebookActions.receiveNotebooks(data);
         callback && callback(data);
       },

@@ -245,6 +245,26 @@ header {
 .sidebar-component-list li {
   padding-bottom: 10px;
 }
+
+.sidebar-icon {
+  border-radius: 50%;
+  padding: 10px 8px;
+}
+
+.sidebar-icon:hover {
+  background: #2DBE60;
+}
+
+.sidebar-icons {
+  color: #2DBE60;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.sidebar-icons:hover {
+  color: #fff;
+}
+
 /*--------------------*/
 
 .error-msgs {

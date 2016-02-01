@@ -9,6 +9,7 @@ class Api::NotebooksController < ApplicationController
   end
 
   def index
+    @notebooks = Notebook.where(author_id: current_user.id)
     #get notebooks where author_id == current_user.id
   end
 

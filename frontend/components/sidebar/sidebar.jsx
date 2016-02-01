@@ -1,11 +1,14 @@
 var React = require('react');
 var NotebookIndex = require('./../notebooks/notebookIndex');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
+var NoteApiUtil = require('./../../util/notes_api_util');
 
 var Sidebar = React.createClass({
 
   showNotes: function() {
     //Show ALL notes, ordered by date
+    NoteApiUtil.fetchAllNotes();
+    //hide
   },
 
   showNotebooks: function() {

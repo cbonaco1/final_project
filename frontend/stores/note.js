@@ -32,7 +32,6 @@ NoteStore.addNote = function(note) {
 
 NoteStore.find = function(noteId) {
   var id = parseInt(noteId);
-  //this is coming back nothing - note is not in store
   return _notes[id];
 };
 

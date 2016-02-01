@@ -6,7 +6,9 @@ var NotesIndexItem = React.createClass({
   mixins: [History],
 
   //called before initial render
+  //the component may have already been rendered, so this is not being called again
   componentWillMount: function() {
+    // console.log("Enter will mount: " + this.props.note.id);
     if (this.props.active === true) {
       this.history.pushState(null, "/notes/" + this.props.note.id);
     }
@@ -18,8 +20,8 @@ var NotesIndexItem = React.createClass({
     //need to trigger a re-render of the item
 
     //Whichever note is selected gets a border and is activenote
-    $(".note-list li").removeClass("active-note");
-    $(e.currentTarget).addClass("active-note");
+    // $(".note-list li").removeClass("active-note");
+    // $(e.currentTarget).addClass("active-note");
     //Toggle the NoteDetail to be this Note
 
     this.history.pushState(null, "/notes/" + this.props.note.id);
@@ -36,6 +38,7 @@ var NotesIndexItem = React.createClass({
 
     if (this.props.active === true) {
       classes += " active-note";
+      // this.history.pushState(null, "/notes/" + this.props.note.id);
     }
 
     return(

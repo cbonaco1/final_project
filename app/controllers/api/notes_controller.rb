@@ -4,7 +4,6 @@ class Api::NotesController < ApplicationController
   def index
     #Note: only get the current user's notes
     @notes = Note.where(author_id: current_user.id).order(updated_at: :asc)
-    # byebug
   end
 
   def show

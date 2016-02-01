@@ -40,6 +40,7 @@ note2 = Note.create!(author_id: user1.id, title:"Reminder", body:"Take out the t
 note2a = Note.create!(author_id: user1.id, title:"App Academy Project", body:"Make a sweet application", notebook_id: cb_notebook.id)
 note2b = Note.create!(author_id: user1.id, body:"Unititled note", notebook_id: cb_notebook.id)
 note2c = Note.create!(author_id: user1.id, title:"AA Note", body:"Keep working on this project", notebook_id: cb_notebook2.id)
+note2d = Note.create!(author_id: user1.id, body:"Fix Bug!!", notebook_id: cb_notebook2.id)
 
 note3 = Note.create!(author_id: user2.id, title:"Yoda's Note", body:"A note by Yoda", notebook_id: yoda_notebook.id)
 note3a = Note.create!(author_id: user2.id, body:"Do or do not, there is no try", notebook_id: yoda_notebook.id)

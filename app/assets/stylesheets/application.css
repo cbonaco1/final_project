@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require quill.snow
  */
 
 html, h2, h3, body, ul, p, a {

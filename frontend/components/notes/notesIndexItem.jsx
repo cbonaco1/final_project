@@ -6,7 +6,6 @@ var NotesIndexItem = React.createClass({
   mixins: [History],
 
   //called before initial render
-  //the component may have already been rendered, so this is not being called again
   componentWillMount: function() {
     // console.log("Enter will mount: " + this.props.note.id);
     if (this.props.active === true) {
@@ -35,6 +34,8 @@ var NotesIndexItem = React.createClass({
   render: function() {
 
     var classes = "user-note";
+
+
 
     if (this.props.active === true) {
       classes += " active-note";

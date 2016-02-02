@@ -22,13 +22,22 @@ var NoteDetail = React.createClass({
   },
 
   _changeNote: function() {
-    this.setState({note: this.getStateFromStore() });
+    var newNote = this.getStateFromStore();
+    _editor.setText(newNote.body);
+    this.setState({note: newNote });
+  },
+
+  updateNote: function() {
+    this.state.note.body = _editor.getText();
+    NotesAPIUtil.updateNote(this.state.note);
   },
 
   //invoked once, after initial rendering
   componentDidMount: function() {
     _editor = new Quill("#note-detail-content", {theme:'snow'});
     _editor.addModule('toolbar', { container: '#toolbar'});
+
+
   },
 
   //note sure why this is not componentDidMount
@@ -49,15 +58,11 @@ var NoteDetail = React.createClass({
   //this.props.params.id will contain the message id
   render: function() {
     var note = this.state.note;
-    var content;
     //TODO add date here
     //TODO Notebook title needs to be a dropdown of all notebooks,
     //in order to allow user to change the notebook for a note
 
-    if (note) {
-      _editor.setText(this.state.note.body);
-    }
-
+    //Include dropdown for Notebook here
     return(
       <div className="note-detail">
         <h2>These are the note details</h2>
@@ -81,6 +86,13 @@ var NoteDetail = React.createClass({
             <option value="rgb(255, 0, 255)"></option>
             <option value="rgb(255, 255, 0)"></option>
           </select>
+
+          <select className="notebook-dropdown">
+            <option value="firstNotebook">First Notebook</option>
+            <option value="secondNotebook">Second Notebook</option>
+          </select>
+
+          <i id="editor-save-icon" className="fa fa-floppy-o sidebar-icon" onClick={this.updateNote}></i>
         </div>
         <div id="note-detail-content"></div>
       </div>

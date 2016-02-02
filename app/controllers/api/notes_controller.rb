@@ -3,7 +3,7 @@ class Api::NotesController < ApplicationController
 
   def index
     #Note: only get the current user's notes
-    @notes = Note.where(author_id: current_user.id).order(updated_at: :asc)
+    @notes = Note.where(author_id: current_user.id).order(updated_at: :desc)
   end
 
   def show
@@ -16,6 +16,15 @@ class Api::NotesController < ApplicationController
       render 'api/notes/show'
     else
       render json: ["Error creating note"]
+    end
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    if @note.update!(note_params)
+      render 'api/notes/show'
+    else
+      render json: ["Error updating note"]
     end
   end
 

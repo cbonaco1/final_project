@@ -233,6 +233,16 @@ header {
 .note-detail-body {
   color: #000;
 }
+/*--------------------*/
+
+/*------Toolbar-------*/
+#toolbar {
+  border: 1px solid #ABA9A9;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0 10px;
+  background: #d4d1d1;
+}
 
 /*--------------------*/
 
@@ -250,6 +260,7 @@ header {
 .sidebar-icon {
   border-radius: 50%;
   padding: 10px 8px;
+  cursor: pointer;
 }
 
 .sidebar-icon:hover {

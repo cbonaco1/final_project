@@ -30,6 +30,10 @@ NoteStore.addNote = function(note) {
   _notesArr.push(note);
 };
 
+NoteStore.updateNote = function(updatedNote) {
+  _notes[updatedNote.id] = updatedNote;
+};
+
 NoteStore.find = function(noteId) {
   var id = parseInt(noteId);
   return _notes[id];
@@ -51,6 +55,9 @@ NoteStore.__onDispatch = function(payload) {
       break;
    case "NOTE_CREATED":
       NoteStore.addNote(payload.data);
+      NoteStore.__emitChange();
+   case "NOTE_UPDATED":
+      NoteStore.updateNote(payload.data);
       NoteStore.__emitChange();
     default:
 

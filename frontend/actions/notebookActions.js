@@ -14,7 +14,7 @@ var NotebookActions = {
       actionType: NotebookConstants.NOTEBOOKS_RECEIVED,
       data: notebooks
     });
-  }
+  },
 };
 
 module.exports = NotebookActions;

@@ -22,6 +22,13 @@ var NoteActions = {
       actionType: NoteConstants.NOTE_CREATED,
       data: note
     })
+  },
+
+  updatedNote: function(note) {
+    Dispatcher.dispatch({
+      actionType: NoteConstants.NOTE_UPDATED,
+      data: note
+    })
   }
 };
 

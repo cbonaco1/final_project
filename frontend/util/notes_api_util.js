@@ -29,6 +29,21 @@ var NotesAPIUtil = {
     });
   },
 
+  addNote: function(note, callback) {
+    $.ajax({
+      type: 'POST',
+      url: '/api/notes',
+      dataType: 'json',
+      data: note,
+      success: function(data) {
+        callback && callback();
+      },
+      error: function(data) {
+        alert("Error in addNote");
+      }
+    })
+  },
+
   updateNote: function(note) {
     $.ajax({
       type: 'PATCH',

@@ -218,7 +218,7 @@ header {
 .note-form {
   margin: 40px auto;
   width: 50%;
-  border: 1px solid blue;
+  border: 1px solid #eee;
   background: #fff;
   border-radius: 8px;
   padding: 20px;

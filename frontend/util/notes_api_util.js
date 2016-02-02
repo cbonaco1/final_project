@@ -36,12 +36,30 @@ var NotesAPIUtil = {
       dataType: 'json',
       data: note,
       success: function(data) {
+        //udate NoteActions
         callback && callback();
       },
       error: function(data) {
         alert("Error in addNote");
       }
     })
+  },
+
+  deleteNote: function(note, callback) {
+    $.ajax({
+      type: 'DELETE',
+      url: '/api/notes/' + note.id,
+      dataType: 'json',
+      data: note,
+      success: function(data) {
+        debugger
+        NoteActions.deletedNote(data);
+        callback && callback();
+      },
+      error: function(data) {
+        alert("Error in deleteNote");
+      }
+    });
   },
 
   updateNote: function(note) {

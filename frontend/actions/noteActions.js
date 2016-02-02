@@ -29,6 +29,13 @@ var NoteActions = {
       actionType: NoteConstants.NOTE_UPDATED,
       data: note
     })
+  },
+
+  deletedNote: function(notes) {
+    Dispatcher.dispatch({
+      actionType: NoteConstants.NOTE_DELETED,
+      data: notes
+    })
   }
 };
 

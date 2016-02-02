@@ -1,4 +1,5 @@
 var React = require('react');
+var NotesAPIUtil = require('./../../util/notes_api_util');
 var History = require('react-router').History;
 
 
@@ -10,7 +11,6 @@ var NotesIndexItem = React.createClass({
   componentWillMount: function() {
     // console.log("Enter will mount: " + this.props.note.id);
     if (this.props.active === true) {
-      console.log("The active note is: " + this.props.note.body);
       this.history.pushState(null, "/notes/" + this.props.note.id);
     }
   },
@@ -30,6 +30,10 @@ var NotesIndexItem = React.createClass({
     this.history.pushState(null, "/notes/" + this.props.note.id);
   },
 
+  deleteNote: function() {
+    NotesAPIUtil.deleteNote(this.props.note);
+  },
+
   formatDate: function(dateIn) {
     var date = new Date(dateIn);
     return (date.getMonth() + 1).toString() + "/" + date.getDate().toString();
@@ -47,7 +51,10 @@ var NotesIndexItem = React.createClass({
     return(
       <li className={classes} onClick={this.showNote}>
         <div className="user-note-content">
-          <h3>{this.props.note.title}</h3>
+          <div className="note-content-header group">
+            <h3 className="note-title">{this.props.note.title}</h3>
+            <i className="fa fa-2x fa-trash note-delete-icon" onClick={this.deleteNote}></i>
+          </div>
           <p>{this.props.note.body}</p>
           <p>{this.formatDate(this.props.note.updated_at)}</p>
         </div>

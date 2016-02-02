@@ -24,6 +24,7 @@ NoteStore.resetNotes = function(newNotes){
   for (var i = 0; i < newNotes.length; i++) {
     _notes[newNotes[i].id] = newNotes[i];
   }
+  debugger
 };
 
 NoteStore.addNote = function(note) {
@@ -59,6 +60,9 @@ NoteStore.__onDispatch = function(payload) {
    case "NOTE_UPDATED":
       NoteStore.updateNote(payload.data);
       NoteStore.__emitChange();
+  case "NOTE_DELETED":
+     NoteStore.resetNotes(payload.data);
+     NoteStore.__emitChange();
     default:
 
   }

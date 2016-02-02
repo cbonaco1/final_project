@@ -44,7 +44,7 @@ var Sidebar = React.createClass({
       <div className="sidebar-component">
         <ul className="sidebar-component-list">
           <li className="sidebar-icons" onClick={this.addNote}>
-            <i className="fa fa-plus-circle fa-lg sidebar-icon"></i>
+            <i className="fa fa-plus-circle fa-2x sidebar-icon"></i>
           </li>
           <li className="sidebar-icons" onClick={this.showNotes}>
             <i className="fa fa-file fa-lg sidebar-icon"></i>

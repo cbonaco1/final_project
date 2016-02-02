@@ -201,6 +201,39 @@ header {
 
 /*--------------------*/
 
+/*---NoteForm Modal--*/
+
+.note-form-outline {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+.note-form {
+  margin: 40px auto;
+  width: 50%;
+  border: 1px solid blue;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.cancel-note-button {
+  float:left;
+}
+
+.add-note-button {
+  float: right;
+}
+
+/*--------------------*/
+
 /*-----NoteDetails-----*/
 
 .note-detail {
@@ -253,7 +286,7 @@ header {
 /*--------------------*/
 
 /*------Toolbar-------*/
-#toolbar {
+.toolbar {
   border: 1px solid #ABA9A9;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -262,7 +295,7 @@ header {
   background: #d4d1d1;
 }
 
-#toolbar * {
+.toolbar * {
   margin-right: 15px;
 }
 

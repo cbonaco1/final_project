@@ -2,6 +2,7 @@ var React  = require('react');
 var NoteStore = require('../../stores/note');
 var NotesAPIUtil = require('../../util/notes_api_util');
 var NotebookStore = require('./../../stores/notebook');
+var Toolbar = require('./../toolbar');
 
 var _editor;
 
@@ -46,7 +47,7 @@ var NoteDetail = React.createClass({
   //invoked once, after initial rendering
   componentDidMount: function() {
     _editor = new Quill("#note-detail-content", {theme:'snow'});
-    _editor.addModule('toolbar', { container: '#toolbar'});
+    _editor.addModule('toolbar', { container: '.toolbar'});
     _editor.on('text-change', function(delta, source){
       //only set state if user made change to text (not API)
       if (source === 'user') {
@@ -100,41 +101,17 @@ var NoteDetail = React.createClass({
     //TODO Make Toolbar React component containing these items
     //in order to allow user to change the notebook for a note
     //pass the editor as a prop:
-    // <Toolbar editor={editor} />
 
-    //Include dropdown for Notebook here
     return(
       <div className="note-detail">
         <input type="text" value={title} className="note-title-field" onChange={this.updateNoteTitle}/>
-        <div id="toolbar">
-          <div className="ql-format-group">
-            <button className="ql-bold ql-format-button"></button>
-            <button className="ql-italic ql-format-button"></button>
-            <button className="ql-underline ql-format-button"></button>
-          </div>
-          <select className="ql-size">
-            <option value="10px">Small</option>
-            <option value="13px">Normal</option>
-            <option value="18px">Large</option>
-            <option value="32px">Huge</option>
-          </select>
-          <select title="Text Color" className="ql-color">
-            <option value="rgb(255, 255, 255)"></option>
-            <option value="rgb(0, 0, 0)"></option>
-            <option value="rgb(255, 0, 0)"></option>
-            <option value="rgb(0, 0, 255)"></option>
-            <option value="rgb(0, 255, 0)"></option>
-            <option value="rgb(0, 128, 128)"></option>
-            <option value="rgb(255, 0, 255)"></option>
-            <option value="rgb(255, 255, 0)"></option>
-          </select>
 
-          <select className="notebook-dropdown" value={selectedNotebook} onChange={this.updateNotebook}>
-            {notebookDropdownOptions}
-          </select>
-
-          <i id="editor-save-icon" className="fa fa-floppy-o sidebar-icon" onClick={this.updateNote}></i>
-        </div>
+        <Toolbar editor={_editor}
+                notebooks={notebookDropdownOptions}
+                selectedNotebook={selectedNotebook}
+                notebookChange={this.updateNotebook}
+                updateNote={this.updateNote}
+        />
         <div id="note-detail-content"></div>
       </div>
     );

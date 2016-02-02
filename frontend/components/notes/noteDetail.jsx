@@ -105,7 +105,7 @@ var NoteDetail = React.createClass({
     //Include dropdown for Notebook here
     return(
       <div className="note-detail">
-        <input type="text" value={title} onChange={this.updateNoteTitle}/>
+        <input type="text" value={title} className="note-title-field" onChange={this.updateNoteTitle}/>
         <div id="toolbar">
           <div className="ql-format-group">
             <button className="ql-bold ql-format-button"></button>

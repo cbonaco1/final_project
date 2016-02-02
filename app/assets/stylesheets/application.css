@@ -238,6 +238,18 @@ header {
 .note-detail-body {
   color: #000;
 }
+
+.note-title-field {
+  border: 0;
+  border-bottom: 1px solid #eee;
+  width: 665px;
+  margin: 15px;
+  font-size: 24px;
+}
+
+.note-title-field:focus {
+  outline: none;
+}
 /*--------------------*/
 
 /*------Toolbar-------*/

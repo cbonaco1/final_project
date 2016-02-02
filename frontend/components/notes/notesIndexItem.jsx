@@ -23,6 +23,8 @@ var NotesIndexItem = React.createClass({
     // $(e.currentTarget).addClass("active-note");
     //Toggle the NoteDetail to be this Note
 
+    // console.log(this.props.note);
+
     this.history.pushState(null, "/notes/" + this.props.note.id);
   },
 

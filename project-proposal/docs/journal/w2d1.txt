@@ -1,0 +1,29 @@
+Today I added font-awesome to my project in order to use the widgets
+on the sidebar component. The icons available were not exact matches
+of Evernote, but after an earlier issue, I was glad to be able to use the icons.
+With the icons added, I implemented the NotebookIndex and NotebookIndexItem
+components. These list all of the logged in user's Notebooks. When the user
+clicks on the Notebook icon, a list of all their notebooks, along with the
+number of notes for each notebook are displayed. Clicking on a Notebook
+filters the NotesIndex to display just the Notes from the selected Notebook.
+The user can then click on the Notes icon and display all notes, regardless of
+Notebook.
+
+In general, this works. The notes are displayed for each notebook, and the user
+can click on any of the notes in the new list to display the Note details.
+The areas I need to improve here are the NoteDetail component, and the order
+in which the NoteIndexItems are displayed when the user filters them by
+notebook. When the user clicks between Notebooks, the details of the first note
+in each notebook is selected. When the user clicks on a Notebook with the
+list of all Notes visible, the details of the first note are not displayed.
+I think this is an issue in the store.
+
+Today I also began implementing CRUD operations for Note objects, specifically
+update. The CRUD operations for the Notes are facilitated through the text editor.
+I imported the Quill JS library in order to accomplish this. There is a react-quil
+library; however I felt the documentation for Quill JS was easier to follow. I
+implemented the update operation on the Note body. I need to add the Note title
+to the text of Quill editor so I can distinguish between Note title and body.
+
+Tomorrow I want to finish CRUD operations for Notes, Notebooks, and start
+working on Tags.

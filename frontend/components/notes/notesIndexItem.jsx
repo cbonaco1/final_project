@@ -6,9 +6,11 @@ var NotesIndexItem = React.createClass({
   mixins: [History],
 
   //called before initial render
+  //When the page is loaded, this renders the NoteDetails of the first note
   componentWillMount: function() {
     // console.log("Enter will mount: " + this.props.note.id);
     if (this.props.active === true) {
+      console.log("The active note is: " + this.props.note.body);
       this.history.pushState(null, "/notes/" + this.props.note.id);
     }
   },
@@ -23,7 +25,7 @@ var NotesIndexItem = React.createClass({
     // $(e.currentTarget).addClass("active-note");
     //Toggle the NoteDetail to be this Note
 
-    // console.log(this.props.note);
+    console.log(this.props.note);
 
     this.history.pushState(null, "/notes/" + this.props.note.id);
   },
@@ -34,11 +36,9 @@ var NotesIndexItem = React.createClass({
   },
 
   render: function() {
+    // console.log("Enter index item render");
 
     var classes = "user-note";
-
-
-
     if (this.props.active === true) {
       classes += " active-note";
       // this.history.pushState(null, "/notes/" + this.props.note.id);

@@ -36,10 +36,10 @@ var NoteDetail = React.createClass({
   componentDidMount: function() {
     _editor = new Quill("#note-detail-content", {theme:'snow'});
     _editor.addModule('toolbar', { container: '#toolbar'});
-    _editor.setText(this.state.note.body);
+    console.log("Editor ");
   },
 
-  //note sure why this is not componentDidMount
+  //called when there are new props
   componentWillReceiveProps: function(newProps) {
     NotesAPIUtil.fetchSingleNote(newProps.params.id);
   },
@@ -58,8 +58,11 @@ var NoteDetail = React.createClass({
   //this.props.params.id will contain the message id
   render: function() {
     var note = this.state.note;
-
-    debugger
+    if (note) {
+      if (_editor) {
+        _editor.setText(note.body);
+      }
+    }
 
     //TODO add date here
     //TODO Notebook title needs to be a dropdown of all notebooks,

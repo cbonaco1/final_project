@@ -18,6 +18,7 @@ var NotesIndex = React.createClass({
     this.setState({ notes: NoteStore.all() });
   },
 
+  //invoked only once, after the initial rendering
   componentDidMount: function() {
     this.listenerToken = NoteStore.addListener(this._onChange);
     NotesAPIUtil.fetchAllNotes();

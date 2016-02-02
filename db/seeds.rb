@@ -26,6 +26,7 @@ Notebook.destroy_all
 guest_notebook = Notebook.create!(author_id: guest_user.id, title:"First Notebook")
 cb_notebook = Notebook.create!(author_id: user1.id, title:"CB First Notebook")
 cb_notebook2 = Notebook.create!(author_id: user1.id, title:"CB App Academy Notebook")
+cb_notebook3 = Notebook.create!(author_id: user1.id, title:"Sample CB Notebook")
 yoda_notebook = Notebook.create!(author_id: user2.id, title: "Yoda's Notebook", description: "Notes from Jedi training")
 john_notebook = Notebook.create!(author_id: user3.id)
 

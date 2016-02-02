@@ -18,6 +18,11 @@ NotebookStore.add = function(notebook) {
   _notebooks.push(notebook);
 };
 
+NotebookStore.find = function(notebookId){
+  var id = parseInt(notebookId);
+  return Object.assign({}, _notebooks[id]);
+};
+
 NotebookStore.__onDispatch = function(payload) {
   switch (payload.actionType) {
     case NotebookConstants.NOTEBOOK_CREATED:

@@ -1,6 +1,7 @@
 var React  = require('react');
 var NoteStore = require('../../stores/note');
 var NotesAPIUtil = require('../../util/notes_api_util');
+var NotebookStore = require('./../../stores/notebook');
 
 var _editor;
 
@@ -8,17 +9,11 @@ var NoteDetail = React.createClass({
 
   //state will be the note object
   getInitialState: function() {
-    //do something here to get the first one to display
-    // return { note: this.getFirstNoteFromStore() };
     return { note: this.getStateFromStore() };
   },
 
   getStateFromStore: function() {
     return NoteStore.find(this.props.params.id);
-  },
-
-  getFirstNoteFromStore: function() {
-    return NoteStore.firstNote();
   },
 
   //listener method on NoteStore
@@ -28,15 +23,38 @@ var NoteDetail = React.createClass({
   },
 
   updateNote: function() {
-    this.state.note.body = _editor.getText();
     NotesAPIUtil.updateNote(this.state.note);
+  },
+
+  updateNotebook: function(e) {
+    //Get the index of the selected notebook from the dropdown
+    var notebookIndex = e.target.selectedIndex;
+    var newNotebook = this.state.note.author.notebooks[notebookIndex];
+    var currentNote = this.state.note;
+    currentNote["notebook"] = newNotebook;
+    currentNote["notebook_id"] = newNotebook.id;
+    this.setState(currentNote);
+  },
+
+  updateNoteTitle: function(e) {
+    var newTitle = e.target.value;
+    var currentNote = this.state.note;
+    currentNote["title"] = newTitle;
+    this.setState(currentNote);
   },
 
   //invoked once, after initial rendering
   componentDidMount: function() {
     _editor = new Quill("#note-detail-content", {theme:'snow'});
     _editor.addModule('toolbar', { container: '#toolbar'});
-    console.log("Editor ");
+    _editor.on('text-change', function(delta, source){
+      //only set state if user made change to text (not API)
+      if (source === 'user') {
+        var currentNote = this.state.note;
+        currentNote["body"] = _editor.getText();
+        this.setState(currentNote);
+      }
+    }.bind(this));
   },
 
   //called when there are new props
@@ -57,11 +75,23 @@ var NoteDetail = React.createClass({
 
   //this.props.params.id will contain the message id
   render: function() {
+
     var note = this.state.note;
-    if (note) {
+    var selectedNotebook;
+    var notebookDropdownOptions = [];
+    var title = "";
+
+    if (note.id) {
       if (_editor) {
         _editor.setText(note.body);
       }
+      notebookDropdownOptions = note.author.notebooks.map(function(notebook, index){
+        return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
+      }.bind(this));
+
+      selectedNotebook = note.notebook.id;
+
+      title = note.title;
     }
 
     //TODO add date here
@@ -72,18 +102,10 @@ var NoteDetail = React.createClass({
     //pass the editor as a prop:
     // <Toolbar editor={editor} />
 
-    // if (note) {
-    //   debugger
-    //   notebookDropdownOptions = note.author.notebooks.map(function(notebook){
-    //
-    //     return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
-    //   }.bind(this));
-    // }
-
     //Include dropdown for Notebook here
     return(
       <div className="note-detail">
-        <h2>These are the note details</h2>
+        <input type="text" value={title} onChange={this.updateNoteTitle}/>
         <div id="toolbar">
           <div className="ql-format-group">
             <button className="ql-bold ql-format-button"></button>
@@ -107,9 +129,8 @@ var NoteDetail = React.createClass({
             <option value="rgb(255, 255, 0)"></option>
           </select>
 
-          <select className="notebook-dropdown">
-            <option>One</option>
-            <option>Two</option>
+          <select className="notebook-dropdown" value={selectedNotebook} onChange={this.updateNotebook}>
+            {notebookDropdownOptions}
           </select>
 
           <i id="editor-save-icon" className="fa fa-floppy-o sidebar-icon" onClick={this.updateNote}></i>

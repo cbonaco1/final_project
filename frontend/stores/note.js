@@ -14,7 +14,7 @@ NoteStore.all = function() {
     allNotes.push(_notes[id]);
   });
 
-  return _notesArr;
+  return allNotes;
 };
 
 NoteStore.resetNotes = function(newNotes){
@@ -36,7 +36,7 @@ NoteStore.updateNote = function(updatedNote) {
 
 NoteStore.find = function(noteId) {
   var id = parseInt(noteId);
-  return _notes[id];
+  return Object.assign({}, _notes[id]);
 };
 
 NoteStore.firstNote = function() {

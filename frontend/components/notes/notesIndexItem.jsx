@@ -6,6 +6,10 @@ var History = require('react-router').History;
 var NotesIndexItem = React.createClass({
   mixins: [History],
 
+  getInitialState: function() {
+    return { selected: this.props.active };
+  },
+
   //called before initial render
   //When the page is loaded, this renders the NoteDetails of the first note
   componentWillMount: function() {
@@ -16,8 +20,8 @@ var NotesIndexItem = React.createClass({
   },
 
   showNote: function(e) {
-    this.props.active = true;
-    //this.setState({active: true})
+    // this.props.active = true;
+    this.setState({selected: true});
     //need to trigger a re-render of the item
 
     //Whichever note is selected gets a border and is activenote

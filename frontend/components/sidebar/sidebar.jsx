@@ -7,7 +7,7 @@ var NoteForm = require('./../notes/newNoteForm');
 var Sidebar = React.createClass({
 
   getInitialState: function() {
-    return( {showNoteModal: false} );
+    return( {showNoteModal: false, showNotebookModal: false} );
   },
 
   addNote: function() {
@@ -20,24 +20,35 @@ var Sidebar = React.createClass({
     //hide
   },
 
-  toggleModal: function() {
+  toggleNoteModal: function() {
     var newState = !this.state.showNoteModal;
     this.setState( {showNoteModal: newState} );
+  },
+
+  toggleNotebookModal: function() {
+    var newState = !this.state.showNotebookModal;
+    this.setState( {showNotebookModal: newState} );
   },
 
   showNotebooks: function() {
     //Display list of users notebooks
     //When user clicks on a notebook,
     //display all notes just for that notebook
+    this.setState({showNotebookModal: true});
     NotebookApiUtil.fetchCurrentUserNotebooks();
   },
 
   render: function() {
 
     //if showNoteModal = true, then set modal = NoteForm component
-    var modal;
+    var noteModal;
+    var notebookModal;
     if (this.state.showNoteModal) {
-      modal = <NoteForm callback={this.toggleModal}/>;
+      noteModal = <NoteForm callback={this.toggleNoteModal}/>;
+    }
+
+    if (this.state.showNotebookModal) {
+      notebookModal = <NotebookIndex callback={this.toggleNotebookModal}/>;
     }
 
     return (
@@ -51,13 +62,13 @@ var Sidebar = React.createClass({
           </li>
           <li className="sidebar-icons" onClick={this.showNotebooks}>
             <i className="fa fa-book fa-lg sidebar-icon"></i>
-            <NotebookIndex />
           </li>
           <li className="sidebar-icons">
             <i className="fa fa-tags fa-lg sidebar-icon"></i>
           </li>
         </ul>
-        {modal}
+        {noteModal}
+        {notebookModal}
       </div>
     );
   }

@@ -35,6 +35,8 @@ var Toolbar = React.createClass({
           <option value="rgb(255, 255, 0)"></option>
         </select>
 
+        <button className="ql-image ql-format-button"></button>
+
         <select className="notebook-dropdown" value={this.props.selectedNotebook} onChange={this.props.notebookChange}>
           {this.props.notebooks}
         </select>

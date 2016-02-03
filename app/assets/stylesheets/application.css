@@ -294,6 +294,52 @@ header {
 }
 /*--------------------*/
 
+/*--------Notebook Modal-----*/
+.notebook-list {
+  background: #fff;
+  width: 300px;
+  margin-left: 65px;
+  padding: 10px;
+}
+
+.notebook-list-items {
+  border-top: 1px solid #eee;
+}
+
+.notebook-list li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.notebook-list li:hover {
+  background: #2DBE60;
+  color: #fff;
+}
+
+.notebook-header-title {
+  float:left;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: #848484;
+}
+
+.add-notebook {
+  float: right;
+}
+
+.notebook-index-title {
+  float: left;
+}
+
+.notebook-delete-icon {
+  float: right;
+  color: #fff;
+}
+
+/*---------------------------*/
+
 /*------Toolbar-------*/
 .toolbar {
   border: 1px solid #ABA9A9;

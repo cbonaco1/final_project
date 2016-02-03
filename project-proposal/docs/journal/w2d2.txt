@@ -1,0 +1,28 @@
+This morning I resolved an issue I had where the details of the selected
+NoteIndexItem were not being displayed when the item was clicked on. I had
+to rearrange code in my render method of the NoteDetail component in order to
+resolve this. The rest of the day I implemented the CRUD operations for Note objects.
+Most of the CRUD operations for Notes are done using the text editor, which I used the
+Quill JS library for. I ended up making the editor toolbar its own component,
+since I needed it for both editing a note, and adding a new note.
+For adding a new Note, I added an icon on the sidebar,
+which brings up a modal window containing the new Note form on click. Overall
+I was pleased with how this came out. For deleting a note, I added a garbage
+bin icon to each note index item, which deletes the note on click.
+
+I would like to do more thorough testing of these CRUD operations, but they
+work in terms of impacting the database. In terms of the front-end, when I delete
+a note, when the NoteIndex component is re-rendered, it still is looking
+for the deleted note. I think this might have something to do with the store
+not being updated.
+
+Today we also did peer reviews of our applications. I reviewed a clone of
+Medium, a blogging forum. I really liked the design of the site, but had
+some difficulty figuring out how to do certain things. I am not familiar with
+Medium so maybe I wasn't the best candidate to review the site; however
+it did seem like a lot of work went into it.
+
+Tomorrow I want to work on CRUD operations for Notebooks. I want to implement
+a modal window for the list of notebooks, similar to how Evernote displays
+the notebooks. After doing a modal today, I feel comfortable with this. I also
+need to work on file upload, search, and Omni Auth.

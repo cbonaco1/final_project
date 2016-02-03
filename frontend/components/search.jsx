@@ -5,6 +5,11 @@ var NoteIndexItem = require('./notes/notesIndexItem');
 var NotebookIndexItem = require('./notebooks/notebookIndexItem');
 
 var Search = React.createClass({
+
+  getInitialState: function () {
+    return {page: 1, query: ""};
+  },
+
   componentDidMount: function() {
     this.listener = SearchResultsStore.addListener(this._onChange);
   },
@@ -16,10 +21,6 @@ var Search = React.createClass({
   //not sure what this does
   _onChange: function() {
     this.forceUpdate();
-  },
-
-  getInitialState: function () {
-    return {page: 1, query: ""};
   },
 
   search: function (e) {
@@ -36,6 +37,11 @@ var Search = React.createClass({
     this.setState({page: nextPage});
   },
 
+  clearResults: function() {
+    SearchResultsStore.reset();
+    this.props.callback();
+  },
+
 
   render: function() {
 
@@ -50,17 +56,20 @@ var Search = React.createClass({
     return (
       <div className="modal-outline">
         <div className="search-modal">
-          <h1 className="search-title">search notes</h1>
           <input type="text" className="search-input"
                   placeholder="search notes..."
                   onKeyUp={ this.search }
                   autoFocus />
-          Displaying {SearchResultsStore.all().length} of
-          {SearchResultsStore.meta().totalCount}
-          <button className="next-page-button" onClick={this.nextPage}>Next ></button>
 
-          <ul className="users-index">{ searchResults }</ul>
-          <button className="form-button" onClick={this.props.callback}>Close</button>
+          <div className="search-nav group">
+            <p>
+              Displaying {SearchResultsStore.all().length} of
+               {SearchResultsStore.meta().totalCount}
+            </p>
+            <button className="next-page-button" onClick={this.nextPage}>Next ></button>
+          </div>
+          <ul className="search-results">{ searchResults }</ul>
+          <button className="form-button" onClick={this.clearResults}>Close</button>
         </div>
       </div>
     );

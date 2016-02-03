@@ -15,6 +15,11 @@ SearchResultsStore.meta = function () {
   return _meta;
 };
 
+SearchResultsStore.reset = function() {
+  _searchResults = [];
+  _meta = {};
+};
+
 SearchResultsStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
 

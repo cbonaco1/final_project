@@ -482,10 +482,20 @@ header {
 .search-input {
   border: 0;
   font-size: 18px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-top: 5px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .search-input:focus {
   outline: none;
+}
+
+.search-results {
+  height: 300px;
+  overflow: auto;
 }
 
 .next-page-button {
@@ -495,6 +505,14 @@ header {
 .search-title {
   color: #848484;
   border-bottom: 1px solid #eee;
+}
+
+.search-nav > p{
+  float:left;
+}
+
+.next-page-button {
+  float:right;
 }
 /*--------------------*/
 

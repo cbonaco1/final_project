@@ -35,6 +35,10 @@ NotebookStore.__onDispatch = function(payload) {
       NotebookStore.resetNotebooks(payload.data);
       NotebookStore.__emitChange();
       break;
+    case NotebookConstants.NOTEBOOK_DELETED:
+        NotebookStore.resetNotebooks(payload.data);
+        NotebookStore.__emitChange();
+        break;
     default:
 
   }

@@ -1,6 +1,7 @@
 var React  = require('react');
 var NoteStore = require('../../stores/note');
 var NotesAPIUtil = require('../../util/notes_api_util');
+var NotebookAPIUtil = require('../../util/notebooks_api_util');
 var NotebookStore = require('./../../stores/notebook');
 var Toolbar = require('./../toolbar');
 
@@ -10,7 +11,7 @@ var NoteDetail = React.createClass({
 
   //state will be the note object
   getInitialState: function() {
-    return { note: this.getStateFromStore() };
+    return { note: this.getStateFromStore(), notebooks: NotebookStore.all() };
   },
 
   getStateFromStore: function() {
@@ -21,6 +22,10 @@ var NoteDetail = React.createClass({
   _changeNote: function() {
     //this works, state is updated to note clicked
     this.setState({note: this.getStateFromStore() });
+  },
+
+  _changeNotebooks: function() {
+    this.setState( { notebooks: NotebookStore.all() } );
   },
 
   updateNote: function() {
@@ -65,13 +70,15 @@ var NoteDetail = React.createClass({
 
   //called before initial rendering occurs
   componentWillMount: function() {
-    // this.history.pushState(null, "/notes/" + this.state.note.id);
-    this.listenerToken = NoteStore.addListener(this._changeNote);
+    this.noteListenerToken = NoteStore.addListener(this._changeNote);
+    this.notebookListenerToken = NotebookStore.addListener(this._changeNotebooks);
     NotesAPIUtil.fetchSingleNote(this.props.params.id);
+    NotebookAPIUtil.fetchCurrentUserNotebooks();
   },
 
   componentWillUnmount: function() {
-    this.listenerToken.remove();
+    this.noteListenerToken.remove();
+    this.notebookListenerToken.remove();
   },
 
   //this.props.params.id will contain the message id
@@ -86,7 +93,7 @@ var NoteDetail = React.createClass({
       if (_editor) {
         _editor.setText(note.body);
       }
-      notebookDropdownOptions = note.author.notebooks.map(function(notebook, index){
+      notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
         return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
       }.bind(this));
 

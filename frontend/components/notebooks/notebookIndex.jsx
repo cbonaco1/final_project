@@ -18,15 +18,17 @@ var NotebookIndex = React.createClass({
   },
 
   _onChange: function() {
+    debugger
     this.setState({ notebooks: NotebookStore.all() });
+  },
+
+  addNotebook: function(e) {
+
   },
 
   render: function() {
     var notebooks = "";
     var classes = "notebook-list"
-    // if (this.state.show === false) {
-    //   classes += " hide";
-    // }
 
     if (this.state.notebooks.length > 0) {
       notebooks = this.state.notebooks.map(function(notebook){
@@ -38,12 +40,14 @@ var NotebookIndex = React.createClass({
 
     //add text input for adding a new notebook
     return (
-      <div className="note-form-outline">
+      <div className="modal-outline">
         <div className={classes}>
           <div className="notebook-header group">
             <h3 className="notebook-header-title">Notebooks</h3>
-            <i className="fa fa-plus-circle fa-2x sidebar-icon add-notebook"></i>
+            <i className="fa fa-plus-circle fa-2x sidebar-icon add-notebook"
+                onClick={this.addNotebook}></i>
           </div>
+          <input type="text" className="notebook-search-field" placeholder="Search for a Notebook" />
           <ul className="notebook-list-items">
             {notebooks}
           </ul>

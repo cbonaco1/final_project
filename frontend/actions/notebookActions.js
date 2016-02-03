@@ -15,6 +15,13 @@ var NotebookActions = {
       data: notebooks
     });
   },
+
+  deleteNotebook: function(notebooks) {
+    Dispatcher.dispatch({
+      actionType: NotebookConstants.NOTEBOOK_DELETED,
+      data: notebooks
+    });
+  }
 };
 
 module.exports = NotebookActions;

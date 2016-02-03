@@ -45,6 +45,8 @@ var NoteForm = React.createClass({
   _updateNotebooks: function() {
     var allNotebooks = NotebookStore.all();
     var currentNote = this.state.note;
+
+    //TODO might not be any notebooks for user
     currentNote["notebook_id"] = allNotebooks[0].id;
     this.setState({ note: currentNote, notebooks: allNotebooks });
   },
@@ -91,7 +93,7 @@ var NoteForm = React.createClass({
 
 
     return(
-      <div className="note-form-outline">
+      <div className="modal-outline">
         <div className="note-form">
           <input type="text" value={title}
                   className="note-title-field"

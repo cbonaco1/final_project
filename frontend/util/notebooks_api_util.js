@@ -32,6 +32,22 @@ var NotebookApiUtils = {
         alert("Error in fetchUserNotebooks");
       }
     });
+  },
+
+  deleteNotebook: function(notebook, callback) {
+      $.ajax({
+        type: 'DELETE',
+        url: '/api/notebooks/' + notebook.id,
+        data: notebook,
+        dataType: 'json',
+        success: function(data) {
+          NotebookActions.deleteNotebook(data);
+          callback && callback(data);
+        },
+        error: function(data) {
+          alert("Error in deleteNotebook");
+        }
+      });
   }
 };
 

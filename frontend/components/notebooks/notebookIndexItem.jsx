@@ -1,5 +1,6 @@
 var React = require('react');
 var NoteActions = require('./../../actions/noteActions');
+var NotebookApiUtil = require('./../../util/notebooks_api_util');
 
 var NotebookIndexItem = React.createClass({
 
@@ -17,18 +18,21 @@ var NotebookIndexItem = React.createClass({
     NoteActions.receiveNotes(this.props.notebook.notes);
   },
 
-  displayNote: function() {
+  deleteNotebook: function(e) {
+    //e.preventDefault ?? to stop the li click event
     //are you sure you want to delete this notebook?
+    //warn user this will delete all notes in that notebook
+    NotebookApiUtil.deleteNotebook(this.props.notebook);
   },
 
   render: function() {
     //display title and number of notes
-    //onClick of NotebookIndexItem, display Notes from that notebook
+    //TODO onClick of NotebookIndexItem, display Notes from that notebook
     return(
-      <li className="notebook-index-item" onClick={this.displayNotebookNotes}>
+      <li className="notebook-index-item">
         <div className="notebook-index-item-header group">
           <h3 className="notebook-index-title">{this.props.notebook.title}</h3>
-          <i className="fa fa-lg fa-trash notebook-delete-icon" onClick={this.deleteNote}></i>
+          <i className="fa fa-lg fa-trash notebook-delete-icon" onClick={this.deleteNotebook}></i>
         </div>
         <p>{this.props.notebook.notes.length} notes</p>
       </li>

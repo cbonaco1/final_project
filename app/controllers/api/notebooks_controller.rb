@@ -13,6 +13,13 @@ class Api::NotebooksController < ApplicationController
     #get notebooks where author_id == current_user.id
   end
 
+  def destroy
+    @notebook = Notebook.find(params[:id])
+    @notebook.destroy
+    @notebooks = Notebook.where(author_id: current_user.id)
+    render 'api/notebooks/index'
+  end
+
 
   private
   def notebook_params

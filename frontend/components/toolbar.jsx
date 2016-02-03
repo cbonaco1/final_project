@@ -1,5 +1,6 @@
 var React = require('react');
 var NotebookStore = require('./../stores/notebook');
+var NotebookApiUtil = require('./../util/notebooks_api_util');
 
 var Toolbar = React.createClass({
 
@@ -9,6 +10,7 @@ var Toolbar = React.createClass({
 
   componentWillMount: function() {
     this.listenerToken = NotebookStore.addListener(this._onChange);
+    NotebookApiUtil.fetchCurrentUserNotebooks();
   },
 
   componentWillUnmount: function() {

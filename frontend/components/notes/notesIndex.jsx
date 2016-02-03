@@ -14,6 +14,7 @@ var NotesIndex = React.createClass({
   },
 
   _onChange: function() {
+    //pushState to first thing 
     this.setState({ notes: NoteStore.all() });
   },
 

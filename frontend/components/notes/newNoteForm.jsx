@@ -9,17 +9,10 @@ var _editor;
 
 var NoteForm = React.createClass({
 
-  //NEED TOOLBAR component
-  //selectedNotebook
-  //notebookChange function (set state of note)
-  //notebook options
-  //updateNote (createNote)
-
   getInitialState: function() {
     //could get Notebooks from Notebook store
     var currentUser = CurrentUserStore.currentUser();
-    var userNotebooks = NotebookStore.all();
-    return( {note: {author_id: currentUser.id }, notebooks: userNotebooks } );
+    return( {note: {author_id: currentUser.id } } );
   },
 
   componentDidMount: function() {
@@ -77,14 +70,14 @@ var NoteForm = React.createClass({
     var selectedNotebook;
     var title;
 
-    if (this.state.notebooks.length > 0) {
-      notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
-        if (index === 0) {
-          selectedNotebook = notebook.id;
-        }
-        return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
-      }.bind(this));
-    }
+    // if (this.state.notebooks.length > 0) {
+    //   notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
+    //     if (index === 0) {
+    //       selectedNotebook = notebook.id;
+    //     }
+    //     return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
+    //   }.bind(this));
+    // }
 
     if (note) {
       title = this.state.note.title;
@@ -101,7 +94,6 @@ var NoteForm = React.createClass({
                   onChange={this.updateTitle}
                     />
           <Toolbar editor={_editor}
-                  notebooks={notebookDropdownOptions}
                   selectedNotebook={selectedNotebook}
                   notebookChange={this.updateNotebook}
                   updateNote={this.addNote}

@@ -44,7 +44,7 @@ var NotebookIndex = React.createClass({
       notebookModal = <NewNotebookForm callback={this.toggleNotebookModal} />;
     }
 
-    //add text input for adding a new notebook
+    //TODO do not show delete option if number of notebooks === 1
     return (
       <div className="modal-outline">
         <div className={classes}>

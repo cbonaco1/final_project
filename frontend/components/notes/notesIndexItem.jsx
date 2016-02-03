@@ -32,8 +32,16 @@ var NotesIndexItem = React.createClass({
     this.history.pushState(null, "/notes/" + this.props.note.id);
   },
 
-  deleteNote: function() {
-    NotesAPIUtil.deleteNote(this.props.note);
+  deleteNote: function(e) {
+    //stopPropagation so the showNote function does not run
+    e.stopPropagation();
+    var del = window.confirm("Are you sure you want to delete this Note?");
+    if (del) {
+      //if note to delete is currently the one displayed,
+      //after deleting it, push state to next note in list
+      debugger
+      NotesAPIUtil.deleteNote(this.props.note);
+    }
   },
 
   formatDate: function(dateIn) {

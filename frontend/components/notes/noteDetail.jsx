@@ -11,7 +11,17 @@ var NoteDetail = React.createClass({
 
   //state will be the note object
   getInitialState: function() {
-    return { note: this.getStateFromStore(), notebooks: NotebookStore.all() };
+    return { note: this.getStateFromStore() };
+  },
+
+  //called before initial rendering occurs
+  componentWillMount: function() {
+    this.noteListenerToken = NoteStore.addListener(this._changeNote);
+    NotesAPIUtil.fetchSingleNote(this.props.params.id);
+  },
+
+  componentWillUnmount: function() {
+    this.noteListenerToken.remove();
   },
 
   getStateFromStore: function() {
@@ -21,11 +31,10 @@ var NoteDetail = React.createClass({
   //listener method on NoteStore
   _changeNote: function() {
     //this works, state is updated to note clicked
-    this.setState({note: this.getStateFromStore() });
-  },
-
-  _changeNotebooks: function() {
-    this.setState( { notebooks: NotebookStore.all() } );
+    // var allNotes = NoteStore.all();
+    // this.setState({note: allNotes[0] });
+    this.setState( {note: this.getStateFromStore() });
+    //setState to first item in NoteStore.all()
   },
 
   updateNote: function() {
@@ -39,6 +48,7 @@ var NoteDetail = React.createClass({
     var currentNote = this.state.note;
     currentNote["notebook"] = newNotebook;
     currentNote["notebook_id"] = newNotebook.id;
+    debugger
     this.setState(currentNote);
   },
 
@@ -63,27 +73,15 @@ var NoteDetail = React.createClass({
     }.bind(this));
   },
 
-  //called when there are new props
+  //called when there are new props (navigating to new link)
   componentWillReceiveProps: function(newProps) {
     NotesAPIUtil.fetchSingleNote(newProps.params.id);
   },
 
-  //called before initial rendering occurs
-  componentWillMount: function() {
-    this.noteListenerToken = NoteStore.addListener(this._changeNote);
-    this.notebookListenerToken = NotebookStore.addListener(this._changeNotebooks);
-    NotesAPIUtil.fetchSingleNote(this.props.params.id);
-    NotebookAPIUtil.fetchCurrentUserNotebooks();
-  },
-
-  componentWillUnmount: function() {
-    this.noteListenerToken.remove();
-    this.notebookListenerToken.remove();
-  },
 
   //this.props.params.id will contain the message id
   render: function() {
-
+    // debugger
     var note = this.state.note;
     var selectedNotebook;
     // var notebookDropdownOptions = [];

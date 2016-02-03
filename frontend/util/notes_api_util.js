@@ -24,7 +24,7 @@ var NotesAPIUtil = {
         NoteActions.receiveSingleNote(data);
       },
       error: function(data ) {
-        alert("Error in fetchSingleNote");
+        debugger
       }
     });
   },

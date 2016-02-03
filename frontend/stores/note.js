@@ -14,7 +14,7 @@ NoteStore.all = function() {
   Object.keys(_notes).forEach(function(id){
     allNotes.push(_notes[id]);
   });
-
+  
   return allNotes;
 };
 
@@ -36,7 +36,6 @@ NoteStore.filterNotes = function(notebooks){
       NoteStore.addNote(note);
     })
   });
-  debugger
 };
 
 NoteStore.addNote = function(note) {

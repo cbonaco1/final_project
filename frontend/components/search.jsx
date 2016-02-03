@@ -63,8 +63,7 @@ var Search = React.createClass({
 
           <div className="search-nav group">
             <p>
-              Displaying {SearchResultsStore.all().length} of
-               {SearchResultsStore.meta().totalCount}
+              Displaying {SearchResultsStore.all().length} of {SearchResultsStore.meta().totalCount}
             </p>
             <button className="next-page-button" onClick={this.nextPage}>Next ></button>
           </div>

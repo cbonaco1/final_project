@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "font-awesome-rails"
 
+gem 'pg_search'
+gem 'kaminari'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

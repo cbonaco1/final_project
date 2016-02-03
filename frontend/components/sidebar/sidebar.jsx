@@ -3,11 +3,14 @@ var NotebookIndex = require('./../notebooks/notebookIndex');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
 var NoteApiUtil = require('./../../util/notes_api_util');
 var NoteForm = require('./../notes/newNoteForm');
+var Search = require('./../search');
 
 var Sidebar = React.createClass({
 
   getInitialState: function() {
-    return( {showNoteModal: false, showNotebookModal: false} );
+    return( { showNoteModal: false,
+              showNotebookModal: false,
+              showSearchModal: false } );
   },
 
   addNote: function() {
@@ -17,7 +20,18 @@ var Sidebar = React.createClass({
   showNotes: function() {
     //Show ALL notes, ordered by date
     NoteApiUtil.fetchAllNotes();
-    //hide
+  },
+
+  showSearch: function() {
+    this.setState( {showSearchModal: true} );
+  },
+
+  showNotebooks: function() {
+    //Display list of users notebooks
+    //When user clicks on a notebook,
+    //display all notes just for that notebook
+    this.setState({showNotebookModal: true});
+    NotebookApiUtil.fetchCurrentUserNotebooks();
   },
 
   toggleNoteModal: function() {
@@ -30,19 +44,19 @@ var Sidebar = React.createClass({
     this.setState( {showNotebookModal: newState} );
   },
 
-  showNotebooks: function() {
-    //Display list of users notebooks
-    //When user clicks on a notebook,
-    //display all notes just for that notebook
-    this.setState({showNotebookModal: true});
-    NotebookApiUtil.fetchCurrentUserNotebooks();
+  toggleSearchModal: function() {
+    var newState = !this.state.showSearchModal;
+    this.setState( {showSearchModal: newState} );
   },
+
 
   render: function() {
 
     //if showNoteModal = true, then set modal = NoteForm component
     var noteModal;
     var notebookModal;
+    var searchModal;
+
     if (this.state.showNoteModal) {
       noteModal = <NoteForm callback={this.toggleNoteModal}/>;
     }
@@ -51,9 +65,16 @@ var Sidebar = React.createClass({
       notebookModal = <NotebookIndex callback={this.toggleNotebookModal}/>;
     }
 
+    if (this.state.showSearchModal) {
+      searchModal = <Search callback={this.toggleSearchModal}/>;
+    }
+
     return (
       <div className="sidebar-component">
         <ul className="sidebar-component-list">
+          <li className="sidebar-icons" onClick={this.showSearch}>
+            <i className="fa fa-search fa-2x sidebar-icon"></i>
+          </li>
           <li className="sidebar-icons" onClick={this.addNote}>
             <i className="fa fa-plus-circle fa-2x sidebar-icon"></i>
           </li>
@@ -69,6 +90,7 @@ var Sidebar = React.createClass({
         </ul>
         {noteModal}
         {notebookModal}
+        {searchModal}
       </div>
     );
   }

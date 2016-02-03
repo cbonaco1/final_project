@@ -50,22 +50,31 @@ var NotesIndexItem = React.createClass({
   },
 
   render: function() {
-    // console.log("Enter index item render");
+    var note = this.props.note;
+    var body = "";
+    var title = "";
 
     var classes = "user-note";
     if (this.props.active === true) {
       classes += " active-note";
-      // this.history.pushState(null, "/notes/" + this.props.note.id);
+    }
+
+    if (note.body) {
+      body = note.body.substring(0, 100);
+    }
+
+    if (note.title) {
+      title = note.title;
     }
 
     return(
       <li className={classes} onClick={this.showNote}>
         <div className="user-note-content">
           <div className="note-content-header group">
-            <h3 className="note-title">{this.props.note.title}</h3>
+            <h3 className="note-title">{title}</h3>
             <i className="fa fa-2x fa-trash note-delete-icon" onClick={this.deleteNote}></i>
           </div>
-          <p>{this.props.note.body.substring(0, 100)}</p>
+          <p>{body}</p>
           <p>{this.formatDate(this.props.note.updated_at)}</p>
         </div>
       </li>

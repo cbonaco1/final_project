@@ -19,17 +19,21 @@ var NotebookIndexItem = React.createClass({
   },
 
   deleteNotebook: function(e) {
-    //e.preventDefault ?? to stop the li click event
-    //are you sure you want to delete this notebook?
-    //warn user this will delete all notes in that notebook
-    NotebookApiUtil.deleteNotebook(this.props.notebook);
+    //stop the click event on the parent li, which displays the notes
+    //for the selected notebook
+    e.stopPropagation();
+    var del = window.confirm("Are you sure you want to delete this Notebook?\n" +
+                    "Note this will delete all Notes under this Notebook");
+    if (del) {
+      NotebookApiUtil.deleteNotebook(this.props.notebook);
+    }
   },
 
   render: function() {
     //display title and number of notes
     //TODO onClick of NotebookIndexItem, display Notes from that notebook
     return(
-      <li className="notebook-index-item">
+      <li className="notebook-index-item" onClick={this.displayNotebookNotes}>
         <div className="notebook-index-item-header group">
           <h3 className="notebook-index-title">{this.props.notebook.title}</h3>
           <i className="fa fa-lg fa-trash notebook-delete-icon" onClick={this.deleteNotebook}></i>

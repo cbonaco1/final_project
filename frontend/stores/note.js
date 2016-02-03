@@ -1,5 +1,6 @@
 var Store = require('flux/utils').Store;
 var Dispatcher = require('../dispatcher/dispatcher');
+var NotebookConstants = require('./../constants/notebook_constants');
 
 var NoteStore = new Store(Dispatcher);
 
@@ -25,6 +26,17 @@ NoteStore.resetNotes = function(newNotes){
   for (var i = 0; i < newNotes.length; i++) {
     _notes[newNotes[i].id] = newNotes[i];
   }
+};
+
+NoteStore.filterNotes = function(notebooks){
+  //Reset _notes to be just the notes from the notebooks in notebooks array arg
+  _notes = {};
+  notebooks.forEach(function(notebook){
+    notebook.notes.forEach(function(note){
+      NoteStore.addNote(note);
+    })
+  });
+  debugger
 };
 
 NoteStore.addNote = function(note) {
@@ -70,6 +82,10 @@ NoteStore.__onDispatch = function(payload) {
       break;
   case "NOTE_DELETED":
      NoteStore.resetNotes(payload.data);
+     NoteStore.__emitChange();
+     break;
+  case NotebookConstants.NOTEBOOK_DELETED:
+     NoteStore.filterNotes(payload.data);
      NoteStore.__emitChange();
      break;
     default:

@@ -2,11 +2,12 @@ var React = require('react');
 var NotebookStore = require('./../../stores/notebook');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
 var NotebookIndexItem = require('./notebookIndexItem');
+var NewNotebookForm = require('./newNotebookForm');
 
 var NotebookIndex = React.createClass({
 
   getInitialState: function() {
-    return { notebooks: NotebookStore.all() };
+    return { notebooks: NotebookStore.all(), showNotebookModal: false };
   },
 
   componentDidMount: function() {
@@ -18,17 +19,18 @@ var NotebookIndex = React.createClass({
   },
 
   _onChange: function() {
-    debugger
     this.setState({ notebooks: NotebookStore.all() });
   },
 
-  addNotebook: function(e) {
-
+  toggleNotebookModal: function() {
+    var newState = !this.state.showNotebookModal;
+    this.setState({showNotebookModal: newState});
   },
 
   render: function() {
     var notebooks = "";
-    var classes = "notebook-list"
+    var classes = "notebook-list";
+    var notebookModal;
 
     if (this.state.notebooks.length > 0) {
       notebooks = this.state.notebooks.map(function(notebook){
@@ -38,6 +40,10 @@ var NotebookIndex = React.createClass({
       }.bind(this));
     }
 
+    if (this.state.showNotebookModal) {
+      notebookModal = <NewNotebookForm callback={this.toggleNotebookModal} />;
+    }
+
     //add text input for adding a new notebook
     return (
       <div className="modal-outline">
@@ -45,7 +51,7 @@ var NotebookIndex = React.createClass({
           <div className="notebook-header group">
             <h3 className="notebook-header-title">Notebooks</h3>
             <i className="fa fa-plus-circle fa-2x sidebar-icon add-notebook"
-                onClick={this.addNotebook}></i>
+                onClick={this.toggleNotebookModal}></i>
           </div>
           <input type="text" className="notebook-search-field" placeholder="Search for a Notebook" />
           <ul className="notebook-list-items">
@@ -53,6 +59,7 @@ var NotebookIndex = React.createClass({
           </ul>
           <button className="form-button" onClick={this.props.callback}>Close</button>
         </div>
+        {notebookModal}
       </div>
     );
   }

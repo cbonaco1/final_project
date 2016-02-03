@@ -86,16 +86,13 @@ var NoteDetail = React.createClass({
 
     var note = this.state.note;
     var selectedNotebook;
-    var notebookDropdownOptions = [];
+    // var notebookDropdownOptions = [];
     var title = "";
 
     if (note.id) {
       if (_editor) {
         _editor.setText(note.body);
       }
-      notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
-        return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
-      }.bind(this));
 
       selectedNotebook = note.notebook.id;
 
@@ -111,10 +108,11 @@ var NoteDetail = React.createClass({
 
     return(
       <div className="note-detail">
-        <input type="text" value={title} className="note-title-field" onChange={this.updateNoteTitle}/>
+        <input type="text" value={title}
+                className="note-title-field"
+                onChange={this.updateNoteTitle} />
 
         <Toolbar editor={_editor}
-                notebooks={notebookDropdownOptions}
                 selectedNotebook={selectedNotebook}
                 notebookChange={this.updateNotebook}
                 updateNote={this.updateNote}

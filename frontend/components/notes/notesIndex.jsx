@@ -10,8 +10,7 @@ var NotesIndex = React.createClass({
   mixins: [History],
 
   getInitialState: function() {
-    var allNotes = NoteStore.all();
-    return { notes: allNotes };
+    return { notes: NoteStore.all() };
   },
 
   _onChange: function() {

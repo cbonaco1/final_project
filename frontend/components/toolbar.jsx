@@ -1,6 +1,25 @@
 var React = require('react');
+var NotebookStore = require('./../stores/notebook');
 
 var Toolbar = React.createClass({
+
+  getInitialState: function() {
+    return( {notebooks: NotebookStore.all() } );
+  },
+
+  componentWillMount: function() {
+    this.listenerToken = NotebookStore.addListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    this.listenerToken.remove();
+  },
+
+  _onChange: function() {
+    this.setState( {notebooks: NotebookStore.all() } );
+  },
+
+
 
   //this.props.updateNotebook
   //this.props.updateNoteTitle
@@ -10,7 +29,18 @@ var Toolbar = React.createClass({
 
   //this.props.editor
 
+
+  //Listen to NotebookStore and update this.props.notebooks _onChange
+
   render: function() {
+    var notebookDropdownOptions = "";
+
+    if (this.state.notebooks.length > 0) {
+      notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
+        return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
+      }.bind(this));
+    }
+
     return (
       <div className="toolbar">
         <div className="ql-format-group">
@@ -38,7 +68,7 @@ var Toolbar = React.createClass({
         <button className="ql-image ql-format-button"></button>
 
         <select className="notebook-dropdown" value={this.props.selectedNotebook} onChange={this.props.notebookChange}>
-          {this.props.notebooks}
+          {notebookDropdownOptions}
         </select>
 
         <i id="editor-save-icon" className="fa fa-floppy-o sidebar-icon" onClick={this.props.updateNote}></i>

@@ -43,7 +43,10 @@ var NoteForm = React.createClass({
   },
 
   _updateNotebooks: function() {
-    this.setState({ notebooks: NotebookStore.all() });
+    var allNotebooks = NotebookStore.all();
+    var currentNote = this.state.note;
+    currentNote["notebook_id"] = allNotebooks[0].id;
+    this.setState({ note: currentNote, notebooks: allNotebooks });
   },
 
   updateNotebook: function(e) {

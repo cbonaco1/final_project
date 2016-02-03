@@ -25,8 +25,6 @@ var NotesIndexItem = React.createClass({
     // $(e.currentTarget).addClass("active-note");
     //Toggle the NoteDetail to be this Note
 
-    console.log(this.props.note);
-
     this.history.pushState(null, "/notes/" + this.props.note.id);
   },
 
@@ -55,7 +53,7 @@ var NotesIndexItem = React.createClass({
             <h3 className="note-title">{this.props.note.title}</h3>
             <i className="fa fa-2x fa-trash note-delete-icon" onClick={this.deleteNote}></i>
           </div>
-          <p>{this.props.note.body}</p>
+          <p>{this.props.note.body.substring(0, 100)}</p>
           <p>{this.formatDate(this.props.note.updated_at)}</p>
         </div>
       </li>

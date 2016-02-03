@@ -36,6 +36,12 @@ guest_note1 = Note.create!(author_id: guest_user.id,
                             title:"Welcome to FeatherNote!",
 body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
                             notebook_id: guest_notebook.id)
+
+guest_note2 = Note.create!(author_id: guest_user.id,
+                            title:"Instructions",
+body:"Add a Note by clicking the plus sign in the top left, notes can be edited in the text editor, and deleted by clicking the garbage can",
+                            notebook_id: guest_notebook.id)
+
 note1 = Note.create!(author_id: user1.id, title:"Christian's Note", body:"This is my first note", notebook_id: cb_notebook.id)
 note2 = Note.create!(author_id: user1.id, title:"Reminder", body:"Take out the trash", notebook_id: cb_notebook.id)
 note2a = Note.create!(author_id: user1.id, title:"App Academy Project", body:"Make a sweet application", notebook_id: cb_notebook.id)

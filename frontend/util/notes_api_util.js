@@ -36,7 +36,7 @@ var NotesAPIUtil = {
       dataType: 'json',
       data: note,
       success: function(data) {
-        //udate NoteActions
+        NoteActions.createNote(data);
         callback && callback();
       },
       error: function(data) {
@@ -52,7 +52,6 @@ var NotesAPIUtil = {
       dataType: 'json',
       data: note,
       success: function(data) {
-        debugger
         NoteActions.deletedNote(data);
         callback && callback();
       },

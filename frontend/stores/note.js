@@ -19,16 +19,17 @@ NoteStore.all = function() {
 
 NoteStore.resetNotes = function(newNotes){
   //notesArr should have the notes in the order in which they were returned
-  _notesArr = newNotes.slice(0);
+  // debugger
+  // _notesArr = newNotes.slice(0);
   _notes = {};
   for (var i = 0; i < newNotes.length; i++) {
     _notes[newNotes[i].id] = newNotes[i];
   }
-  debugger
 };
 
 NoteStore.addNote = function(note) {
-  _notesArr.push(note);
+  // _notesArr.push(note);
+  _notes[note.id] = note;
 };
 
 NoteStore.updateNote = function(updatedNote) {
@@ -40,9 +41,14 @@ NoteStore.find = function(noteId) {
   return Object.assign({}, _notes[id]);
 };
 
-NoteStore.firstNote = function() {
-  return _notesArr[0];
-};
+// NoteStore.firstNote = function() {
+//   // return _notesArr[0];
+//   Object.keys(_notes).map(function(note, index){
+//     if (index === 0) {
+//       return note;
+//     }
+//   });
+// };
 
 NoteStore.__onDispatch = function(payload) {
   switch (payload.actionType) {
@@ -57,12 +63,15 @@ NoteStore.__onDispatch = function(payload) {
    case "NOTE_CREATED":
       NoteStore.addNote(payload.data);
       NoteStore.__emitChange();
+      break;
    case "NOTE_UPDATED":
       NoteStore.updateNote(payload.data);
       NoteStore.__emitChange();
+      break;
   case "NOTE_DELETED":
      NoteStore.resetNotes(payload.data);
      NoteStore.__emitChange();
+     break;
     default:
 
   }

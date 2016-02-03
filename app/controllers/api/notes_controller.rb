@@ -32,7 +32,6 @@ class Api::NotesController < ApplicationController
     @note = Note.find(params[:id])
     @note.destroy
     @notes = Note.where(author_id: current_user.id).order(updated_at: :desc)
-    byebug
     render 'api/notes/index'
   end
 

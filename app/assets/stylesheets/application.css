@@ -24,7 +24,7 @@ html, h2, h3, body, ul, p, a {
   font-size: inherit;
   text-decoration: inherit;
 
-  font-family: Gotham, Helvetica, Arial, sans-serif;;
+  font-family: "caecilia";
 }
 
 body {
@@ -403,9 +403,10 @@ header {
 .new-notebook-input {
   border: 0;
   font-size: 24px;
-  margin-bottom: 15px;
+  margin: 15px auto;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  padding-left: 140px;
 }
 
 .new-notebook-input:focus {

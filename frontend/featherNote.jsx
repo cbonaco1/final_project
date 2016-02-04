@@ -59,7 +59,6 @@ var FeatherNote = React.createClass({
     );
   }
 });
-
 var router = (
   <Router>
     <Route path="/" component={FeatherNote} />

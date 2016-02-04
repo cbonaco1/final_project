@@ -1,8 +1,10 @@
 var React = require('react');
 var NoteActions = require('./../../actions/noteActions');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
+var History = require('react-router').History;
 
 var NotebookIndexItem = React.createClass({
+  mixins: [History],
 
   displayNotebookNotes: function() {
     this.props.callback();
@@ -25,7 +27,13 @@ var NotebookIndexItem = React.createClass({
     var del = window.confirm("Are you sure you want to delete this Notebook?\n" +
                     "Note this will delete all Notes under this Notebook");
     if (del) {
-      NotebookApiUtil.deleteNotebook(this.props.notebook);
+      NotebookApiUtil.deleteNotebook(this.props.notebook, function(remainingNotebooks){
+        //NOTE last notebook might not have any notes
+        //TODO dont let user delete their last notebook
+        var noteToRedirectTo = remainingNotebooks[0].notes[0].id;
+        // debugger
+        this.history.pushState(null, "/notes/" + noteToRedirectTo);
+      }.bind(this));
     }
   },
 

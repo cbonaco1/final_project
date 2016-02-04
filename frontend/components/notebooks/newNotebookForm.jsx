@@ -46,6 +46,7 @@ var NewNotebookForm = React.createClass({
                   className="new-notebook-input notebook-title-field"
                   placeholder="Title Your Notebook..."
                   onChange={this.updateTitle}
+                  autoFocus
                     />
 
           <input type="text" value={description} className=""

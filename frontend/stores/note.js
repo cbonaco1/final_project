@@ -14,7 +14,7 @@ NoteStore.all = function() {
   Object.keys(_notes).forEach(function(id){
     allNotes.push(_notes[id]);
   });
-  
+
   return allNotes;
 };
 

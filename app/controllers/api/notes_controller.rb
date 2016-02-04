@@ -6,8 +6,8 @@ class Api::NotesController < ApplicationController
     @notes = Note.where(author_id: current_user.id).order(updated_at: :desc)
   end
 
-  #this is coming back with nothing
   def show
+    #should this render show view?
     @note = Note.find(params[:id])
   end
 

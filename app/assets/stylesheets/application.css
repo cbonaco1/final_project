@@ -92,6 +92,15 @@ header {
 }
 
 /*----Stuff for sign-in/sign-up forms ----*/
+
+.welcome-landing > h2 {
+  margin-bottom: 8px;
+}
+
+.welcome-messages {
+  margin-bottom: 20px;
+}
+
 .user-form {
   margin: 20px auto;
   width: 400px;

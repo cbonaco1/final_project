@@ -36,14 +36,16 @@ var FeatherNote = React.createClass({
 
   render: function() {
     return(
-      <div>
+      <div className="welcome-landing">
         <header>
           <h1>Welcome to FeatherNote!</h1>
-          <p>FeatherNote is a note-taking application designed
-          to simplify a way for you to organize your notes and
-          simplify your life!</p>
-          <p>FeatherNote is inspired by Evernote and is written using the Rails
-          webframework and React.js</p>
+          <div className="welcome-messages">
+            <p>FeatherNote is a note-taking application designed
+            to simplify a way for you to organize your notes and
+            simplify your life!</p>
+            <p>FeatherNote is inspired by Evernote and is written using the Rails
+            webframework and React.js</p>
+          </div>
 
           <button className="form-button" onClick={this.goToSignUp}>Sign Up</button>
           <button className="form-button" onClick={this.goToSignIn}>Sign In</button>

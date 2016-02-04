@@ -28,6 +28,7 @@ cb_notebook = Notebook.create!(author_id: user1.id, title:"CB First Notebook")
 cb_notebook2 = Notebook.create!(author_id: user1.id, title:"CB App Academy Notebook")
 cb_notebook3 = Notebook.create!(author_id: user1.id, title:"Sample CB Notebook")
 yoda_notebook = Notebook.create!(author_id: user2.id, title: "Yoda's Notebook", description: "Notes from Jedi training")
+yoda_other_notebook = Notebook.create!(author_id: user2.id, title: "Yoda's Personal Notebook", description: "Personal stuff")
 john_notebook = Notebook.create!(author_id: user3.id)
 
 
@@ -45,13 +46,15 @@ body:"Add a Note by clicking the plus sign in the top left, notes can be edited 
 note1 = Note.create!(author_id: user1.id, title:"Christian's Note", body:"This is my first note", notebook_id: cb_notebook.id)
 note2 = Note.create!(author_id: user1.id, title:"Reminder", body:"Take out the trash", notebook_id: cb_notebook.id)
 note2a = Note.create!(author_id: user1.id, title:"App Academy Project", body:"Make a sweet application", notebook_id: cb_notebook2.id)
-note2b = Note.create!(author_id: user1.id, body:"Unititled note", notebook_id: cb_notebook2.id)
-note2c = Note.create!(author_id: user1.id, title:"AA Note", body:"Keep working on this project", notebook_id: cb_notebook3.id)
-note2d = Note.create!(author_id: user1.id, body:"Fix Bug!!", notebook_id: cb_notebook3.id)
+note2b = Note.create!(author_id: user1.id, body:"No titled note...", notebook_id: cb_notebook3.id)
+note2c = Note.create!(author_id: user1.id, title:"AA Note", notebook_id: cb_notebook2.id)
+note2d = Note.create!(author_id: user1.id, body:"Fix Bug!!", notebook_id: cb_notebook2.id)
 
 note3 = Note.create!(author_id: user2.id, title:"Yoda's Note", body:"A note by Yoda", notebook_id: yoda_notebook.id)
 note3a = Note.create!(author_id: user2.id, body:"Do or do not, there is no try", notebook_id: yoda_notebook.id)
+note3b = Note.create!(author_id: user2.id, title: "Training", body:"Keep training Luke", notebook_id: yoda_notebook.id)
+note3c = Note.create!(author_id: user2.id, title: "Reminder", body:"Pickup light saber from store", notebook_id: yoda_other_notebook.id)
+note3c = Note.create!(author_id: user2.id, body:"Is useful, this app", notebook_id: yoda_other_notebook.id)
+note4 = Note.create!(author_id: user2.id, title:"No body, this note has", notebook_id: yoda_notebook.id)
 
-note4 = Note.create!(author_id: user2.id, body:"Unititled note by Yoda", notebook_id: yoda_notebook.id)
-
-note5 = Note.create!(author_id: user3.id, title:"John's reminder", notebook_id: john_notebook.id)
+note5 = Note.create!(author_id: user3.id, title:"John's reminder", body: "Not sure what I was supposed to remind myself", notebook_id: john_notebook.id)

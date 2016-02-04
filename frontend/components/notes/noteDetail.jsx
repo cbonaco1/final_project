@@ -48,7 +48,6 @@ var NoteDetail = React.createClass({
     var currentNote = this.state.note;
     currentNote["notebook"] = newNotebook;
     currentNote["notebook_id"] = newNotebook.id;
-    debugger
     this.setState(currentNote);
   },
 
@@ -84,12 +83,19 @@ var NoteDetail = React.createClass({
     // debugger
     var note = this.state.note;
     var selectedNotebook;
+    var textEditor;
     // var notebookDropdownOptions = [];
     var title = "";
 
+    //note is null after a notebook is deleted
     if (note.id) {
+      //This is not null, so the body is being set
       if (_editor) {
+        console.log("editor IS set");
         _editor.setText(note.body);
+      }
+      else {
+        console.log("editor NOT set");
       }
 
       selectedNotebook = note.notebook.id;

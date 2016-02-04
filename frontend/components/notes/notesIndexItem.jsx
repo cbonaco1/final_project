@@ -25,8 +25,8 @@ var NotesIndexItem = React.createClass({
     //need to trigger a re-render of the item
 
     //Whichever note is selected gets a border and is activenote
-    // $(".note-list li").removeClass("active-note");
-    // $(e.currentTarget).addClass("active-note");
+    $(".note-list li").removeClass("active-note");
+    $(e.currentTarget).addClass("active-note");
     //Toggle the NoteDetail to be this Note
 
     this.history.pushState(null, "/notes/" + this.props.note.id);
@@ -38,8 +38,13 @@ var NotesIndexItem = React.createClass({
     var del = window.confirm("Are you sure you want to delete this Note?");
     if (del) {
       //if note to delete is currently the one displayed,
-      //after deleting it, push state to next note in list
-      debugger
+      //after deleting it, add callback which pushes state to next note in list
+      var query = window.location.hash.indexOf("?");
+      var urlNoteId = parseInt(window.location.hash.substring(8, query));
+      var callback;
+      if (urlNoteId === this.props.note.id) {
+        // debugger
+      }
       NotesAPIUtil.deleteNote(this.props.note);
     }
   },

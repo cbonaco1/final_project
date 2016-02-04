@@ -43,6 +43,7 @@ var Toolbar = React.createClass({
       }.bind(this));
     }
 
+    //TODO style dropdown options
     return (
       <div className="toolbar">
         <div className="ql-format-group">

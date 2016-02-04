@@ -2,6 +2,8 @@ var React = require('react');
 var ErrorMessages = require('./../errorMessages');
 var UserApiAUtil = require('./../../util/user_api_util');
 var NotebookApiUtils = require('./../../util/notebooks_api_util');
+var NoteApiUtils = require('./../../util/notes_api_util');
+var NoteConstants = require('./../../constants/note_constants');
 var History = require('react-router').History;
 
 var NewUserForm = React.createClass({
@@ -24,16 +26,24 @@ var NewUserForm = React.createClass({
   },
 
   setUpUser: function(user) {
-    var newNotebook = {author_id: user.id,
-                      title: "First Notebook",
-                      description: "This is your first notebook"};
+    var newNotebook = {
+          author_id: user.id,
+          title: "First Notebook",
+          description: "This is your first notebook on FeatherNote!"
+    };
+
+    var welcomeNote = {
+          author_id: user.id,
+          title: NoteConstants.NEW_NOTE_TITLE,
+          body: NoteConstants.NEW_NOTE_BODY
+    };
 
     //Create new user notes/notebook
-    NotebookApiUtils.createNotebook(newNotebook);
+    NotebookApiUtils.createNotebook(newNotebook, function(newNotebook){
+      welcomeNote["notebook_id"] = newNotebook.id;
+      NoteApiUtils.addNote(welcomeNote);
+    });
 
-    //TODO: Display some type of welcome message to the new user
-    //Maybe in NoteDetail header
-    //Open up the new note field
   },
 
   render: function() {

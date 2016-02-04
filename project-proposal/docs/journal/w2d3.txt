@@ -1,0 +1,35 @@
+Today I was pleased with the progress I made. Most of the morning I worked on
+Notebook CRUD operations. The user can view a list of all their notebooks
+in a modal window. When a notebook is clicked, the notes for that notebook are shown.
+The user can also delete and add a notebook from this window. Adding a notebook
+brings up another modal window.
+
+Deleting a notebook was tricky since other components need to be updated when
+a notebok is deleted. For example, when the user deletes a Notebook, the
+dropdown in the text editor of the NoteDetail component needs to be updated
+to remove the deleted notebook, so the user cannot change a note to be associated
+with the deleted notebook. As I found yesterday, these operations work
+in terms of impacting the database, and if I refresh the page the changes
+are there, it is just a matter of modifying the UI in a smooth way to
+reflect the change. I want to do more thorough testing of these features.
+
+In the afternoon I worked on implementing the Search functionality. I used the
+demo done in lecture this week as a reference. The Search feature used both the
+pg-search and kaminari gems. Pg-search essentially creates one big table
+in the database, containing all the fields which we want to search. I added
+the title and description columns for Notebooks, and title and body column
+for Notes, allowing the user to search for plain text in any of these fields.
+This big table has a polymorphic association with the models specified.
+On a key up event for the search field, a search of this table is fired.
+
+Overall I was pleased with the progress I made today. Tomorrow I want to
+do more thorough testing of the Notebook CRUD operations, as well as
+the Note Detail component rendering correctly when the user filters
+Notes by Notebook. I also need to implement file upload and Omni Auth.
+
+
+Bug with deleting a note and notebook
+(if active note is the one being deleted, redirect to next
+note's show page, or /notes if no more notes)
+-Seed data for demo
+-Outline presentation

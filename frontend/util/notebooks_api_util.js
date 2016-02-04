@@ -8,7 +8,6 @@ var NotebookApiUtils = {
       data: notebook,
       dataType: 'json',
       success: function(data) {
-        debugger
         NotebookActions.createNotebook(data);
         callback && callback(data);
       },

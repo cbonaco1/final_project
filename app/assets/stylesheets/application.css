@@ -267,7 +267,7 @@ header {
 
 .note-detail {
   float: left;
-  width: 700px;
+  width: 60%;
   background: #fff;
   border: 1px solid green;
 }
@@ -439,7 +439,6 @@ header {
 
 /*------Sidebar-------*/
 .sidebar-component {
-  border-left: 1px solid green;
   float: left;
   padding: 10px;
 }

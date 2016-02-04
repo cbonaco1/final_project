@@ -39,13 +39,24 @@ var NotesIndexItem = React.createClass({
     if (del) {
       //if note to delete is currently the one displayed,
       //after deleting it, add callback which pushes state to next note in list
-      var query = window.location.hash.indexOf("?");
-      var urlNoteId = parseInt(window.location.hash.substring(8, query));
-      var callback;
-      if (urlNoteId === this.props.note.id) {
-        // debugger
-      }
-      NotesAPIUtil.deleteNote(this.props.note);
+      NotesAPIUtil.deleteNote(this.props.note, function(remainingNotes){
+        //if user just deleted last note, show /notes
+        if (remainingNotes.length === 0) {
+          this.history.pushState(null, "/notes/");
+        }
+        else {
+          var query = window.location.hash.indexOf("?");
+          var urlNoteId = parseInt(window.location.hash.substring(8, query));
+          if (urlNoteId === this.props.note.id) {
+            //NOTE this is only for when the user clicks DELETE
+            //not when deleting a notebook triggers a delete of notes
+
+            //Redirect to another note show page
+            this.history.pushState(null, "/notes/" + remainingNotes[0].id);
+          }
+        }
+
+      }.bind(this));
     }
   },
 

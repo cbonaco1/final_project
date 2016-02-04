@@ -33,6 +33,8 @@ var NoteDetail = React.createClass({
     //this works, state is updated to note clicked
     // var allNotes = NoteStore.all();
     // this.setState({note: allNotes[0] });
+    debugger
+    //this comes back empty since we deleted the note
     this.setState( {note: this.getStateFromStore() });
     //setState to first item in NoteStore.all()
   },
@@ -77,8 +79,6 @@ var NoteDetail = React.createClass({
     NotesAPIUtil.fetchSingleNote(newProps.params.id);
   },
 
-
-  //this.props.params.id will contain the message id
   render: function() {
     // debugger
     var note = this.state.note;
@@ -86,16 +86,18 @@ var NoteDetail = React.createClass({
     var textEditor;
     // var notebookDropdownOptions = [];
     var title = "";
-
     //note is null after a notebook is deleted
     if (note.id) {
       //This is not null, so the body is being set
       if (_editor) {
-        console.log("editor IS set");
-        _editor.setText(note.body);
-      }
-      else {
-        console.log("editor NOT set");
+        var noteBody;
+        if (note.body) {
+          noteBody = note.body;
+        }
+        else {
+          noteBody = "You can add text to your note here..."
+        }
+        _editor.setText(noteBody);
       }
 
       selectedNotebook = note.notebook.id;

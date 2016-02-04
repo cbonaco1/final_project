@@ -24,7 +24,7 @@ var NotesAPIUtil = {
         NoteActions.receiveSingleNote(data);
       },
       error: function(data ) {
-        debugger
+        // debugger
       }
     });
   },
@@ -53,7 +53,7 @@ var NotesAPIUtil = {
       data: note,
       success: function(data) {
         NoteActions.deletedNote(data);
-        callback && callback();
+        callback && callback(data);
       },
       error: function(data) {
         alert("Error in deleteNote");

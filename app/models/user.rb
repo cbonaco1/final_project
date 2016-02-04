@@ -20,6 +20,24 @@ class User < ActiveRecord::Base
     :primary_key => :id
   )
 
+  def self.find_or_create_by_auth_hash(auth_hash)
+    provider = auth_hash[:provider]
+    uid = auth_hash[:uid]
+
+    user = User.find_by(provider: provider, uid: uid)
+
+    return user if user
+
+    #username?
+    new_user = User.create(
+      username: auth_hash[:info][:name],
+      provider: provider,
+      uid: uid,
+      password: SecureRandom::urlsafe_base64,
+      session_token: SecureRandom::urlsafe_base64
+    )
+
+  end
 
 
   def password=(password)

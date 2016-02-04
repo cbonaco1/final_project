@@ -35,6 +35,9 @@ gem "font-awesome-rails"
 gem 'pg_search'
 gem 'kaminari'
 
+gem 'omniauth-facebook'
+gem 'figaro'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

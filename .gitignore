@@ -4,3 +4,5 @@
 /app/assets/javascripts/bundle.js.map
 
 /log/*
+
+/config/application.yml

@@ -132,11 +132,10 @@ header {
   margin: 25px auto;
 }
 
-
-
 .sign-in-msg {
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .sign-in-msg p {
@@ -146,6 +145,42 @@ header {
 .sign-in-msg a {
   font-size: 24px;
   color: #2DBE60;
+}
+
+.social-message {
+  margin-bottom: 10px;
+}
+
+.social-media-logins {
+  margin: auto;
+  width: 200px;
+}
+
+.social-media-login:hover {
+  background: #27964E;
+}
+
+.social-media-login {
+  float:left;
+  margin-left: 36px;
+}
+
+.facebook-login {
+  position: relative;
+  display: inline-block;
+  background: #2DBE60;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.social-media-icon {
+  position: absolute;
+  top: 6px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+
 }
 /*----------------*/
 

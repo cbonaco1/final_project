@@ -26,16 +26,22 @@ class User < ActiveRecord::Base
 
     user = User.find_by(provider: provider, uid: uid)
 
-    return user if user
+    if user
+      return user
+    else
+      new_user = User.create(
+        username: auth_hash[:info][:name],
+        provider: provider,
+        uid: uid,
+        password: SecureRandom::urlsafe_base64,
+        session_token: SecureRandom::urlsafe_base64
+      )
 
-    #username?
-    new_user = User.create(
-      username: auth_hash[:info][:name],
-      provider: provider,
-      uid: uid,
-      password: SecureRandom::urlsafe_base64,
-      session_token: SecureRandom::urlsafe_base64
-    )
+      #make defult note and notebooks for new user
+      new_user.set_up_user
+
+      return new_user
+    end
 
   end
 
@@ -71,6 +77,17 @@ class User < ActiveRecord::Base
       return nil
     end
   end
+
+  #create default note and Notebook for new user
+  def set_up_user
+    new_notebook = Notebook.create!(author_id: self.id, title:"First Notebook")
+    
+    Note.create!(author_id: self.id,
+                title:"Welcome to FeatherNote!",
+    body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
+                notebook_id: new_notebook.id)
+  end
+
 
   private
   def ensure_session_token

@@ -34,10 +34,6 @@ var FeatherNote = React.createClass({
     }.bind(this));
   },
 
-  facebookLogin: function() {
-
-  },
-
   render: function() {
     return(
       <div>
@@ -60,8 +56,8 @@ var FeatherNote = React.createClass({
           </div>
 
           <div className="social-media-login">
-            <p>Or sign in on Facebook</p>
-              <a href="/auth/facebook">LOG IN WITH FACEBOOK</a>
+            
+            <a href="/auth/facebook">LOG IN WITH FACEBOOK</a>
           </div>
 
         </header>

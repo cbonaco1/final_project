@@ -60,3 +60,4 @@ Features I want to add:
 -Tags (many to many between notes and tags)
 -Saving the styling of a note (bold, color, size, etc.)
 -Twitter - turn a note into a tweet
+-More validation and error messages 

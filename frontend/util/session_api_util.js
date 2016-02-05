@@ -10,6 +10,7 @@ var SessionsApiUti = {
       data: credentials,
       dataType: 'json',
       success: function(data) {
+        //need to clear error messages from component
         ErrorStore.clearMessages();
         CurrentUserActions.receiveCurrentUser(data);
         callback && callback();

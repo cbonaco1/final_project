@@ -1,9 +1,11 @@
-json.total_count @search_results.total_count
+matches = 0
+
 json.results do
   json.array! @search_results do |result|
     result = result.searchable
 
     if result.author_id == current_user.id
+      matches += 1
       if result.class == Note
         json.partial!("api/notes/notes", note: result)
       else
@@ -14,3 +16,4 @@ json.results do
 
   end
 end
+json.total_count matches

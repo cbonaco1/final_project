@@ -25,7 +25,7 @@ var NewUserForm = React.createClass({
 
   },
 
-  setUpUser: function(user) {
+  setUpUser: function(user, callback) {
     var newNotebook = {
           author_id: user.id,
           title: "First Notebook",
@@ -38,11 +38,17 @@ var NewUserForm = React.createClass({
           body: NoteConstants.NEW_NOTE_BODY
     };
 
+    var instructionalNote = {
+      author_id: user.id,
+      title: NoteConstants.INSTRUCTION_NOTE_TITLE,
+      body: NoteConstants.INSTRUCTION_NOTE_BODY
+    };
+
     //Create new user notes/notebook
     NotebookApiUtils.createNotebook(newNotebook, function(newNotebook){
       welcomeNote["notebook_id"] = newNotebook.id;
       NoteApiUtils.addNote(welcomeNote);
-    });
+    }.bind(this));
 
   },
 

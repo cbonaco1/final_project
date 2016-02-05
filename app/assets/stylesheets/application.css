@@ -24,7 +24,7 @@ html, h2, h3, body, ul, p, a {
   font-size: inherit;
   text-decoration: inherit;
 
-  font-family: "caecilia";
+  font-family: "caecilia", Helvetica, Arial, sans-serif;
 }
 
 body {

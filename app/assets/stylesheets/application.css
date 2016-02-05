@@ -72,10 +72,31 @@ header {
   color: #fff;
   padding: 9px 14px;
   margin: 10px auto;
+  font-size: 18px;
 }
 
 .form-button:hover{
   background: #27964E;
+}
+
+.sign-in-buttons {
+  width: 245px;
+  margin: auto;
+}
+
+#sign-in-facebook-icon {
+  float:right;
+  font-size: 16px;
+}
+
+#fb-icon-new-session {
+  left: 10px;
+}
+
+#new-session-sign-in {
+  float: left;
+  margin-top: 0;
+  width: 150px;
 }
 
 .cancel-button {
@@ -91,14 +112,19 @@ header {
   border: 1px solid #d1d1d1;
 }
 
+.ql-editor {
+  font-size: 18px;
+}
+
 /*----Stuff for sign-in/sign-up forms ----*/
 
-.welcome-landing > h2 {
-  margin-bottom: 8px;
+.welcome-header {
+  margin-bottom: 0;
 }
 
 .welcome-messages {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 24px;
 }
 
 .user-form {
@@ -147,16 +173,13 @@ header {
   margin-bottom: 30px;
 }
 
-.sign-in-msg p {
-  font-size: 14px;
-}
-
 .sign-in-msg a {
   font-size: 24px;
   color: #2DBE60;
 }
 
 .social-message {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -322,11 +345,15 @@ header {
   padding-bottom: 20px;
 }
 
-#note-detail-content {
+#note-detail-content,
+#new-note-content {
   margin-left: 15px;
   margin-right: 15px;
   margin-bottom: 20px;
   padding-bottom: 15px;
+}
+
+.note-content {
   border-left: 1px solid #ABA9A9;
   border-right: 1px solid #ABA9A9;
   border-bottom: 1px solid #ABA9A9;

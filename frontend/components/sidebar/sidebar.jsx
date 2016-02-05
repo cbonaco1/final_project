@@ -72,19 +72,19 @@ var Sidebar = React.createClass({
     return (
       <div className="sidebar-component">
         <ul className="sidebar-component-list">
-          <li className="sidebar-icons" onClick={this.showSearch}>
+          <li className="sidebar-icons" title="Search" onClick={this.showSearch}>
             <i className="fa fa-search fa-2x sidebar-icon"></i>
           </li>
-          <li className="sidebar-icons" onClick={this.addNote}>
+          <li className="sidebar-icons" title="Add Note" onClick={this.addNote}>
             <i className="fa fa-plus-circle fa-2x sidebar-icon"></i>
           </li>
-          <li className="sidebar-icons" onClick={this.showNotes}>
+          <li className="sidebar-icons" title="Notes" onClick={this.showNotes}>
             <i className="fa fa-file fa-lg sidebar-icon"></i>
           </li>
-          <li className="sidebar-icons" onClick={this.showNotebooks}>
+          <li className="sidebar-icons" title="Notebooks" onClick={this.showNotebooks}>
             <i className="fa fa-book fa-lg sidebar-icon"></i>
           </li>
-          <li className="sidebar-icons">
+          <li className="sidebar-icons" title="Tags">
             <i className="fa fa-tags fa-lg sidebar-icon"></i>
           </li>
         </ul>

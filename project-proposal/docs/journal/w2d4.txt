@@ -1,0 +1,23 @@
+Last full day of working on final projects.
+
+This morning I worked on resolving a bug I had with deleting a notebook.
+When deleting a notebook, the notes associated with that notebook also
+need to be deleted. After a notebook was deleted, selecting a note from
+the list of remaining notes produced an error that the note was undefined.
+After consulting with two TAs, we figured out that it was due to my
+jbuilder notebook index view not rendering enough information. In the notebook
+index view, I was returning the note associated with that notebook, but I needed
+to render the note partial.
+
+After that I implemented authentication with Facebook. Implementing the login
+was pretty straight forward; however I needed to create a default notebook
+and welcome note for a user logging in for the first time with Facebook. For
+users creating a new account (not with Facebook), I do this in Javascript in
+a callback to the api util function creating a new user. In the case of
+Facebook, I needed to create this notebook and note in the controller.
+
+With that implemented, I added some more styling, and a stock photo
+for the landing welcome page. I was pleased with how this came out.
+
+Overall I am pleased with how my app came out up to this point. I would like to
+add some more styling to it tomorrow, and finalize my seed data.

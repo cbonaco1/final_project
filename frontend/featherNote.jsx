@@ -38,7 +38,7 @@ var FeatherNote = React.createClass({
     return(
       <div className="welcome-landing">
         <header>
-          <h1>Welcome to FeatherNote!</h1>
+          <h1 className="welcome-header">Welcome to FeatherNote!</h1>
           <div className="welcome-messages">
             <p>FeatherNote is a note-taking application designed
             to simplify a way for you to organize your notes and
@@ -51,7 +51,7 @@ var FeatherNote = React.createClass({
           <button className="form-button" onClick={this.goToSignIn}>Sign In</button>
 
           <div className="sign-in-msg">
-            <p>Not sure if you want to join?</p>
+            <p className="social-message">Not sure if you want to join?</p>
             <button className="form-button" onClick={this.signInAsGuest}>
               Demo the app!
             </button>

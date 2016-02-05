@@ -30,11 +30,6 @@ var NoteDetail = React.createClass({
 
   //listener method on NoteStore
   _changeNote: function() {
-    //this works, state is updated to note clicked
-    // var allNotes = NoteStore.all();
-    // this.setState({note: allNotes[0] });
-    // console.log("changed note");
-    //this comes back empty since we deleted the note
     this.setState( {note: this.getStateFromStore() });
     //setState to first item in NoteStore.all()
   },
@@ -83,14 +78,10 @@ var NoteDetail = React.createClass({
     var currentNote = this.state.note;
     var selectedNotebook;
     var textEditor;
-    // var notebookDropdownOptions = [];
     var title = "";
 
-    // debugger
-    //note is null after a notebook is deleted
     if (currentNote) {
       if (currentNote.id) {
-        //This is not null, so the body is being set
         if (_editor) {
           var noteBody;
           if (currentNote.body) {
@@ -126,7 +117,7 @@ var NoteDetail = React.createClass({
                 notebookChange={this.updateNotebook}
                 updateNote={this.updateNote}
         />
-        <div id="note-detail-content"></div>
+        <div id="note-detail-content" className="note-content"></div>
       </div>
     );
   }

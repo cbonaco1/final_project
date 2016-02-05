@@ -21,19 +21,6 @@ var Toolbar = React.createClass({
     this.setState( {notebooks: NotebookStore.all() } );
   },
 
-
-
-  //this.props.updateNotebook
-  //this.props.updateNoteTitle
-  //this.props.updateNoteBody
-
-  //this.props.notebooks
-
-  //this.props.editor
-
-
-  //Listen to NotebookStore and update this.props.notebooks _onChange
-
   render: function() {
     var notebookDropdownOptions = "";
 
@@ -51,7 +38,7 @@ var Toolbar = React.createClass({
           <button className="ql-italic ql-format-button"></button>
           <button className="ql-underline ql-format-button"></button>
         </div>
-        <select className="ql-size">
+        <select className="ql-size" value="18px">
           <option value="10px">Small</option>
           <option value="13px">Normal</option>
           <option value="18px">Large</option>

@@ -1,0 +1,62 @@
+Cloned Evernote note-taking application
+-Can create notes, which belong to a notebook
+    note belongs to a notebook
+    notebook has many notes
+-Designed to organize thoughts and ideas, improve productivity
+
+
+Demo user
+-Sign in as Demo user
+-Show welcome message and instructions
+-Add a note
+  "First Note"
+  "I like pizza"
+-Add another note to delete
+  "Note TBD"
+  "This will be deleted :("
+-Delete TBD note (with other note active)
+-Edit first note
+-Create a notebook to organize notebooks
+  Tasks
+  "This is a notebook of tasks"
+-Add note to Tasks
+    -"Reminder"
+    -"Take out the trash"
+-Add another note to Tasks (note dont need a title)
+      -"Finish Evernote clone"
+-Filter out notes just in Tasks notebook
+-Go back to All notes
+-Delete Tasks notebook - dont want more demo users to see our tasks
+    -Make sure other notebook is current
+    -Make a point that deleting a notebook deletes its notes
+    -Challenge was updating the Notebooks dropdwon in the Toolbar component
+      -The toolbar has a Notebook state, and listens to the NotebookStore
+      -When a notebook is deleted, it re-renders itself.
+      This is important since we dont want a user to add a note to a ntoebook
+      that has been deleted.
+
+Create an Account
+-Asks who wants an account
+-Show error messages (leave out password)
+-Show welcome notes and instructions
+-Create note
+  "My first note"
+  "I also like pizza"
+-Delete instructional note (we dont need the instructions anymore)
+-Search for "pizza"
+  -Note how we created a note with "pizza" under the guest account,
+  but this doesnt show in the results (dont want to see others notes)
+  -Added a condition in the search results to check if the note or notebook
+  returned belongs to the current_user
+-Log out
+-Try to log back in with bad password
+-Create account with same name (username already taken)
+-Log in to see the notes we added
+
+OmniAuth
+-Make sure I am signed out of Facebook
+
+Features I want to add:
+-Tags (many to many between notes and tags)
+-Saving the styling of a note (bold, color, size, etc.)
+-Twitter - turn a note into a tweet

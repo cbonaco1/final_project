@@ -53,7 +53,6 @@ var NotebookIndex = React.createClass({
             <i className="fa fa-plus-circle fa-2x sidebar-icon add-notebook"
                 onClick={this.toggleNotebookModal}></i>
           </div>
-          <input type="text" className="notebook-search-field" placeholder="Search for a Notebook" />
           <ul className="notebook-list-items">
             {notebooks}
           </ul>

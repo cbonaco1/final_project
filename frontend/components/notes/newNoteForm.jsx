@@ -10,13 +10,14 @@ var _editor;
 var NoteForm = React.createClass({
 
   getInitialState: function() {
-    //could get Notebooks from Notebook store
     var currentUser = CurrentUserStore.currentUser();
     return( {note: {author_id: currentUser.id } } );
   },
 
   componentDidMount: function() {
-    _editor = new Quill("#new-note-content", {theme:'snow'});
+    _editor = new Quill("#new-note-content", {
+      theme:'snow'
+    });
     _editor.addModule('toolbar', { container: '.toolbar'});
     _editor.on('text-change', function(delta, source){
       //only set state if user made change to text (not API)
@@ -26,6 +27,8 @@ var NoteForm = React.createClass({
         this.setState(currentNote);
       }
     }.bind(this));
+
+    _editor.focus();
 
     this.listenerToken = NotebookStore.addListener(this._updateNotebooks);
     NotebookApiUtil.fetchCurrentUserNotebooks();
@@ -98,7 +101,7 @@ var NoteForm = React.createClass({
                   notebookChange={this.updateNotebook}
                   updateNote={this.addNote}
           />
-          <div id="new-note-content"></div>
+          <div id="new-note-content" className="note-content"></div>
           <div className="new-note-buttons group">
             <button className="form-button cancel-note-button" onClick={this.props.callback}>Cancel</button>
             <button className="form-button add-note-button" onClick={this.addNote}>Add Note</button>

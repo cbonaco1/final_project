@@ -1,5 +1,6 @@
 var React = require('react');
 var ErrorMessages = require('./../errorMessages');
+var ErrorStore = require('./../../stores/errors');
 var UserApiAUtil = require('./../../util/user_api_util');
 var NotebookApiUtils = require('./../../util/notebooks_api_util');
 var NoteApiUtils = require('./../../util/notes_api_util');
@@ -23,6 +24,11 @@ var NewUserForm = React.createClass({
       this.history.pushState(null, "/notes");
     }.bind(this));
 
+  },
+
+  //Clear errors when this thing unmounts
+  componentWillUnmount: function() {
+    ErrorStore.clearMessages();
   },
 
   setUpUser: function(user, callback) {

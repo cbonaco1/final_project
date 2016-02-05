@@ -13,6 +13,11 @@ var NewSessionForm = React.createClass({
     this.history.pushState(null, "/notes");
   },
 
+  //Clear errors when this thing unmounts
+  componentWillUnmount: function() {
+    ErrorStore.clearMessages();
+  },
+
   submit: function(e) {
     e.preventDefault();
     var fields = $(e.currentTarget).serializeArray();

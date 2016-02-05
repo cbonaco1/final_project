@@ -38,7 +38,7 @@ var Toolbar = React.createClass({
           <button className="ql-italic ql-format-button"></button>
           <button className="ql-underline ql-format-button"></button>
         </div>
-        <select className="ql-size" value="18px">
+        <select className="ql-size">
           <option value="10px">Small</option>
           <option value="13px">Normal</option>
           <option value="18px">Large</option>

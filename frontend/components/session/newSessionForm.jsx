@@ -45,14 +45,21 @@ var NewSessionForm = React.createClass({
             </label>
           </div>
 
-          <div className="sign-in-buttons group">
-            <button id="new-session-sign-in" className="form-button">Sign In</button>
-            <div id="sign-in-facebook-icon" title="Log in with Facebook!" className="facebook-login social-media-login">
+          <ul className="sign-in-buttons group">
+            <li>
+              <button id="new-session-sign-in" className="form-button">Sign In</button>
+            </li>
+            <li id="sign-in-facebook-icon" title="Log in with Facebook!" className="icon-container social-media-login">
               <a href="/auth/facebook">
-                <i id="fb-icon-new-session" className="fa fa-facebook fa-2x facebook-icon social-media-icon"></i>
+                <i id="fb-icon-new-session" className="fa fa-facebook fa-2x icon-item social-media-icon"></i>
               </a>
-            </div>
-          </div>
+            </li>
+            <li className="icon-container">
+              <a href="/#">
+                <i className="icon-item home-icon fa fa-home fa-lg"></i>
+              </a>
+            </li>
+          </ul>
         </form>
 
         <ErrorMessages />

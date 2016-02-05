@@ -80,12 +80,16 @@ header {
 }
 
 .sign-in-buttons {
-  width: 245px;
   margin: auto;
 }
 
+.sign-in-buttons li {
+  float: left;
+  margin-left: 35px;
+}
+
 #sign-in-facebook-icon {
-  float:right;
+
   font-size: 16px;
 }
 
@@ -114,6 +118,28 @@ header {
 
 .ql-editor {
   font-size: 18px;
+}
+
+.icon-container {
+  position: relative;
+  background: #2DBE60;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.icon-container:hover {
+  background: #27964E;
+}
+
+.icon-item {
+  position: absolute;
+  top: 6px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
 }
 
 /*----Stuff for sign-in/sign-up forms ----*/
@@ -165,6 +191,29 @@ header {
 .input-field {
   width: 200px;
   margin: 25px auto;
+}
+
+.create-account-link {
+  float: left;
+}
+
+.home-icon {
+  float:right;
+  left: 5px;
+  top: 8px;
+}
+
+.new-user-bottom-icons {
+  padding: 0 30px;
+  margin: auto;
+}
+
+.new-user-home-icon {
+  float:right;
+}
+
+.create-account-button {
+  margin: 0;
 }
 
 .sign-in-msg {

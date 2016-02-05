@@ -22,7 +22,7 @@ Demo user
 -Add note to Tasks
     -"Reminder"
     -"Take out the trash"
--Add another note to Tasks (note doesnt need a title)
+-Add another note to Tasks (note dont need a title)
       -"Finish Evernote clone"
 -Filter out notes just in Tasks notebook
 -Go back to All notes

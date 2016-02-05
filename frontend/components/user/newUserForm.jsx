@@ -64,8 +64,16 @@ var NewUserForm = React.createClass({
             </label>
           </div>
 
-          <button className="form-button">Create Account!</button>
-
+          <ul className="new-user-bottom-icons group">
+            <li className="create-account-link">
+              <button className="create-account-button form-button">Create Account!</button>
+            </li>
+            <li className="icon-container new-user-home-icon">
+              <a href="/#">
+                <i className="icon-item home-icon fa fa-home fa-lg"></i>
+              </a>
+            </li>
+          </ul>
         </form>
 
         <ErrorMessages />

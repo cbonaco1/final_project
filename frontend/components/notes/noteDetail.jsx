@@ -35,6 +35,7 @@ var NoteDetail = React.createClass({
   },
 
   updateNote: function() {
+    // debugger
     NotesAPIUtil.updateNote(this.state.note);
   },
 
@@ -98,13 +99,6 @@ var NoteDetail = React.createClass({
         title = currentNote.title;
       }
     }
-
-    //TODO add date here
-    //TODO Notebook title needs to be a dropdown of all notebooks,
-    //make selected Notebook have class ql-selected
-    //TODO Make Toolbar React component containing these items
-    //in order to allow user to change the notebook for a note
-    //pass the editor as a prop:
 
     return(
       <div className="note-detail">

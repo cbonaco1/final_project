@@ -13,7 +13,6 @@ var NotesIndexItem = React.createClass({
   //called before initial render
   //When the page is loaded, this renders the NoteDetails of the first note
   componentWillMount: function() {
-    // console.log("Enter will mount: " + this.props.note.id);
     if (this.props.active === true) {
       this.history.pushState(null, "/notes/" + this.props.note.id);
     }
@@ -72,7 +71,11 @@ var NotesIndexItem = React.createClass({
 
     var classes = "user-note";
     if (this.props.active === true) {
+      //This prints the active note, need to go to it route
       classes += " active-note";
+
+      //cant do this
+      // this.history.pushState(null, "/notes/" + this.props.note.id)
     }
 
     if (note.body) {

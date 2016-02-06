@@ -15,9 +15,18 @@ var NotebookIndexItem = React.createClass({
       note["notebook"] = this.props.notebook;
     }.bind(this));
 
+    //Redirect the link to the first of the notes for the selected notebook
+    var notebookNotes = this.props.notebook.notes;
+    if (notebookNotes.length > 0) {
+      this.history.pushState(null, "/notes/" + notebookNotes[0].id);
+    }
+    else {
+      this.history.pushState(null, "/notes");
+    }
+
     //Update the NoteStore so the NoteIndex changes to have only the
     //notes from the selected Notebook
-    NoteActions.receiveNotes(this.props.notebook.notes);
+    NoteActions.receiveNotes(notebookNotes);
   },
 
   deleteNotebook: function(e) {

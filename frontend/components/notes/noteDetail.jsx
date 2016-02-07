@@ -35,7 +35,7 @@ var NoteDetail = React.createClass({
   },
 
   updateNote: function() {
-    // debugger
+    //gets here - this.state.note is updated version
     NotesAPIUtil.updateNote(this.state.note);
   },
 

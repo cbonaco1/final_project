@@ -7,6 +7,7 @@ var NotesAPIUtil = {
       url: '/api/notes',
       dataType: 'json',
       success: function(data) {
+        // debugger
         NoteActions.receiveNotes(data);
       },
       error: function(data) {
@@ -25,6 +26,20 @@ var NotesAPIUtil = {
       },
       error: function(data ) {
         // debugger
+      }
+    });
+  },
+
+  fetchNotebookNotes: function(notebook) {
+    $.ajax({
+      type: 'GET',
+      url: '/api/notebooks/' + notebook.id + "/notes",
+      dataType: 'json',
+      success: function(data) {
+        NoteActions.receiveNotes(data);
+      },
+      error: function(data) {
+        alert("Error in fetchNotebookNotes");
       }
     });
   },
@@ -62,6 +77,7 @@ var NotesAPIUtil = {
   },
 
   updateNote: function(note) {
+    // debugger
     $.ajax({
       type: 'PATCH',
       url: '/api/notes/' + note.id,

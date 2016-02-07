@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :create]
     resources :notes, only: [:index, :show, :create, :update, :destroy]
     resources :notebooks, only: [:index, :show, :create, :destroy]
+    get "notebooks/:notebook_id/notes", to: "notes#notebook_notes"
     resource :session, only: [:new, :create, :destroy, :show]
     get "search", to: "utils#search"
   end

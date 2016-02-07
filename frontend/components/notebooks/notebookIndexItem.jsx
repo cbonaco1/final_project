@@ -1,6 +1,7 @@
 var React = require('react');
 var NoteActions = require('./../../actions/noteActions');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
+var NoteApiUtil = require('./../../util/notes_api_util');
 var History = require('react-router').History;
 
 var NotebookIndexItem = React.createClass({
@@ -16,6 +17,8 @@ var NotebookIndexItem = React.createClass({
     }.bind(this));
 
     //Redirect the link to the first of the notes for the selected notebook
+    //TODO might have to change how the notes are filtered by notebook
+    //Objects in notebook.notes contain notebooks, which contain notes, etc.
     var notebookNotes = this.props.notebook.notes;
     if (notebookNotes.length > 0) {
       this.history.pushState(null, "/notes/" + notebookNotes[0].id);
@@ -24,9 +27,15 @@ var NotebookIndexItem = React.createClass({
       this.history.pushState(null, "/notes");
     }
 
+    NoteApiUtil.fetchNotebookNotes(this.props.notebook);
+
     //Update the NoteStore so the NoteIndex changes to have only the
     //notes from the selected Notebook
-    NoteActions.receiveNotes(notebookNotes);
+
+    //GET to notebooks/id/notes
+    // debugger
+    //Note
+    // NoteActions.receiveNotes(notebookNotes);
   },
 
   deleteNotebook: function(e) {

@@ -556,6 +556,10 @@ header {
   border: 1px solid #aaa;
 }
 
+#editor-save-icon:hover {
+  color: #3737F5;
+}
+
 /*--------------------*/
 
 /*------Sidebar-------*/
@@ -569,17 +573,8 @@ header {
 }
 
 .sidebar-icon {
-  border-radius: 50%;
   padding: 10px 8px;
   cursor: pointer;
-}
-
-.sidebar-icons:hover .sidebar-icon{
-  /*color: #fff;*/
-}
-
-.sidebar-icons:hover {
-  /*background: #2DBE60;*/
 }
 
 .sidebar-icons {

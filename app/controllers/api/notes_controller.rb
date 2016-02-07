@@ -6,6 +6,16 @@ class Api::NotesController < ApplicationController
     @notes = Note.where(author_id: current_user.id).order(updated_at: :desc)
   end
 
+  #This retrieves all of the current users notes for a notebook
+  def notebook_notes
+    @notes = Note.where(author_id: current_user.id,
+                        notebook_id: params[:notebook_id])
+                        .order(updated_at: :desc)
+    # byebug
+    render 'api/notes/index'
+
+  end
+
   def show
     #should this render show view?
     @note = Note.find(params[:id])

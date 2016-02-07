@@ -8,7 +8,6 @@ var ErrorMessages = React.createClass({
   },
 
   //listen to ErrorStore
-  //should this be another lifecycle method?
   componentDidMount: function() {
     this.listenerToken = ErrorStore.addListener(this.showErrors);
   },

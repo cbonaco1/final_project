@@ -79,6 +79,48 @@ header {
   background: #27964E;
 }
 
+.error-msgs {
+  color: #f00;
+  text-align: center;
+  background: #ffd1d1;
+  padding: 8px;
+  border-left: 1px solid #e4a197;
+  border-right: 1px solid #e4a197;
+  border-bottom: 1px solid #e4a197;
+}
+
+.notifications-container {
+  position: fixed;
+  border: 1px solid #1C6B38;
+  background: #2DBE60;
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: bold;
+  right: 0;
+}
+
+.messages-enter {
+  opacity: 0.01;
+}
+
+.messages-enter.messages-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms ease-in;
+  border:1px solid blue;
+}
+
+.messages-leave {
+  opacity: 1;
+}
+
+.messages-leave.messages-leave-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+
+
+
 .sign-in-buttons {
   margin: auto;
 }
@@ -630,13 +672,3 @@ header {
   float:right;
 }
 /*--------------------*/
-
-.error-msgs {
-  color: #f00;
-  text-align: center;
-  background: #ffd1d1;
-  padding: 8px;
-  border-left: 1px solid #e4a197;
-  border-right: 1px solid #e4a197;
-  border-bottom: 1px solid #e4a197;
-}

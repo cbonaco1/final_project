@@ -3,56 +3,163 @@
 1 verbose cli   '/usr/bin/npm',
 1 verbose cli   'install',
 1 verbose cli   '--save',
-1 verbose cli   'https://github.com/zenoamaro/react-quill.git' ]
+1 verbose cli   'react-addons-css-transition-group' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.37
 4 verbose node symlink /usr/bin/node
 5 warn package.json FeatherNote@1.0.0 No repository field.
 6 verbose readDependencies using package.json deps
-7 verbose cache add [ 'https://github.com/zenoamaro/react-quill.git', null ]
-8 verbose cache add name=undefined spec="https://github.com/zenoamaro/react-quill.git" args=["https://github.com/zenoamaro/react-quill.git",null]
-9 verbose parsed url { protocol: 'https:',
-9 verbose parsed url   slashes: true,
+7 verbose cache add [ 'react-addons-css-transition-group', null ]
+8 verbose cache add name=undefined spec="react-addons-css-transition-group" args=["react-addons-css-transition-group",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
 9 verbose parsed url   auth: null,
-9 verbose parsed url   host: 'github.com',
+9 verbose parsed url   host: null,
 9 verbose parsed url   port: null,
-9 verbose parsed url   hostname: 'github.com',
+9 verbose parsed url   hostname: null,
 9 verbose parsed url   hash: null,
 9 verbose parsed url   search: null,
 9 verbose parsed url   query: null,
-9 verbose parsed url   pathname: '/zenoamaro/react-quill.git',
-9 verbose parsed url   path: '/zenoamaro/react-quill.git',
-9 verbose parsed url   href: 'https://github.com/zenoamaro/react-quill.git' }
-10 silly lockFile 9b9c7c81-ub-com-zenoamaro-react-quill-git https://github.com/zenoamaro/react-quill.git
-11 verbose lock https://github.com/zenoamaro/react-quill.git /home/christian/.npm/9b9c7c81-ub-com-zenoamaro-react-quill-git.lock
-12 verbose addRemoteTarball [ 'https://github.com/zenoamaro/react-quill.git', null ]
-13 info retry fetch attempt 1 at 17:38:18
-14 verbose fetch to= /tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-15 http GET https://github.com/zenoamaro/react-quill.git
-16 http 200 https://github.com/zenoamaro/react-quill.git
-17 verbose tar unpack /tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-18 silly lockFile 842d68d3-zenoamaro-react-quill-git-unpack tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack
-19 verbose lock tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack /home/christian/.npm/842d68d3-zenoamaro-react-quill-git-unpack.lock
-20 silly lockFile 8c82ca27-ub-com-zenoamaro-react-quill-git tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-21 verbose lock tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git /home/christian/.npm/8c82ca27-ub-com-zenoamaro-react-quill-git.lock
-22 silly gunzTarPerm modes [ '755', '644' ]
-23 error not a package /tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-24 silly lockFile 842d68d3-zenoamaro-react-quill-git-unpack tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack
-25 silly lockFile 842d68d3-zenoamaro-react-quill-git-unpack tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack
-26 silly lockFile 8c82ca27-ub-com-zenoamaro-react-quill-git tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-27 silly lockFile 8c82ca27-ub-com-zenoamaro-react-quill-git tar:///tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git
-28 silly lockFile 9b9c7c81-ub-com-zenoamaro-react-quill-git https://github.com/zenoamaro/react-quill.git
-29 silly lockFile 9b9c7c81-ub-com-zenoamaro-react-quill-git https://github.com/zenoamaro/react-quill.git
-30 error Error: ENOENT, open '/tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack/package.json'
-31 error If you need help, you may report this *entire* log,
-31 error including the npm and node versions, at:
-31 error     <http://github.com/npm/npm/issues>
-32 error System Linux 3.19.0-47-generic
-33 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save" "https://github.com/zenoamaro/react-quill.git"
-34 error cwd /home/christian/AppAcademy/FeatherNote
-35 error node -v v0.10.37
-36 error npm -v 1.4.28
-37 error path /tmp/npm-3434-7-qWoiby/github.com/zenoamaro/react-quill.git-unpack/package.json
-38 error code ENOENT
-39 error errno 34
-40 verbose exit [ 34, true ]
+9 verbose parsed url   pathname: 'react-addons-css-transition-group',
+9 verbose parsed url   path: 'react-addons-css-transition-group',
+9 verbose parsed url   href: 'react-addons-css-transition-group' }
+10 silly lockFile 173e9f40-eact-addons-css-transition-group react-addons-css-transition-group
+11 verbose lock react-addons-css-transition-group /home/christian/.npm/173e9f40-eact-addons-css-transition-group.lock
+12 silly lockFile 173e9f40-eact-addons-css-transition-group react-addons-css-transition-group
+13 silly lockFile 173e9f40-eact-addons-css-transition-group react-addons-css-transition-group
+14 verbose addNamed [ 'react-addons-css-transition-group', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile ec6401f5-eact-addons-css-transition-group react-addons-css-transition-group@
+17 verbose lock react-addons-css-transition-group@ /home/christian/.npm/ec6401f5-eact-addons-css-transition-group.lock
+18 silly addNameRange { name: 'react-addons-css-transition-group',
+18 silly addNameRange   range: '*',
+18 silly addNameRange   hasData: false }
+19 verbose request where is /react-addons-css-transition-group
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 150a0ef8e4b7e4c3
+22 verbose url raw /react-addons-css-transition-group
+23 verbose url resolving [ 'https://registry.npmjs.org/',
+23 verbose url resolving   './react-addons-css-transition-group' ]
+24 verbose url resolved https://registry.npmjs.org/react-addons-css-transition-group
+25 verbose request where is https://registry.npmjs.org/react-addons-css-transition-group
+26 info trying registry request attempt 1 at 16:17:56
+27 verbose etag "6W8BTPY3BG76IN502MEKFE2CX"
+28 http GET https://registry.npmjs.org/react-addons-css-transition-group
+29 http 304 https://registry.npmjs.org/react-addons-css-transition-group
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Sun, 07 Feb 2016 21:17:56 GMT',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'cache-control': 'max-age=300',
+30 silly registry.get     etag: '"6W8BTPY3BG76IN502MEKFE2CX"',
+30 silly registry.get     age: '0',
+30 silly registry.get     connection: 'keep-alive',
+30 silly registry.get     'x-served-by': 'cache-iad2136-IAD',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1454879876.363130,VS0,VE13',
+30 silly registry.get     vary: 'Accept' } ]
+31 verbose etag https://registry.npmjs.org/react-addons-css-transition-group from cache
+32 silly addNameRange number 2 { name: 'react-addons-css-transition-group',
+32 silly addNameRange   range: '*',
+32 silly addNameRange   hasData: true }
+33 silly addNameRange versions [ 'react-addons-css-transition-group',
+33 silly addNameRange   [ '0.14.0-beta1',
+33 silly addNameRange     '0.14.0-beta2',
+33 silly addNameRange     '0.14.0-beta3',
+33 silly addNameRange     '0.14.0-rc1',
+33 silly addNameRange     '0.14.0',
+33 silly addNameRange     '0.14.1',
+33 silly addNameRange     '0.14.2',
+33 silly addNameRange     '0.14.3',
+33 silly addNameRange     '0.14.4',
+33 silly addNameRange     '0.14.5',
+33 silly addNameRange     '0.14.6',
+33 silly addNameRange     '0.15.0-alpha.1',
+33 silly addNameRange     '0.14.7' ] ]
+34 verbose addNamed [ 'react-addons-css-transition-group', '0.14.7' ]
+35 verbose addNamed [ '0.14.7', '0.14.7' ]
+36 silly lockFile 53f0189a-dons-css-transition-group-0-14-7 react-addons-css-transition-group@0.14.7
+37 verbose lock react-addons-css-transition-group@0.14.7 /home/christian/.npm/53f0189a-dons-css-transition-group-0-14-7.lock
+38 silly lockFile 53f0189a-dons-css-transition-group-0-14-7 react-addons-css-transition-group@0.14.7
+39 silly lockFile 53f0189a-dons-css-transition-group-0-14-7 react-addons-css-transition-group@0.14.7
+40 silly lockFile ec6401f5-eact-addons-css-transition-group react-addons-css-transition-group@
+41 silly lockFile ec6401f5-eact-addons-css-transition-group react-addons-css-transition-group@
+42 silly resolved [ { name: 'react-addons-css-transition-group',
+42 silly resolved     version: '0.14.7',
+42 silly resolved     main: 'index.js',
+42 silly resolved     repository:
+42 silly resolved      { type: 'git',
+42 silly resolved        url: 'git+https://github.com/facebook/react.git' },
+42 silly resolved     keywords: [ 'react', 'react-addon' ],
+42 silly resolved     license: 'BSD-3-Clause',
+42 silly resolved     dependencies: {},
+42 silly resolved     peerDependencies: { react: '^0.14.7' },
+42 silly resolved     description: 'This package provides the React CSSTransitionGroup add-on.',
+42 silly resolved     bugs: { url: 'https://github.com/facebook/react/issues' },
+42 silly resolved     homepage: 'https://github.com/facebook/react#readme',
+42 silly resolved     _id: 'react-addons-css-transition-group@0.14.7',
+42 silly resolved     _shasum: 'e8742ba0f695221018234fbbdc4b5a138bb0faf3',
+42 silly resolved     _resolved: 'https://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-0.14.7.tgz',
+42 silly resolved     _from: 'react-addons-css-transition-group@',
+42 silly resolved     scripts: {},
+42 silly resolved     _npmVersion: '2.14.12',
+42 silly resolved     _nodeVersion: '4.2.6',
+42 silly resolved     _npmUser: { name: 'graue', email: 'scott@oceanbase.org' },
+42 silly resolved     dist:
+42 silly resolved      { shasum: 'e8742ba0f695221018234fbbdc4b5a138bb0faf3',
+42 silly resolved        tarball: 'http://registry.npmjs.org/react-addons-css-transition-group/-/react-addons-css-transition-group-0.14.7.tgz' },
+42 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+42 silly resolved     directories: {},
+42 silly resolved     readme: 'ERROR: No README data found!' } ]
+43 info install react-addons-css-transition-group@0.14.7 into /home/christian/AppAcademy/FeatherNote
+44 info installOne react-addons-css-transition-group@0.14.7
+45 verbose node_modules/react-addons-css-transition-group unbuild
+46 info preuninstall react-addons-css-transition-group@0.14.7
+47 info uninstall react-addons-css-transition-group@0.14.7
+48 verbose true,/home/christian/AppAcademy/FeatherNote/node_modules,/home/christian/AppAcademy/FeatherNote/node_modules unbuild react-addons-css-transition-group@0.14.7
+49 info postuninstall react-addons-css-transition-group@0.14.7
+50 verbose tar unpack /home/christian/.npm/react-addons-css-transition-group/0.14.7/package.tgz
+51 silly lockFile 11517b69-eact-addons-css-transition-group tar:///home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group
+52 verbose lock tar:///home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group /home/christian/.npm/11517b69-eact-addons-css-transition-group.lock
+53 silly lockFile 52057a74-nsition-group-0-14-7-package-tgz tar:///home/christian/.npm/react-addons-css-transition-group/0.14.7/package.tgz
+54 verbose lock tar:///home/christian/.npm/react-addons-css-transition-group/0.14.7/package.tgz /home/christian/.npm/52057a74-nsition-group-0-14-7-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 silly gunzTarPerm extractEntry package.json
+57 silly gunzTarPerm extractEntry README.md
+58 silly gunzTarPerm extractEntry LICENSE
+59 silly gunzTarPerm extractEntry index.js
+60 silly gunzTarPerm extractEntry PATENTS
+61 silly lockFile 11517b69-eact-addons-css-transition-group tar:///home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group
+62 silly lockFile 11517b69-eact-addons-css-transition-group tar:///home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group
+63 silly lockFile 52057a74-nsition-group-0-14-7-package-tgz tar:///home/christian/.npm/react-addons-css-transition-group/0.14.7/package.tgz
+64 silly lockFile 52057a74-nsition-group-0-14-7-package-tgz tar:///home/christian/.npm/react-addons-css-transition-group/0.14.7/package.tgz
+65 info preinstall react-addons-css-transition-group@0.14.7
+66 verbose readDependencies using package.json deps
+67 verbose readDependencies using package.json deps
+68 silly resolved []
+69 verbose about to build /home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group
+70 info build /home/christian/AppAcademy/FeatherNote/node_modules/react-addons-css-transition-group
+71 verbose linkStuff [ false,
+71 verbose linkStuff   false,
+71 verbose linkStuff   false,
+71 verbose linkStuff   '/home/christian/AppAcademy/FeatherNote/node_modules' ]
+72 info linkStuff react-addons-css-transition-group@0.14.7
+73 verbose linkBins react-addons-css-transition-group@0.14.7
+74 verbose linkMans react-addons-css-transition-group@0.14.7
+75 verbose rebuildBundles react-addons-css-transition-group@0.14.7
+76 info install react-addons-css-transition-group@0.14.7
+77 info postinstall react-addons-css-transition-group@0.14.7
+78 verbose readDependencies using package.json deps
+79 verbose already installed skipping react@^0.14.7 /home/christian/AppAcademy/FeatherNote
+80 silly resolved []
+81 error peerinvalid The package react does not satisfy its siblings' peerDependencies requirements!
+81 error peerinvalid Peer react-dom@0.14.6 wants react@^0.14.6
+81 error peerinvalid Peer react-addons-css-transition-group@0.14.7 wants react@^0.14.7
+81 error peerinvalid Peer react-quill@0.3.0 wants react@>=0.11.0
+82 error System Linux 3.19.0-49-generic
+83 error command "/usr/bin/node" "/usr/bin/npm" "install" "--save" "react-addons-css-transition-group"
+84 error cwd /home/christian/AppAcademy/FeatherNote
+85 error node -v v0.10.37
+86 error npm -v 1.4.28
+87 error code EPEERINVALID
+88 verbose exit [ 1, true ]

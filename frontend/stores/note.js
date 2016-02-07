@@ -26,7 +26,6 @@ NoteStore.resetNotes = function(newNotes){
   for (var i = 0; i < newNotes.length; i++) {
     _notes[newNotes[i].id] = newNotes[i];
   }
-  debugger
 };
 
 NoteStore.filterNotes = function(notebooks){

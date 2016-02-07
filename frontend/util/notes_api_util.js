@@ -1,4 +1,5 @@
 var NoteActions = require('../actions/noteActions');
+var CurrentUserActions = require('../actions/currentUserActions');
 
 var NotesAPIUtil = {
   fetchAllNotes: function() {
@@ -85,6 +86,7 @@ var NotesAPIUtil = {
       data: note,
       success: function(data) {
         NoteActions.updatedNote(data);
+        // CurrentUserActions.noteUpdated(data);
       },
       error: function(data) {
         alert("Error in updateNote");

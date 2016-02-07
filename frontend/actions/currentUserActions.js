@@ -28,7 +28,7 @@ var CurrentUserActions = {
     AppDispatcher.dispatch({
       actionType: UserConstants.BAD_CREATE_USER,
       data: messages
-    })
+    });
   }
 
 };

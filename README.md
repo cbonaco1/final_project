@@ -24,6 +24,8 @@ Technologies used to develop this application include:
 
 * BCrypt
 
+* Quill JS Text Editor ([documentation](http://quilljs.com/docs/quickstart/))
+
 Implementation timeline and other project documents including wireframes
 can be viewed [here][docs].
 

@@ -94,7 +94,6 @@ var NotesIndexItem = React.createClass({
             <i className="fa fa-2x fa-trash note-delete-icon" onClick={this.deleteNote}></i>
           </div>
           <p>{body}</p>
-          <p>{this.formatDate(this.props.note.updated_at)}</p>
         </div>
       </li>
     );

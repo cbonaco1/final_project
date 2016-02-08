@@ -16,7 +16,7 @@
  *= require quill.snow
  */
 
-html, h2, h3, body, ul, p, a {
+html, h2, h3, body, input, ul, p, a {
   padding: 0;
   margin: 0;
   border: 0;
@@ -24,7 +24,8 @@ html, h2, h3, body, ul, p, a {
   font-size: inherit;
   text-decoration: inherit;
 
-  font-family: "caecilia", Helvetica, Arial, sans-serif;
+  /*font-family: "caecilia", Helvetica, Arial, sans-serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
@@ -160,6 +161,7 @@ header {
 
 .ql-editor {
   font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .icon-container {

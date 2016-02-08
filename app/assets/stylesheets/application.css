@@ -257,7 +257,7 @@ header {
 
 .social-media-logins {
   margin: auto;
-  width: 200px;
+  width: 100px;
 }
 
 .social-media-login:hover {
@@ -600,11 +600,16 @@ header {
   cursor: pointer;
 }
 
+.sidebar-icon:hover {
+  color: #27964E;
+}
+
 .sidebar-icons {
   color: #2DBE60;
   cursor: pointer;
   margin-bottom: 30px;
 }
+
 /*--------------------*/
 
 /*------Search-----------*/

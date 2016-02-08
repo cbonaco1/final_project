@@ -84,9 +84,6 @@ var Sidebar = React.createClass({
           <li className="sidebar-icons" title="Notebooks" onClick={this.showNotebooks}>
             <i className="fa fa-book fa-lg sidebar-icon"></i>
           </li>
-          <li className="sidebar-icons" title="Tags">
-            <i className="fa fa-tags fa-lg sidebar-icon"></i>
-          </li>
         </ul>
         {noteModal}
         {notebookModal}

@@ -50,11 +50,11 @@ var NewUserForm = React.createClass({
       body: NoteConstants.INSTRUCTION_NOTE_BODY
     };
 
-    //Create new user notes/notebook
-    NotebookApiUtils.createNotebook(newNotebook, function(newNotebook){
-      welcomeNote["notebook_id"] = newNotebook.id;
-      NoteApiUtils.addNote(welcomeNote);
-    }.bind(this));
+    // //Create new user notes/notebook
+    // NotebookApiUtils.createNotebook(newNotebook, function(newNotebook){
+    //   welcomeNote["notebook_id"] = newNotebook.id;
+    //   NoteApiUtils.addNote(welcomeNote);
+    // }.bind(this));
 
   },
 

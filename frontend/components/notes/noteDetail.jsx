@@ -64,7 +64,7 @@ var NoteDetail = React.createClass({
       //only set state if user made change to text (not API)
       if (source === 'user') {
         var currentNote = this.state.note;
-        currentNote["body"] = _editor.getText();
+        currentNote["body"] = _editor.getText();        
         this.setState(currentNote);
       }
     }.bind(this));

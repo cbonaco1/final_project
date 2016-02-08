@@ -1,10 +1,11 @@
 class Api::UsersController < ApplicationController
 
   def create
-    # @user = User.new(username: params[:username], password: params[:password])
     @user = User.new(user_params)
 
     if @user.save
+      #create new notebook and notes for new user
+      @user.set_up_user
       sign_in_user(@user)
       render "api/users/new"
     else

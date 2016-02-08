@@ -1,0 +1,23 @@
+SubmitChange default font size dropdown in new note to Large instead of Small
+SubmitRemove Twitter login until functional
+SubmitMultiple blank lines in new note
+SubmitSave text decorations
+SubmitImage upload
+SubmitAdd a new notebook from new note field
+SubmitWent back on new notebook form (it is a modal)
+Submit Add some opacity to new notebook form
+SubmitRemove Tags icon until functional
+SubmitBetter prompt for deleting note (could be disabled by user)
+SubmitCreate new user notes in backend (after @user is created)
+SubmitRemove Next button if no next page
+SubmitHover effects on sidebar icons (same as other buttons)
+
+
+SubmitBug in text editor (editing a note in the middle of text) --- Stop it from re-rendering
+SubmitSliding out modal windows
+SubmitCustom domain
+SubmitGoogle fonts
+SubmitSaving formatting done by user in text editor
+SubmitStyle notebook dropdown
+SubmitValidation for note/notebooks
+SubmitStyle alert windows for deleting notes/notebooks

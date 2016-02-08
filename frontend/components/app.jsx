@@ -2,15 +2,15 @@ var React = require('react');
 var NotesIndex = require('./notes/notesIndex');
 var Header = require('./header');
 var Sidebar = require('./sidebar/sidebar');
-var Messages = require('./notifications');
+var Notifications = require('./notifications');
 
 var App = React.createClass({
 
   render: function() {
-    //put Messages component here
+    //put Notifications component here
     return(
       <div className="content-header group">
-        <Messages />
+        <Notifications />
         <Sidebar />
         <div className="content-sidebar">
           <NotesIndex />

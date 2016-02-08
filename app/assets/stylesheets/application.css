@@ -98,29 +98,8 @@ header {
   padding: 10px 30px;
   font-weight: bold;
   right: 0;
+  z-index: 5;
 }
-
-.messages-enter {
-  opacity: 0.01;
-}
-
-.messages-enter.messages-enter-active {
-  opacity: 1;
-  transition: opacity 5000ms ease-in;
-  border:1px solid blue;
-}
-
-.messages-leave {
-  opacity: 1;
-}
-
-.messages-leave.messages-leave-active {
-  opacity: 0.01;
-  transition: opacity 1000ms ease-in;
-}
-
-
-
 
 .sign-in-buttons {
   margin: auto;

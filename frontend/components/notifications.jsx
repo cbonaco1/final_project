@@ -22,6 +22,10 @@ var Notificiations = React.createClass({
     this.setState({ messages: NotificiationStore.getMessages() });
   },
 
+  hideMessages: function() {
+    this.setState({ messages: NotificiationStore.clearMessages() });
+  },
+
   render: function() {
 
     //after rendered with messages, call setState again on an interval,
@@ -32,6 +36,12 @@ var Notificiations = React.createClass({
     var classes = "notifications-container";
 
     if (this.state.messages.length > 0) {
+
+      //Clear messages after 3 seconds
+      window.setTimeout(function(){
+        this.hideMessages();
+      }.bind(this), 3000);
+
       messages = this.state.messages.map(function(message, index){
         return <p key={index}>{message}</p>
       });
@@ -41,11 +51,9 @@ var Notificiations = React.createClass({
     }
 
     return(
-      <ReactCSSTransitionGroup transitionName="messages" transitionEnterTimeout={5000} transitionLeaveTimeout={4000}>
-        <div className={classes}>
-          { messages }
-          </div>
-      </ReactCSSTransitionGroup>
+      <div className={classes}>
+        { messages }
+        </div>
     );
   }
 });

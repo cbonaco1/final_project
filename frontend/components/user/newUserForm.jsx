@@ -20,7 +20,6 @@ var NewUserForm = React.createClass({
     });
 
     UserApiAUtil.createUser(credentials, function(user) {
-      this.setUpUser(user);
       this.history.pushState(null, "/notes");
     }.bind(this));
 
@@ -29,33 +28,6 @@ var NewUserForm = React.createClass({
   //Clear errors when this thing unmounts
   componentWillUnmount: function() {
     ErrorStore.clearMessages();
-  },
-
-  setUpUser: function(user, callback) {
-    var newNotebook = {
-          author_id: user.id,
-          title: "First Notebook",
-          description: "This is your first notebook on FeatherNote!"
-    };
-
-    var welcomeNote = {
-          author_id: user.id,
-          title: NoteConstants.NEW_NOTE_TITLE,
-          body: NoteConstants.NEW_NOTE_BODY
-    };
-
-    var instructionalNote = {
-      author_id: user.id,
-      title: NoteConstants.INSTRUCTION_NOTE_TITLE,
-      body: NoteConstants.INSTRUCTION_NOTE_BODY
-    };
-
-    // //Create new user notes/notebook
-    // NotebookApiUtils.createNotebook(newNotebook, function(newNotebook){
-    //   welcomeNote["notebook_id"] = newNotebook.id;
-    //   NoteApiUtils.addNote(welcomeNote);
-    // }.bind(this));
-
   },
 
   render: function() {

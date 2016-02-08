@@ -55,7 +55,7 @@ var NewNotebookForm = React.createClass({
                   onChange={this.updateDescription}
                     />
           <div className="group">
-            <button className="cancel-button note-cancel-button" onClick={this.props.callback}>Cancel</button>
+            <button className="cancel-button note-cancel-button form-button" onClick={this.props.callback}>Cancel</button>
             <button className="form-button note-add-button" onClick={this.addNotebook}>Create Notebook</button>
           </div>
         </div>

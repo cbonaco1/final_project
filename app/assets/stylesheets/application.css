@@ -16,7 +16,7 @@
  *= require quill.snow
  */
 
-html, h2, h3, body, input, ul, p, a {
+html, h2, h3, body, input, ul, p, a, button {
   padding: 0;
   margin: 0;
   border: 0;
@@ -520,13 +520,16 @@ header {
 /*----Notebook Form Modal------*/
 
 .new-notebook-outline{
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .notebook-form {
   margin: 40px auto;
   width: 500px;
   padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+
 }
 
 .new-note-header {
@@ -550,6 +553,7 @@ header {
   width: 100%;
   text-align: left;
   padding-left: 140px;
+  box-sizing: border-box;
 }
 
 .new-notebook-input:focus {

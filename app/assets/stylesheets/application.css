@@ -134,7 +134,7 @@ header {
 }
 
 .cancel-button:hover {
-  background: #d9d9d9;
+  background: #BDBDBD;
   border: 1px solid #d1d1d1;
 }
 
@@ -347,10 +347,13 @@ header {
   border-bottom: 1px solid #eee;
   margin-left: 15px;
   height: 100%;
+  width: 320px;
   margin-right: 15px;
+  float: left;
 }
 
 .user-note {
+  position: relative;
   height: 120px;
   padding-top: 15px;
   color: #848484;
@@ -363,6 +366,59 @@ header {
   color: #fff;
   border: none;
 }
+
+.delete-prompt {
+  position: absolute;
+  top: -4px;
+  background: blue;
+  border: 1px solid red;
+  color: white;
+  width: 280px;
+  height: 75px;
+  padding: 10px;
+  float: left;
+  z-index: 2;
+}
+
+.prompt-buttons {
+  width: 100px;
+  height: 38px;
+  float:left;
+  font-size: 16px;
+}
+
+.promt-cancel-button {
+  margin-left: 20px;
+}
+
+
+/*------*/
+.example-enter {
+  opacity: 0.01;
+  /*left: 40px;*/
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  /*left: 350px;*/
+  transition: opacity 500ms ease-in;
+}
+
+/*.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}*/
+/*------*/
+
+
+
+
+
+
 
 .active-note {
   border: 4px solid #D4D1D1;

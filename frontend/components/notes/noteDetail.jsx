@@ -9,7 +9,6 @@ var _editor;
 
 var NoteDetail = React.createClass({
 
-  //state will be the note object
   getInitialState: function() {
     return { note: this.getStateFromStore() };
   },
@@ -31,12 +30,18 @@ var NoteDetail = React.createClass({
   //listener method on NoteStore
   _changeNote: function() {
     this.setState( {note: this.getStateFromStore() });
-    //setState to first item in NoteStore.all()
   },
 
+  //saves Note to database
   updateNote: function() {
-    //gets here - this.state.note is updated version
-    NotesAPIUtil.updateNote(this.state.note);
+    //set body of this.state.note to contents of text editor
+    //only when the user clicks save, otherwise it will re-render
+    //the note body everytime. This moved the cursor to the end of the line
+    //when the user edited middle of body
+    var noteBody = _editor.getText();
+    var currentNote = this.state.note;
+    currentNote["body"] = noteBody;
+    NotesAPIUtil.updateNote(currentNote);
   },
 
   updateNotebook: function(e) {
@@ -60,14 +65,20 @@ var NoteDetail = React.createClass({
   componentDidMount: function() {
     _editor = new Quill("#note-detail-content", {theme:'snow'});
     _editor.addModule('toolbar', { container: '.toolbar'});
-    _editor.on('text-change', function(delta, source){
-      //only set state if user made change to text (not API)
-      if (source === 'user') {
-        var currentNote = this.state.note;
-        currentNote["body"] = _editor.getText();        
-        this.setState(currentNote);
+    _editor.on('text-change', function(delta, source) {
+      //this is where the formatting can be changed
+      if (source === "user") {
+        if (this.timeout) {
+          clearTimeout(this.timeout);
+        }
+        this.timeout = window.setTimeout(function() {
+          var currentNote = this.state.note;
+          currentNote["body"] = _editor.getText();
+          // this.setState(currentNote);
+        }.bind(this), 500);
       }
     }.bind(this));
+
   },
 
   //called when there are new props (navigating to new link)

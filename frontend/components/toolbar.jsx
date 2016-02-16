@@ -31,6 +31,8 @@ var Toolbar = React.createClass({
     }
 
     //TODO style dropdown options
+    //NOTE React gives a warning that we set value of the font-size
+    //dropdown without giving it a onChange event
     return (
       <div className="toolbar">
         <div className="ql-format-group">
@@ -38,7 +40,7 @@ var Toolbar = React.createClass({
           <button className="ql-italic ql-format-button"></button>
           <button className="ql-underline ql-format-button"></button>
         </div>
-        <select className="ql-size">
+        <select className="ql-size" value="18px">
           <option value="10px">Small</option>
           <option value="13px">Normal</option>
           <option value="18px">Large</option>
@@ -54,8 +56,6 @@ var Toolbar = React.createClass({
           <option value="rgb(255, 0, 255)"></option>
           <option value="rgb(255, 255, 0)"></option>
         </select>
-
-        <button className="ql-image ql-format-button"></button>
 
         <select className="notebook-dropdown" value={this.props.selectedNotebook} onChange={this.props.notebookChange}>
           {notebookDropdownOptions}

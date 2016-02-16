@@ -73,20 +73,10 @@ var NoteForm = React.createClass({
     var selectedNotebook;
     var title;
 
-    // if (this.state.notebooks.length > 0) {
-    //   notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
-    //     if (index === 0) {
-    //       selectedNotebook = notebook.id;
-    //     }
-    //     return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
-    //   }.bind(this));
-    // }
-
     if (note) {
       title = this.state.note.title;
       selectedNotebook = this.state.note.notebook_id;
     }
-
 
     return(
       <div className="modal-outline">

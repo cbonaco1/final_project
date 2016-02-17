@@ -11,7 +11,7 @@ var DeletePrompt = React.createClass({
           <button className="prompt-buttons form-button"
                   onClick={this.props.deleteFunction}>Yes</button>
 
-          <button className="prompt-buttons cancel-button promt-cancel-button"
+          <button className="prompt-buttons cancel-button prompt-cancel-button"
                   onClick={this.props.callback}>Cancel</button>
         </div>
       </div>

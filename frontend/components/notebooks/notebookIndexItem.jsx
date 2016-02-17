@@ -83,6 +83,7 @@ var NotebookIndexItem = React.createClass({
     var deletePrompt = "";
     if (this.state.showDeletePrompt) {
       deletePrompt = <DeletePrompt key={1}
+                          classes = "delete-prompt-notebook"
                           message={"Are you sure you want to delete this notebook?\n Note this will delete all notes within this notebook"}
                           callback={this.toggleDeletePrompt}
                           deleteFunction={this.deleteNotebook}/>;
@@ -96,7 +97,7 @@ var NotebookIndexItem = React.createClass({
         </div>
         <p>{this.props.notebook.notes.length} notes</p>
 
-        <ReactCSSTransitionGroup transitionName="delete-prompt"
+        <ReactCSSTransitionGroup transitionName="delete-prompt-notebook"
                                   transitionEnterTimeout={500}
                                   transitionLeaveTimeout={300}>
 

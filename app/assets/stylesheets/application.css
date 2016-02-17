@@ -502,7 +502,7 @@ header {
 .note-title-field {
   border: 0;
   border-bottom: 1px solid #eee;
-  max-width: 665px;
+  width: 95%;
   margin: 15px;
   font-size: 24px;
 }

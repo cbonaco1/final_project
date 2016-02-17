@@ -5,7 +5,7 @@ var DeletePrompt = React.createClass({
 
   render: function() {
     return(
-      <div className="delete-prompt" key={this.props.key}>
+      <div className={"delete-prompt " + this.props.classes} key={this.props.key}>
         <p>{this.props.message}</p>
         <div className="prompt-buttons-group group">
           <button className="prompt-buttons form-button"

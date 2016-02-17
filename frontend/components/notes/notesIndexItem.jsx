@@ -40,14 +40,7 @@ var NotesIndexItem = React.createClass({
     //stopPropagation so the showNote function does not run
     e.stopPropagation();
 
-    //Call setState - showDeletePrompt: true
     this.setState({ showDeletePrompt: true });
-
-    //Might have to call setState again after note is deleted,
-    //to re-render the NotesIndexItem without the prompt
-    //   //if note to delete is currently the one displayed,
-    //   //after deleting it, add callback which pushes state to next note in list
-
   },
 
   toggleDeletePrompt: function(e) {
@@ -108,6 +101,7 @@ var NotesIndexItem = React.createClass({
 
     if (this.state.showDeletePrompt) {
       deletePrompt = <DeletePrompt key={1}
+              classes = "delete-prompt-note"
               message = "Are you sure you want to delete this note?"
               callback={this.toggleDeletePrompt}
               deleteFunction={this.removeNote}/>;
@@ -125,7 +119,12 @@ var NotesIndexItem = React.createClass({
           <p>{body}</p>
         </div>
 
+        <ReactCSSTransitionGroup transitionName="delete-prompt-note"
+                                  transitionEnterTimeout={500}
+                                  transitionLeaveTimeout={300}>
           { deletePrompt }
+        </ReactCSSTransitionGroup>
+
 
       </li>
     );

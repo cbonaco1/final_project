@@ -3,6 +3,7 @@ var NoteActions = require('./../../actions/noteActions');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
 var NoteApiUtil = require('./../../util/notes_api_util');
 var DeletePrompt = require('./../deletePrompt');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 var History = require('react-router').History;
 
 var NotebookIndexItem = React.createClass({
@@ -82,7 +83,7 @@ var NotebookIndexItem = React.createClass({
     var deletePrompt = "";
     if (this.state.showDeletePrompt) {
       deletePrompt = <DeletePrompt key={1}
-                          message="Are you sure you want to delete this notebook?\n Note this will delete all notes within this notebook"
+                          message={"Are you sure you want to delete this notebook?\n Note this will delete all notes within this notebook"}
                           callback={this.toggleDeletePrompt}
                           deleteFunction={this.deleteNotebook}/>;
     }
@@ -95,7 +96,12 @@ var NotebookIndexItem = React.createClass({
         </div>
         <p>{this.props.notebook.notes.length} notes</p>
 
+        <ReactCSSTransitionGroup transitionName="delete-prompt"
+                                  transitionEnterTimeout={500}
+                                  transitionLeaveTimeout={300}>
+
         { deletePrompt }
+        </ReactCSSTransitionGroup>
 
       </li>
     );

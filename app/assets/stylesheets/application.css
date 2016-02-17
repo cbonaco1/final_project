@@ -370,11 +370,12 @@ header {
 .delete-prompt {
   position: absolute;
   top: -4px;
-  background: blue;
-  border: 1px solid red;
+  background: #9C9B9B;
+  border: 1px solid #9E9E9E;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
   color: white;
   width: 280px;
-  height: 75px;
   padding: 10px;
   float: left;
   z-index: 2;
@@ -503,7 +504,7 @@ header {
 .note-title-field {
   border: 0;
   border-bottom: 1px solid #eee;
-  width: 665px;
+  max-width: 665px;
   margin: 15px;
   font-size: 24px;
 }

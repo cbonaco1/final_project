@@ -2,10 +2,15 @@ var React = require('react');
 var NoteActions = require('./../../actions/noteActions');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
 var NoteApiUtil = require('./../../util/notes_api_util');
+var DeletePrompt = require('./../deletePrompt');
 var History = require('react-router').History;
 
 var NotebookIndexItem = React.createClass({
   mixins: [History],
+
+  getInitialState: function() {
+    return { showDeletePrompt: false };
+  },
 
   displayNotebookNotes: function() {
     this.props.callback();
@@ -28,43 +33,70 @@ var NotebookIndexItem = React.createClass({
     }
 
     NoteApiUtil.fetchNotebookNotes(this.props.notebook);
-
-    //Update the NoteStore so the NoteIndex changes to have only the
-    //notes from the selected Notebook
-
-    //GET to notebooks/id/notes
-    // debugger
-    //Note
-    // NoteActions.receiveNotes(notebookNotes);
   },
 
-  deleteNotebook: function(e) {
+  toggleDeletePrompt: function(e) {
+    //stopPropagation to stop the click event on the li element
+    //That event displays the notes for the notebook
+    //dont want this to happen when the user clicks Cancel
+    //want to  keep the notebookindex displayed
+    e.stopPropagation();
+    var newState = !this.state.showDeletePrompt;
+    this.setState( {showDeletePrompt: newState} );
+  },
+
+  showDeletePrompt: function(e) {
     //stop the click event on the parent li, which displays the notes
     //for the selected notebook
     e.stopPropagation();
-    var del = window.confirm("Are you sure you want to delete this Notebook?\n" +
-                    "Note this will delete all Notes under this Notebook");
-    if (del) {
-      NotebookApiUtil.deleteNotebook(this.props.notebook, function(remainingNotebooks){
-        //NOTE last notebook might not have any notes
-        //TODO dont let user delete their last notebook
+
+    //Call setState - showDeletePrompt: true
+    this.setState({ showDeletePrompt: true });
+
+    //Might have to call setState again after note is deleted,
+    //to re-render the NotesIndexItem without the prompt
+    //   //if note to delete is currently the one displayed,
+    //   //after deleting it, add callback which pushes state to next note in list
+  },
+
+  deleteNotebook: function(e) {
+    e.stopPropagation();
+
+    // debugger
+
+    NotebookApiUtil.deleteNotebook(this.props.notebook, function(remainingNotebooks){
+      //NOTE last notebook might not have any notes
+      //TODO dont let user delete their last notebook
+      if (remainingNotebooks[0].notes.length > 0) {
         var noteToRedirectTo = remainingNotebooks[0].notes[0].id;
-        // debugger
         this.history.pushState(null, "/notes/" + noteToRedirectTo);
-      }.bind(this));
-    }
+      }
+      else {
+        this.history.pushState(null, "/notes/");
+      }
+    }.bind(this));
   },
 
   render: function() {
-    //display title and number of notes
-    //TODO onClick of NotebookIndexItem, display Notes from that notebook
+
+    var deletePrompt = "";
+    if (this.state.showDeletePrompt) {
+      deletePrompt = <DeletePrompt key={1}
+                          message="Are you sure you want to delete this notebook?\n Note this will delete all notes within this notebook"
+                          callback={this.toggleDeletePrompt}
+                          deleteFunction={this.deleteNotebook}/>;
+    }
+
     return(
       <li className="notebook-index-item" onClick={this.displayNotebookNotes}>
         <div className="notebook-index-item-header group">
           <h3 className="notebook-index-title">{this.props.notebook.title}</h3>
-          <i className="fa fa-lg fa-trash notebook-delete-icon" onClick={this.deleteNotebook}></i>
+          <i className="fa fa-lg fa-trash notebook-delete-icon" onClick={this.showDeletePrompt}></i>
         </div>
         <p>{this.props.notebook.notes.length} notes</p>
+
+        { deletePrompt }
+
       </li>
     );
   }

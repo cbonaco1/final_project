@@ -50,7 +50,8 @@ var NotesIndexItem = React.createClass({
 
   },
 
-  toggleDeletePrompt: function() {
+  toggleDeletePrompt: function(e) {
+    e.stopPropagation();
     var newState = !this.state.showDeletePrompt;
     this.setState( {showDeletePrompt: newState} );
   },
@@ -107,8 +108,9 @@ var NotesIndexItem = React.createClass({
 
     if (this.state.showDeletePrompt) {
       deletePrompt = <DeletePrompt key={1}
-                                  callback={this.toggleDeletePrompt}
-                                  deleteFunction={this.removeNote}/>;
+              message = "Are you sure you want to delete this note?"
+              callback={this.toggleDeletePrompt}
+              deleteFunction={this.removeNote}/>;
     }
 
     //Use ReactCSSTransitionGroup around the delete prompt

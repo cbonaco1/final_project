@@ -120,7 +120,7 @@ var NotesIndexItem = React.createClass({
         </div>
 
         <ReactCSSTransitionGroup transitionName="delete-prompt-note"
-                                  transitionEnterTimeout={500}
+                                  transitionEnterTimeout={300}
                                   transitionLeaveTimeout={300}>
           { deletePrompt }
         </ReactCSSTransitionGroup>

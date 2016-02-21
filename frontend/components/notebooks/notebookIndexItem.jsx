@@ -98,7 +98,7 @@ var NotebookIndexItem = React.createClass({
         <p>{this.props.notebook.notes.length} notes</p>
 
         <ReactCSSTransitionGroup transitionName="delete-prompt-notebook"
-                                  transitionEnterTimeout={500}
+                                  transitionEnterTimeout={300}
                                   transitionLeaveTimeout={300}>
 
         { deletePrompt }

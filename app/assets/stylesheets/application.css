@@ -421,7 +421,8 @@ header {
 .delete-prompt-note-enter.delete-prompt-note-enter-active {
   opacity: 1;
   left: 345px;
-  transition: opacity 500ms, left 500ms ease-in;
+  /*transition: opacity 300ms, left 300ms ease-in;*/
+  transition: opacity 300ms;
 }
 
 .delete-prompt-note-leave {
@@ -610,7 +611,7 @@ header {
 .delete-prompt-notebook-enter.delete-prompt-notebook-enter-active {
   opacity: 1;
   left: 395px;
-  transition: opacity 500ms, left 500ms ease-in;
+  transition: opacity 300ms;
 }
 
 .delete-prompt-notebook-leave {

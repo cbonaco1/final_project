@@ -79,7 +79,7 @@ var NewSessionForm = React.createClass({
           </li>
           <li className="sign-in-msg demo-msg">
             <p>Or give it a try</p>
-            <a href="#/session/new" onClick={this.signInAsGuest}>Demo the app</a>
+            <button className="demo-button" onClick={this.signInAsGuest}>Demo the app</button>
           </li>
         </ul>
 

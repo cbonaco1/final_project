@@ -59,9 +59,9 @@ var FeatherNote = React.createClass({
 
           <p className="social-message">Or log in with social media</p>
           <ul className="social-media-logins group">
-            <li className="facebook-login social-media-login">
+            <li className="facebook-icon facebook-login social-media-login">
               <a href="/auth/facebook">
-                <i className="fa fa-facebook fa-2x facebook-icon social-media-icon"></i>
+                <i className="fa fa-facebook fa-2x social-media-icon"></i>
               </a>
             </li>
           </ul>

@@ -54,7 +54,7 @@ var NewSessionForm = React.createClass({
             <li>
               <button id="new-session-sign-in" className="form-button">Sign In</button>
             </li>
-            <li id="sign-in-facebook-icon" title="Log in with Facebook!" className="icon-container social-media-login">
+            <li id="sign-in-facebook-icon" title="Log in with Facebook!" className="facebook-icon icon-container social-media-login">
               <a href="/auth/facebook">
                 <i id="fb-icon-new-session" className="fa fa-facebook fa-2x icon-item social-media-icon"></i>
               </a>

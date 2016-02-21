@@ -111,7 +111,6 @@ header {
 }
 
 #sign-in-facebook-icon {
-
   font-size: 16px;
 }
 
@@ -260,19 +259,22 @@ header {
   width: 100px;
 }
 
-.social-media-login:hover {
-  background: #27964E;
-}
-
 .social-media-login {
   float:left;
   margin-left: 36px;
 }
 
+.facebook-icon {
+  background: #355089;
+}
+
+.facebook-icon:hover {
+  background: #1D3058;
+}
+
 .facebook-login {
   position: relative;
   display: inline-block;
-  background: #2DBE60;
   padding: 20px;
   border-radius: 8px;
 }
@@ -280,7 +282,7 @@ header {
 .social-media-icon {
   position: absolute;
   top: 6px;
-  bottom: 0;
+  bottom: 6px;
   left: 0;
   right: 0;
   color: #fff;

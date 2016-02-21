@@ -29,7 +29,7 @@ var FeatherNote = React.createClass({
   },
 
   signInAsGuest: function() {
-    SessionsApiUtil.login({username: "guest", password: "guestpassword"}, function() {
+    SessionsApiUtil.loginAsGuest(function() {
       this.history.pushState(null, "/notes");
     }.bind(this));
   },

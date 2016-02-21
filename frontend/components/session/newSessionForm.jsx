@@ -9,13 +9,16 @@ var NewSessionForm = React.createClass({
   mixins: [History],
 
   redirectToNotes: function() {
-    //history is defined in the mixin
     this.history.pushState(null, "/notes");
   },
 
   //Clear errors when this thing unmounts
   componentWillUnmount: function() {
     ErrorStore.clearMessages();
+  },
+
+  signInAsGuest: function() {
+    SessionsApiUtil.loginAsGuest(this.redirectToNotes);
   },
 
   submit: function(e) {
@@ -69,10 +72,16 @@ var NewSessionForm = React.createClass({
 
         <ErrorMessages />
 
-        <div className="sign-in-msg">
-          <p>Dont have an account?</p>
-          <a href="#/users/new">Create account</a>
-        </div>
+        <ul className="sign-in-msgs group">
+          <li className="sign-in-msg create-account-msg">
+            <p>Dont have an account?</p>
+            <a href="#/users/new">Create account</a>
+          </li>
+          <li className="sign-in-msg demo-msg">
+            <p>Or give it a try</p>
+            <a href="#/session/new" onClick={this.signInAsGuest}>Demo the app</a>
+          </li>
+        </ul>
 
       </div>
     );

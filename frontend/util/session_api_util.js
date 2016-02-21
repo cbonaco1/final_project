@@ -1,16 +1,19 @@
 var CurrentUserActions = require("./../actions/currentUserActions");
 var ErrorStore = require('./../stores/errors');
+var ReactRouter = require('react-router');
+var History = ReactRouter.History;
 
 var SessionsApiUti = {
+
+  mixins: [History],
+
   login: function(credentials, callback){
-    //AJAX request to create new session
     $.ajax({
       type: 'POST',
       url: 'api/session',
       data: credentials,
       dataType: 'json',
       success: function(data) {
-        //need to clear error messages from component
         ErrorStore.clearMessages();
         CurrentUserActions.receiveCurrentUser(data);
         callback && callback();
@@ -19,6 +22,10 @@ var SessionsApiUti = {
         CurrentUserActions.badLogin(data);
       }
     });
+  },
+
+  loginAsGuest: function(callback) {
+    this.login({username: "guest", password: "guestpassword"}, callback);
   },
 
   logout: function(callback) {

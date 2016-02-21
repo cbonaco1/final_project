@@ -3,6 +3,7 @@ var ErrorMessages = require('./../errorMessages');
 var ErrorStore = require('./../../stores/errors');
 var UserApiAUtil = require('./../../util/user_api_util');
 var NotebookApiUtils = require('./../../util/notebooks_api_util');
+var SessionsApiUtil = require('./../../util/session_api_util');
 var NoteApiUtils = require('./../../util/notes_api_util');
 var NoteConstants = require('./../../constants/note_constants');
 var History = require('react-router').History;
@@ -23,6 +24,12 @@ var NewUserForm = React.createClass({
       this.history.pushState(null, "/notes");
     }.bind(this));
 
+  },
+
+  signInAsGuest: function() {
+    SessionsApiUtil.loginAsGuest(function(user) {
+      this.history.pushState(null, "/notes");
+    }.bind(this));
   },
 
   //Clear errors when this thing unmounts
@@ -62,10 +69,16 @@ var NewUserForm = React.createClass({
 
         <ErrorMessages />
 
-        <div className="sign-in-msg">
-          <p>Already have an account?</p>
-          <a href="#/session/new">Sign in</a>
-        </div>
+        <ul className="sign-in-msgs group">
+          <li className="sign-in-msg create-account-msg">
+            <p>Already have an account?</p>
+            <a href="#/session/new">Sign in</a>
+          </li>
+          <li className="sign-in-msg demo-msg">
+            <p>Or give it a try</p>
+            <a href="#/users/new" onClick={this.signInAsGuest}>Demo the app</a>
+          </li>
+        </ul>
 
       </div>
     );

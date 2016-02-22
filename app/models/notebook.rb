@@ -1,5 +1,4 @@
 class Notebook < ActiveRecord::Base
-  #only include results if they belong to the current user?
   include PgSearch
   multisearchable :against => [:title, :description]
 

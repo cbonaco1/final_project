@@ -93,6 +93,8 @@ header {
 .notifications-container {
   position: fixed;
   border: 1px solid #1C6B38;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: #2DBE60;
   color: #fff;
   padding: 10px 30px;
@@ -492,6 +494,7 @@ header {
   width: 60%;
   background: #fff;
   border: 1px solid green;
+  border-bottom-right-radius: 10px;
 }
 
 .note-detail > h2 {
@@ -546,7 +549,7 @@ header {
   width: 300px;
   margin-left: 65px;
   padding: 15px;
-  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
@@ -732,7 +735,7 @@ header {
   width: 300px;
   margin-left: 65px;
   padding: 15px;
-  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 

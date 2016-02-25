@@ -12,7 +12,9 @@ the Rails web framework, as well as React.js. Give it a try [here][live-link]!
 - [ ] Create Notebooks to organize notes
 - [ ] Search for notes, filter search by either note content or notebook title
 
-![alt text][screenshot]
+<a href="http://feather-note.herokuapp.com/" target="_blank">
+  ![alt text][screenshot]
+</a>
 
 ## Technologies
 * Ruby (version 2.2.3)

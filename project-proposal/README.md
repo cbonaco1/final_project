@@ -9,11 +9,10 @@ and React.js. FeatherNote allows users to:
 
 - [ ] Create an account
 - [ ] Log in / Log out
+- [ ] Log in through Facebook
 - [ ] Create, view, and edit notes
 - [ ] Create Notebooks to organize notes
-- [ ] Create and delete tags
-- [ ] Assign zero or more tags to a note
-- [ ] Search for notes, filter search by either note content, tag, or notebook
+- [ ] Search for notes, filter search by either note content or notebook title
 
 
 ## Design Docs
@@ -99,6 +98,7 @@ each be instances of the NoteIndexItem component.
 
 ### Bonus Features (TBD)
 - [ ] Make CSS media queries to make site responsive to mobile devices
+- [ ] Use the Twitter API to allow users to log in using Twitter account, and turn a note into a tweet
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md

@@ -3,6 +3,11 @@
 /app/assets/javascripts/bundle.js
 /app/assets/javascripts/bundle.js.map
 
+/.byebug_history
+
 /log/*
 
 /config/application.yml
+
+/project-proposal/docs/outline.txt
+/project-proposal/docs/peer_review.txt

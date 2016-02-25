@@ -1,17 +1,18 @@
 # FeatherNote
 
-Welcome to the FeatherNote application. FeatherNote is a web-based
-application inspired by EverNote. This application is built using
-the Rails web framework, as well as React.js.
+Welcome to the FeatherNote application! FeatherNote is a single-page web
+application inspired by Evernote. This application is built using
+the Rails web framework, as well as React.js. Give it a try [here][live-link]!
 
 ## Features
 - [ ] Create an account
 - [ ] Log in / Log out
+- [ ] Log in through Facebook
 - [ ] Create, view, and edit notes
 - [ ] Create Notebooks to organize notes
-- [ ] Create and delete tags
-- [ ] Assign zero or more tags to a note
-- [ ] Search for notes, filter search by either note content, tag, or notebook
+- [ ] Search for notes, filter search by either note content or notebook title
+
+![alt text][screenshot]
 
 ## Technologies
 * Ruby (version 2.2.3)
@@ -31,4 +32,6 @@ the Rails web framework, as well as React.js.
 Implementation timeline and other project documents including wireframes
 can be viewed [here][docs].
 
+[live-link]: http://feather-note.herokuapp.com/
+[screenshot]: ./project-proposal/screenshots/feather-note-screenshot.png
 [docs]: ./project-proposal/README.md

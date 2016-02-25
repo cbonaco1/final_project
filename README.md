@@ -2,7 +2,9 @@
 
 Welcome to the FeatherNote application! FeatherNote is a single-page web
 application inspired by Evernote. This application is built using
-the Rails web framework, as well as React.js. Give it a try [here][live-link]!
+the Rails web framework, as well as React.js. Give it a try <a href="http://feather-note.herokuapp.com/" target="_blank">
+  here
+</a>!
 
 ## Features
 - [ ] Create an account

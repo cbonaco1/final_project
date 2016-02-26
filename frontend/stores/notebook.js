@@ -27,8 +27,6 @@ NotebookStore.__onDispatch = function(payload) {
   switch (payload.actionType) {
     case NotebookConstants.NOTEBOOK_CREATED:
       NotebookStore.add(payload.data);
-      //Emit change will not do anything now since no components are
-      //listening to it
       NotebookStore.__emitChange();
       break;
     case NotebookConstants.NOTEBOOKS_RECEIVED:

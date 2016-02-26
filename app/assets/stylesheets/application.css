@@ -318,7 +318,8 @@ header {
 /*----------------*/
 
 .content-sidebar {
-  width: 350px;
+  /*width: 350px;*/
+  width: 25%;
   float: left;
 }
 
@@ -376,7 +377,8 @@ header {
   border-bottom: 1px solid #eee;
   margin-left: 15px;
   height: 100%;
-  width: 320px;
+  /*width: 320px;*/
+  width: 90%;
   margin-right: 15px;
   float: left;
 }
@@ -491,7 +493,7 @@ header {
 
 .note-detail {
   float: left;
-  width: 60%;
+  width: 66%;
   background: #fff;
   border: 1px solid green;
   border-bottom-right-radius: 10px;
@@ -704,6 +706,7 @@ header {
 
 /*------Sidebar-------*/
 .sidebar-component {
+  width: 3%;
   float: left;
   padding: 10px;
 }

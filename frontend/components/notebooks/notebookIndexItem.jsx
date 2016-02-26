@@ -63,8 +63,6 @@ var NotebookIndexItem = React.createClass({
   deleteNotebook: function(e) {
     e.stopPropagation();
 
-    // debugger
-
     NotebookApiUtil.deleteNotebook(this.props.notebook, function(remainingNotebooks){
       //NOTE last notebook might not have any notes
       //TODO dont let user delete their last notebook

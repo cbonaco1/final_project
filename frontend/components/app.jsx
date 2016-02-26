@@ -7,7 +7,6 @@ var Notifications = require('./notifications');
 var App = React.createClass({
 
   render: function() {
-    //put Notifications component here
     return(
       <div className="content-header group">
         <Notifications />

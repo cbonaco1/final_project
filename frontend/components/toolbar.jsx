@@ -57,9 +57,7 @@ var Toolbar = React.createClass({
           <option value="rgb(255, 255, 0)"></option>
         </select>
 
-        <select className="notebook-dropdown" value={this.props.selectedNotebook} onChange={this.props.notebookChange}>
-          {notebookDropdownOptions}
-        </select>
+        {this.props.notebooks}
 
         <i id="editor-save-icon" className="fa fa-floppy-o sidebar-icon" onClick={this.props.updateNote}></i>
 

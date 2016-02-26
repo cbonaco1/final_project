@@ -49,17 +49,10 @@ NoteStore.updateNote = function(updatedNote) {
 
 NoteStore.find = function(noteId) {
   var id = parseInt(noteId);
+
+  //copies values from _notes[id] into an empty object
   return Object.assign({}, _notes[id]);
 };
-
-// NoteStore.firstNote = function() {
-//   // return _notesArr[0];
-//   Object.keys(_notes).map(function(note, index){
-//     if (index === 0) {
-//       return note;
-//     }
-//   });
-// };
 
 NoteStore.__onDispatch = function(payload) {
   switch (payload.actionType) {

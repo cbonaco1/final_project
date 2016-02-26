@@ -71,7 +71,7 @@ var Sidebar = React.createClass({
 
     return (
       <div className="sidebar-component">
-        <ul className="sidebar-component-list">
+        <ul className="sidebar-component-list group">
           <li className="sidebar-icons" title="Search" onClick={this.showSearch}>
             <i className="fa fa-search fa-2x sidebar-icon"></i>
           </li>

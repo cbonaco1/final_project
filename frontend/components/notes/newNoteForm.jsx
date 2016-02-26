@@ -11,7 +11,10 @@ var NoteForm = React.createClass({
 
   getInitialState: function() {
     var currentUser = CurrentUserStore.currentUser();
-    return( {note: {author_id: currentUser.id } } );
+    return {
+          note: {author_id: currentUser.id },
+          notebooks: NotebookStore.all()
+        };
   },
 
   componentDidMount: function() {
@@ -69,13 +72,27 @@ var NoteForm = React.createClass({
   //Need dropdown of their notebooks
   render: function() {
     var note = this.state.note;
-    var notebookDropdownOptions = [];
+    var notebookDropdown = <select className="notebook-dropdown"><option></option></select>;
     var selectedNotebook;
     var title;
 
     if (note) {
-      title = this.state.note.title;
-      selectedNotebook = this.state.note.notebook_id;
+      title = note.title;
+      // selectedNotebook = this.state.note.notebook_id;
+
+      //Generate the list of notebooks
+      if (this.state.notebooks.length > 0) {
+        var notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
+          return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
+        }.bind(this));
+
+        notebookDropdown = (
+          <select className="notebook-dropdown" value={note.notebook_id} onChange={this.updateNotebook}>
+            {notebookDropdownOptions}
+          </select>
+        );
+      }
+
     }
 
     return(
@@ -87,10 +104,9 @@ var NoteForm = React.createClass({
                   onChange={this.updateTitle}
                     />
           <Toolbar editor={_editor}
-                  selectedNotebook={selectedNotebook}
-                  notebookChange={this.updateNotebook}
-                  updateNote={this.addNote}
-          />
+                  notebooks={notebookDropdown}
+                  updateNote={this.addNote} />
+
           <div id="new-note-content" className="note-content"></div>
           <div className="new-note-buttons group">
             <button className="form-button cancel-note-button" onClick={this.props.callback}>Cancel</button>

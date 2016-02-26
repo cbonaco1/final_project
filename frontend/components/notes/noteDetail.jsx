@@ -108,7 +108,6 @@ var NoteDetail = React.createClass({
 
   render: function() {
     var currentNote = this.state.note;
-    // debugger
     var notebookDropdown = <select className="notebook-dropdown"><option></option></select>;
     var selectedNotebook;
     var textEditor;
@@ -140,15 +139,13 @@ var NoteDetail = React.createClass({
 
           notebookDropdown = (
             <select className="notebook-dropdown" value={currentNote.notebook.id} onChange={this.updateNotebook}>
-            {notebookDropdownOptions}
+              {notebookDropdownOptions}
             </select>
           );
         }
       }
 
-
     }
-
 
     //pass notebook dropdown to Toolbar as a prop
     return(
@@ -159,8 +156,8 @@ var NoteDetail = React.createClass({
 
         <Toolbar editor={_editor}
                 notebooks={notebookDropdown}
-                updateNote={this.updateNote}
-        />
+                updateNote={this.updateNote} />
+
         <div id="note-detail-content" className="note-content"></div>
       </div>
     );

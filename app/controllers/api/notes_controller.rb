@@ -11,9 +11,8 @@ class Api::NotesController < ApplicationController
     @notes = Note.where(author_id: current_user.id,
                         notebook_id: params[:notebook_id])
                         .order(updated_at: :desc)
-    # byebug
-    render 'api/notes/index'
 
+    render 'api/notes/index'
   end
 
   def show
@@ -48,6 +47,6 @@ class Api::NotesController < ApplicationController
 
   private
   def note_params
-    params.permit(:author_id, :notebook_id, :title, :body)
+    params.permit(:author_id, :notebook_id, :title, :body, :formatting)
   end
 end

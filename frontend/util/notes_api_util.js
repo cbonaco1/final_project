@@ -78,7 +78,6 @@ var NotesAPIUtil = {
   },
 
   updateNote: function(note) {
-    // debugger
     $.ajax({
       type: 'PATCH',
       url: '/api/notes/' + note.id,
@@ -86,7 +85,6 @@ var NotesAPIUtil = {
       data: note,
       success: function(data) {
         NoteActions.updatedNote(data);
-        // CurrentUserActions.noteUpdated(data);
       },
       error: function(data) {
         alert("Error in updateNote");

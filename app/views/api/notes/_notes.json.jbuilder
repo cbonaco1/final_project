@@ -1,4 +1,4 @@
-json.extract! note, :id, :title, :body, :updated_at
+json.extract! note, :id, :title, :body, :formatting, :updated_at
 json.notebook note.notebook
 json.author do
   # json.partial! 'api/users/users', user: note.author

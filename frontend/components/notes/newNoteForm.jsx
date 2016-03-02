@@ -65,6 +65,9 @@ var NoteForm = React.createClass({
   },
 
   addNote: function() {
+    var currentNote = this.state.note;
+    var formatting = _editor.getContents();
+    currentNote["formatting"] = JSON.stringify(formatting);
     NoteApiUtil.addNote(this.state.note, this.props.callback);
   },
 

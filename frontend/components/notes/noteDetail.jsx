@@ -53,14 +53,14 @@ var NoteDetail = React.createClass({
     //only when the user clicks save, otherwise it will re-render
     //the note body everytime. This moved the cursor to the end of the line
     //when the user edited middle of body
-    var noteBody = _editor.getText();
     var currentNote = this.state.note;
-    currentNote["body"] = noteBody;
+    var formatting = _editor.getContents();
+    currentNote["body"] = _editor.getText();
+    currentNote["formatting"] = JSON.stringify(formatting);
     NotesAPIUtil.updateNote(currentNote);
   },
 
   //This is when the user changes the notebook using the dropdown
-  //TODO this will probably change
   updateNotebook: function(e) {
     //Get the index of the selected notebook from the dropdown
     var notebookIndex = e.target.selectedIndex;
@@ -88,14 +88,22 @@ var NoteDetail = React.createClass({
     _editor.on('text-change', function(delta, source) {
       //this is where the formatting can be changed
       if (source === "user") {
-        if (this.timeout) {
-          clearTimeout(this.timeout);
-        }
-        this.timeout = window.setTimeout(function() {
-          var currentNote = this.state.note;
-          currentNote["body"] = _editor.getText();
-          // this.setState(currentNote);
-        }.bind(this), 500);
+
+
+        //delta.ops returns an array of objects representing operations
+        //if there is one element in this array, then the whole string has the affect
+        //
+
+
+
+        // if (this.timeout) {
+        //   clearTimeout(this.timeout);
+        // }
+        // this.timeout = window.setTimeout(function() {
+        //   var currentNote = this.state.note;
+        //   currentNote["body"] = _editor.getText();
+        //   // this.setState(currentNote);
+        // }.bind(this), 500);
       }
     }.bind(this));
 
@@ -116,14 +124,14 @@ var NoteDetail = React.createClass({
     if (currentNote) {
       if (currentNote.id) {
         if (_editor) {
-          var noteBody;
           if (currentNote.body) {
-            noteBody = currentNote.body;
+            if (currentNote.formatting) {
+              _editor.setContents(JSON.parse(currentNote.formatting));
+            }
           }
           else {
-            noteBody = "You can add text to your note here..."
+            _editor.setText("You can add text to your note here...");
           }
-          _editor.setText(noteBody);
         }
 
         selectedNotebook = currentNote.notebook.id;

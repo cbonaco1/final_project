@@ -8,7 +8,6 @@ var NotesAPIUtil = {
       url: '/api/notes',
       dataType: 'json',
       success: function(data) {
-        // debugger
         NoteActions.receiveNotes(data);
       },
       error: function(data) {

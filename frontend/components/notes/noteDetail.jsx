@@ -65,10 +65,8 @@ var NoteDetail = React.createClass({
     //Get the index of the selected notebook from the dropdown
     var notebookIndex = e.target.selectedIndex;
 
-    //this.state.note.author.notebooks does not have the new ntoebook yet
     var newNotebook = this.state.notebooks[notebookIndex];
     var currentNote = this.state.note;
-    // debugger
     currentNote["notebook"] = newNotebook;
     currentNote["notebook_id"] = newNotebook.id;
     this.setState(currentNote);
@@ -88,22 +86,7 @@ var NoteDetail = React.createClass({
     _editor.on('text-change', function(delta, source) {
       //this is where the formatting can be changed
       if (source === "user") {
-
-
-        //delta.ops returns an array of objects representing operations
-        //if there is one element in this array, then the whole string has the affect
-        //
-
-
-
-        // if (this.timeout) {
-        //   clearTimeout(this.timeout);
-        // }
-        // this.timeout = window.setTimeout(function() {
-        //   var currentNote = this.state.note;
-        //   currentNote["body"] = _editor.getText();
-        //   // this.setState(currentNote);
-        // }.bind(this), 500);
+        //TODO might have to update state of note here
       }
     }.bind(this));
 
@@ -116,6 +99,7 @@ var NoteDetail = React.createClass({
 
   render: function() {
     var currentNote = this.state.note;
+    // debugger
     var notebookDropdown = <select className="notebook-dropdown"><option></option></select>;
     var selectedNotebook;
     var textEditor;
@@ -127,6 +111,9 @@ var NoteDetail = React.createClass({
           if (currentNote.body) {
             if (currentNote.formatting) {
               _editor.setContents(JSON.parse(currentNote.formatting));
+            }
+            else {
+              _editor.setText(currentNote.body);
             }
           }
           else {
@@ -140,7 +127,6 @@ var NoteDetail = React.createClass({
 
         //Generate the list of notebooks
         if (this.state.notebooks.length > 0) {
-          // debugger
           var notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
             return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
           }.bind(this));

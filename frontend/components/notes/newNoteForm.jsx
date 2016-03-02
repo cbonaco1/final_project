@@ -19,7 +19,12 @@ var NoteForm = React.createClass({
 
   componentDidMount: function() {
     _editor = new Quill("#new-note-content", {
-      theme:'snow'
+      theme:'snow',
+      styles: {
+        '.ql-editor': {
+          'font-size': '18px'
+        }
+      }
     });
     _editor.addModule('toolbar', { container: '.toolbar'});
     _editor.on('text-change', function(delta, source){

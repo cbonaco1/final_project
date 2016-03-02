@@ -81,7 +81,14 @@ var NoteDetail = React.createClass({
 
   //invoked once, after initial rendering
   componentDidMount: function() {
-    _editor = new Quill("#note-detail-content", {theme:'snow'});
+    _editor = new Quill("#note-detail-content", {
+      theme:'snow',
+      styles: {
+        '.ql-editor': {
+          'font-size': '18px'
+        }
+      }      
+    });
     _editor.addModule('toolbar', { container: '.toolbar'});
     _editor.on('text-change', function(delta, source) {
       //this is where the formatting can be changed

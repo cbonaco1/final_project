@@ -376,10 +376,11 @@ header {
 }
 
 .user-note-content {
-  border-bottom: 1px solid #eee;
+  /* Got rid of the light grey border on bottom of each note
+  It was showing when the note was hovered over */
+  /*border-bottom: 1px solid #eee;*/
   margin-left: 15px;
   height: 100%;
-  /*width: 320px;*/
   width: 90%;
   margin-right: 15px;
   float: left;
@@ -398,8 +399,10 @@ header {
 .user-note:hover {
   background: #2DBE60;
   color: #fff;
-  /*border: none;*/
-  border:4px solid #2DBE60;
+  border-right:4px solid #2DBE60;
+  border-left:4px solid #2DBE60;
+  border-top:4px solid #2DBE60;
+  border-bottom: 1px solid #2DBE60;
 }
 
 /*----Delete Prompt for Notes-------*/

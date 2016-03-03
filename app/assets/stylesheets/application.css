@@ -351,9 +351,11 @@ header {
 .note-container {
   border: 1px solid green;
   background: #fff;
-  /*margin-left: 50px;*/
   box-sizing: border-box;
   padding-bottom: 10px;
+  /*height: 576px;
+  overflow-y: auto;
+  overflow-x: visible;*/
 }
 
 .note-container > h3 {
@@ -390,12 +392,14 @@ header {
   color: #848484;
   cursor: pointer;
   box-sizing: border-box;
+  border: 4px solid #fff;
 }
 
 .user-note:hover {
   background: #2DBE60;
   color: #fff;
-  border: none;
+  /*border: none;*/
+  border:4px solid #2DBE60;
 }
 
 /*----Delete Prompt for Notes-------*/
@@ -414,7 +418,7 @@ header {
 
 .delete-prompt-note {
   top: -4px;
-  left: 345px;
+  left: 315px;
 }
 
 .delete-prompt-note-enter {
@@ -424,14 +428,14 @@ header {
 
 .delete-prompt-note-enter.delete-prompt-note-enter-active {
   opacity: 1;
-  left: 345px;
+  left: 315px;
   /*transition: opacity 300ms, left 300ms ease-in;*/
   transition: opacity 300ms;
 }
 
 .delete-prompt-note-leave {
   opacity: 1;
-  left: 345px;
+  left: 315px;
 }
 
 .delete-prompt-note-leave.delete-prompt-note-leave-active {

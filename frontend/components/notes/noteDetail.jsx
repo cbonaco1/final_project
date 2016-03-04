@@ -48,7 +48,7 @@ var NoteDetail = React.createClass({
   },
 
   //saves Note to database
-  updateNote: function() {
+  saveNote: function(e) {
     //set body of this.state.note to contents of text editor
     //only when the user clicks save, otherwise it will re-render
     //the note body everytime. This moved the cursor to the end of the line
@@ -57,25 +57,25 @@ var NoteDetail = React.createClass({
     var formatting = _editor.getContents();
     currentNote["body"] = _editor.getText();
     currentNote["formatting"] = JSON.stringify(formatting);
-    NotesAPIUtil.updateNote(currentNote);
+    this.setState(currentNote);
+    NotesAPIUtil.updateNote(this.state.note);
   },
 
-  //This is when the user changes the notebook using the dropdown
-  updateNotebook: function(e) {
-    //Get the index of the selected notebook from the dropdown
-    var notebookIndex = e.target.selectedIndex;
-
-    var newNotebook = this.state.notebooks[notebookIndex];
+  //when any field other than the note body are updated,
+  //get all the fields from the note and set the state
+  //This resolves different components re-rerendering differently
+  //when one component was updated
+  updateNote: function() {
     var currentNote = this.state.note;
+    var formatting = _editor.getContents();
+    var noteTitle = document.getElementsByClassName("note-title-field")[0].value;
+    var notebookIndex = document.getElementsByClassName("notebook-dropdown")[0].selectedIndex;
+    var newNotebook = this.state.notebooks[notebookIndex];
+    currentNote["body"] = _editor.getText();
+    currentNote["formatting"] = JSON.stringify(formatting);
+    currentNote["title"] = noteTitle;
     currentNote["notebook"] = newNotebook;
     currentNote["notebook_id"] = newNotebook.id;
-    this.setState(currentNote);
-  },
-
-  updateNoteTitle: function(e) {
-    var newTitle = e.target.value;
-    var currentNote = this.state.note;
-    currentNote["title"] = newTitle;
     this.setState(currentNote);
   },
 
@@ -87,15 +87,10 @@ var NoteDetail = React.createClass({
         '.ql-editor': {
           'font-size': '18px'
         }
-      }      
-    });
-    _editor.addModule('toolbar', { container: '.toolbar'});
-    _editor.on('text-change', function(delta, source) {
-      //this is where the formatting can be changed
-      if (source === "user") {
-        //TODO might have to update state of note here
       }
-    }.bind(this));
+    });
+
+    _editor.addModule('toolbar', { container: '.toolbar'});
 
   },
 
@@ -106,7 +101,6 @@ var NoteDetail = React.createClass({
 
   render: function() {
     var currentNote = this.state.note;
-    // debugger
     var notebookDropdown = <select className="notebook-dropdown"><option></option></select>;
     var selectedNotebook;
     var textEditor;
@@ -139,7 +133,7 @@ var NoteDetail = React.createClass({
           }.bind(this));
 
           notebookDropdown = (
-            <select className="notebook-dropdown" value={currentNote.notebook.id} onChange={this.updateNotebook}>
+            <select className="notebook-dropdown" value={currentNote.notebook.id} onChange={this.updateNote}>
               {notebookDropdownOptions}
             </select>
           );
@@ -153,11 +147,11 @@ var NoteDetail = React.createClass({
       <div className="note-detail">
         <input type="text" value={title}
                 className="note-title-field"
-                onChange={this.updateNoteTitle} />
+                onChange={this.updateNote} />
 
         <Toolbar editor={_editor}
                 notebooks={notebookDropdown}
-                updateNote={this.updateNote} />
+                updateNote={this.saveNote} />
 
         <div id="note-detail-content" className="note-content"></div>
       </div>

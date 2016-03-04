@@ -421,7 +421,7 @@ header {
 
 .delete-prompt-note {
   top: -4px;
-  left: 315px;
+  left: 101%;
 }
 
 .delete-prompt-note-enter {
@@ -431,14 +431,14 @@ header {
 
 .delete-prompt-note-enter.delete-prompt-note-enter-active {
   opacity: 1;
-  left: 315px;
+  left: 101%;
   /*transition: opacity 300ms, left 300ms ease-in;*/
   transition: opacity 300ms;
 }
 
 .delete-prompt-note-leave {
   opacity: 1;
-  left: 315px;
+  left: 101%;
 }
 
 .delete-prompt-note-leave.delete-prompt-note-leave-active {

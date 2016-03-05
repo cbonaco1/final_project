@@ -64,6 +64,11 @@ var FeatherNote = React.createClass({
                 <i className="fa fa-facebook fa-2x social-media-icon"></i>
               </a>
             </li>
+            <li className="twitter-icon facebook-login social-media-login">
+              <a href="/auth/twitter">
+                <i className="fa fa-twitter fa-2x social-media-icon"></i>
+              </a>
+            </li>
           </ul>
 
         </header>

@@ -112,9 +112,9 @@ header {
   margin-left: 35px;
 }
 
-#sign-in-facebook-icon {
+/*#sign-in-facebook-icon {
   font-size: 16px;
-}
+}*/
 
 #fb-icon-new-session {
   left: 10px;
@@ -283,7 +283,7 @@ header {
 
 .social-media-logins {
   margin: auto;
-  width: 100px;
+  width: 170px;
 }
 
 .social-media-login {
@@ -304,6 +304,14 @@ header {
   display: inline-block;
   padding: 20px;
   border-radius: 8px;
+}
+
+.twitter-icon {
+  background: #1da1f2;
+}
+
+.twitter-icon:hover {
+  background: #1278B7;
 }
 
 .social-media-icon {

@@ -29,8 +29,18 @@ class User < ActiveRecord::Base
     if user
       return user
     else
+
+      #For Twitter, use the nickname as username,
+      #otherwise it will most likely be the same username as in Facebook
+      #Since the username has a unique constraint, user wouldnt be able to
+      #have both a FB and Twitter login
+      name = auth_hash[:info][:name]
+      if provider == "twitter"
+        name = auth_hash[:info][:nickname]
+      end
+
       new_user = User.create(
-        username: auth_hash[:info][:name],
+        username: name,
         provider: provider,
         uid: uid,
         password: SecureRandom::urlsafe_base64,

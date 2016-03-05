@@ -29,6 +29,12 @@ class SessionsController < ApplicationController
     redirect_to root_url + '#/notes'
   end
 
+  def omniauth_twitter
+    @user = User.find_or_create_by_auth_hash(auth_hash)
+    sign_in_user(@user)
+    redirect_to root_url + '#/notes'
+  end
+
   private
   def auth_hash
     request.env['omniauth.auth']

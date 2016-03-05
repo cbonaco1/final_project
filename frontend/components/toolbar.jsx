@@ -22,13 +22,6 @@ var Toolbar = React.createClass({
   },
 
   render: function() {
-    var notebookDropdownOptions = "";
-
-    if (this.state.notebooks.length > 0) {
-      notebookDropdownOptions = this.state.notebooks.map(function(notebook, index){
-        return <option key={notebook.id} value={notebook.id}>{notebook.title}</option>;
-      }.bind(this));
-    }
 
     //TODO style dropdown options
     //NOTE React gives a warning that we set value of the font-size

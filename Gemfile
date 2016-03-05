@@ -36,6 +36,7 @@ gem 'pg_search'
 gem 'kaminari'
 
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'figaro'
 
 # Use Unicorn as the app server

@@ -3,6 +3,7 @@ var NotebookIndex = require('./../notebooks/notebookIndex');
 var NotebookApiUtil = require('./../../util/notebooks_api_util');
 var NoteApiUtil = require('./../../util/notes_api_util');
 var NoteForm = require('./../notes/newNoteForm');
+var CurrentUserStore = require('./../../stores/currentUserStore');
 var Search = require('./../search');
 
 var Sidebar = React.createClass({
@@ -10,7 +11,8 @@ var Sidebar = React.createClass({
   getInitialState: function() {
     return( { showNoteModal: false,
               showNotebookModal: false,
-              showSearchModal: false } );
+              showSearchModal: false,
+              currentUser: CurrentUserStore.currentUser() } );
   },
 
   addNote: function() {
@@ -56,6 +58,7 @@ var Sidebar = React.createClass({
     var noteModal;
     var notebookModal;
     var searchModal;
+    var tweetButton;
 
     if (this.state.showNoteModal) {
       noteModal = <NoteForm callback={this.toggleNoteModal}/>;
@@ -69,6 +72,20 @@ var Sidebar = React.createClass({
       searchModal = <Search callback={this.toggleSearchModal}/>;
     }
 
+    if (CurrentUserStore.isLoggedIn()) {
+      if (this.state.currentUser.provider == "twitter") {
+        tweetButton = (
+          <li className="sidebar-icons" title="Create a Tweet!">
+            <a className="twitter-share-button"
+                href="https://twitter.com/intent/tweet"
+                data-size="large">
+              <i className="fa fa-twitter-square fa-2x sidebar-icon sidebar-twitter"></i>
+            </a>
+          </li>
+        )
+      }
+    }
+
     return (
       <div className="sidebar-component">
         <ul className="sidebar-component-list group">
@@ -79,11 +96,12 @@ var Sidebar = React.createClass({
             <i className="fa fa-plus-circle fa-2x sidebar-icon"></i>
           </li>
           <li className="sidebar-icons" title="Notes" onClick={this.showNotes}>
-            <i className="fa fa-file fa-lg sidebar-icon"></i>
+            <i className="fa fa-file fa-2x sidebar-icon"></i>
           </li>
           <li className="sidebar-icons" title="Notebooks" onClick={this.showNotebooks}>
-            <i className="fa fa-book fa-lg sidebar-icon"></i>
+            <i className="fa fa-book fa-2x sidebar-icon"></i>
           </li>
+          { tweetButton }
         </ul>
         {noteModal}
         {notebookModal}

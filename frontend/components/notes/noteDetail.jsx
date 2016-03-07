@@ -155,11 +155,6 @@ var NoteDetail = React.createClass({
 
         <div id="note-detail-content" className="note-content"></div>
 
-        <a className="twitter-share-button"
-          href="https://twitter.com/intent/tweet"
-          data-size="large">
-        Tweet</a>
-
       </div>
     );
   }

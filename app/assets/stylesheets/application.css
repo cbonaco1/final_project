@@ -742,6 +742,14 @@ header {
   margin-bottom: 30px;
 }
 
+.sidebar-twitter {
+  color: #1da1f2;
+}
+
+.sidebar-twitter:hover {
+  color: #1278B7;
+}
+
 /*--------------------*/
 
 /*------Search-----------*/

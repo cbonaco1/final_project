@@ -57,9 +57,14 @@ var NewSessionForm = React.createClass({
             <li>
               <button id="new-session-sign-in" className="form-button">Sign In</button>
             </li>
-            <li id="sign-in-facebook-icon" title="Log in with Facebook!" className="facebook-icon icon-container social-media-login">
+            <li title="Log in with Facebook!" className="facebook-icon social-media-login">
               <a href="/auth/facebook">
-                <i id="fb-icon-new-session" className="fa fa-facebook fa-2x icon-item social-media-icon"></i>
+              <i id="new-session-facebook-icon" className="fa fa-facebook fa-lg social-media-icon"></i>
+              </a>
+            </li>
+            <li title="Log in with Twitter!" className="twitter-icon social-media-login">
+              <a href="/auth/twitter">
+                <i id="new-session-twitter-icon" className="fa fa-twitter fa-lg social-media-icon"></i>
               </a>
             </li>
             <li className="icon-container">

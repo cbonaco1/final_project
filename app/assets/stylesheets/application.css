@@ -109,15 +109,17 @@ header {
 
 .sign-in-buttons li {
   float: left;
-  margin-left: 35px;
+  margin-left: 26px;
 }
 
-/*#sign-in-facebook-icon {
-  font-size: 16px;
-}*/
-
-#fb-icon-new-session {
+#new-session-facebook-icon {
   left: 10px;
+  top: 9px;
+}
+
+#new-session-twitter-icon {
+  left: 6px;
+  top: 9px;
 }
 
 #new-session-sign-in {
@@ -287,8 +289,11 @@ header {
 }
 
 .social-media-login {
+  position: relative;
   float:left;
   margin-left: 36px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .facebook-icon {
@@ -297,13 +302,6 @@ header {
 
 .facebook-icon:hover {
   background: #1D3058;
-}
-
-.facebook-login {
-  position: relative;
-  display: inline-block;
-  padding: 20px;
-  border-radius: 8px;
 }
 
 .twitter-icon {

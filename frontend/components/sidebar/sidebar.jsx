@@ -78,7 +78,8 @@ var Sidebar = React.createClass({
           <li className="sidebar-icons" title="Create a Tweet!">
             <a
                 href="https://twitter.com/intent/tweet"
-                data-size="large">
+                data-size="large"
+                target="_blank">
               <i className="fa fa-twitter fa-2x sidebar-icon sidebar-twitter"></i>
             </a>
           </li>

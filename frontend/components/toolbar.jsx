@@ -27,27 +27,19 @@ var Toolbar = React.createClass({
     var range = editor.getSelection();
     var tweet;
     //If user has selected text, then use that selected text as the tweet
-    if (window.getSelection) {
+    if (window.getSelection()) {
       tweet = window.getSelection().toString().substr(0, 140);
+      //If no selection, use first 140 characters of note
       if (tweet.length === 0) {
         tweet = this.props.editor.getText(0, 140);
       }
     }
 
-    console.log(tweet);
-
     var tweetButton = document.getElementById("new-tweet-button");
     tweetButton.href="https://twitter.com/intent/tweet?text=" + encodeURI(tweet);
-    tweetButton.setAttribute("target", "_self");
+    tweetButton.setAttribute("target", "_blank");
   },
 
-//<i className="fa fa-twitter-square fa-2x sidebar-icon sidebar-twitter"></i>
-/*
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="CBonacore">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-
-*/
   render: function() {
 
     var tweetButton;

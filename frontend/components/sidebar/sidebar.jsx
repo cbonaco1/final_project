@@ -76,10 +76,10 @@ var Sidebar = React.createClass({
       if (this.state.currentUser.provider == "twitter") {
         tweetButton = (
           <li className="sidebar-icons" title="Create a Tweet!">
-            <a className="twitter-share-button"
+            <a
                 href="https://twitter.com/intent/tweet"
                 data-size="large">
-              <i className="fa fa-twitter-square fa-2x sidebar-icon sidebar-twitter"></i>
+              <i className="fa fa-twitter fa-2x sidebar-icon sidebar-twitter"></i>
             </a>
           </li>
         )
@@ -96,10 +96,10 @@ var Sidebar = React.createClass({
             <i className="fa fa-plus-circle fa-2x sidebar-icon"></i>
           </li>
           <li className="sidebar-icons" title="Notes" onClick={this.showNotes}>
-            <i className="fa fa-file fa-2x sidebar-icon"></i>
+            <i className="fa fa-file fa-lg sidebar-icon"></i>
           </li>
           <li className="sidebar-icons" title="Notebooks" onClick={this.showNotebooks}>
-            <i className="fa fa-book fa-2x sidebar-icon"></i>
+            <i className="fa fa-book fa-lg sidebar-icon"></i>
           </li>
           { tweetButton }
         </ul>

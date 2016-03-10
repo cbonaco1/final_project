@@ -10,11 +10,12 @@ var _editor;
 var NoteForm = React.createClass({
 
   getInitialState: function() {
-    var currentUser = CurrentUserStore.currentUser();
-    return {
-          note: {author_id: currentUser.id },
-          notebooks: NotebookStore.all()
-        };
+    var _curUser = CurrentUserStore.currentUser();
+    return({
+          note: {author_id: _curUser.id },
+          notebooks: NotebookStore.all(),
+          currentUser: _curUser
+        });
   },
 
   componentDidMount: function() {

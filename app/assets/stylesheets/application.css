@@ -24,6 +24,8 @@ html, h2, h3, body, input, ul, p, a, button {
   font-size: inherit;
   text-decoration: inherit;
 
+  color: inherit;
+
   /*font-family: "caecilia", Helvetica, Arial, sans-serif;*/
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -713,6 +715,16 @@ header {
 #editor-save-icon:hover {
   color: #3737F5;
 }
+
+#new-tweet-button {
+  color: #1da1f2;
+  cursor: pointer;
+}
+
+#new-tweet-button:hover {
+  color: #1278B7;
+}
+
 
 /*--------------------*/
 

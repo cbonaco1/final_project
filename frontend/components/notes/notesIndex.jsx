@@ -27,6 +27,12 @@ var NotesIndex = React.createClass({
     this.listenerToken.remove();
   },
 
+  updateNoteOrder: function() {
+    //Get value selected
+    //Fetch notes in that order from NotesAPIUtil
+    //call setState { notes: newNotes }
+  },
+
   render: function() {
 
     var noteList = "";
@@ -46,7 +52,9 @@ var NotesIndex = React.createClass({
     return(
       <div className="note-container">
         <h3>Notes</h3>
-        <p className="note-count">{this.state.notes.length} notes</p>
+        <div className="group">
+          <p className="note-count">{this.state.notes.length} notes</p>
+        </div>
         <ul className="note-list">
           {noteList}
         </ul>

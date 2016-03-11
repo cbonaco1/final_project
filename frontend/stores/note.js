@@ -15,13 +15,13 @@ NoteStore.all = function() {
     allNotes.push(_notes[id]);
   });
 
-  return allNotes;
+  // return allNotes;
+  return _notesArr;
 };
 
 NoteStore.resetNotes = function(newNotes){
-  //notesArr should have the notes in the order in which they were returned
-  // debugger
-  // _notesArr = newNotes.slice(0);
+  //notesArr has the notes in the order in which they were returned
+  _notesArr = newNotes.slice(0);
   _notes = {};
   for (var i = 0; i < newNotes.length; i++) {
     _notes[newNotes[i].id] = newNotes[i];
@@ -39,11 +39,13 @@ NoteStore.filterNotes = function(notebooks){
 };
 
 NoteStore.addNote = function(note) {
-  // _notesArr.push(note);
+  _notesArr.unshift(note);
   _notes[note.id] = note;
 };
 
 NoteStore.updateNote = function(updatedNote) {
+  //to update the _notesArr array, need to iterate through to find it
+
   _notes[updatedNote.id] = updatedNote;
 };
 

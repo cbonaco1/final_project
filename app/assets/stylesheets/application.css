@@ -381,6 +381,11 @@ header {
   padding-left: 15px;
   color:#ABA9A9;
   border-bottom: 1px solid #eee;
+  float:left;
+}
+
+.note-order {
+  float: right;
 }
 
 .user-note-content {

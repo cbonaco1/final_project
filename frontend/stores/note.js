@@ -10,27 +10,21 @@ var _notesArr = [];
 NoteStore.all = function() {
   //NOTE - changed this to return an array so the notes are in the order
   //that they were received in
-  var allNotes = [];
-  Object.keys(_notes).forEach(function(id){
-    allNotes.push(_notes[id]);
-  });
-
-  // return allNotes;
   return _notesArr;
 };
 
 NoteStore.resetNotes = function(newNotes){
   //notesArr has the notes in the order in which they were returned
   _notesArr = newNotes.slice(0);
-  _notes = {};
-  for (var i = 0; i < newNotes.length; i++) {
-    _notes[newNotes[i].id] = newNotes[i];
-  }
+  // _notes = {};
+  // for (var i = 0; i < newNotes.length; i++) {
+  //   _notes[newNotes[i].id] = newNotes[i];
+  // }
 };
 
+//Reset _notes to be just the notes from the notebooks in notebooks array arg
 NoteStore.filterNotes = function(notebooks){
-  //Reset _notes to be just the notes from the notebooks in notebooks array arg
-  _notes = {};
+  _notesArr = [];
   notebooks.forEach(function(notebook){
     notebook.notes.forEach(function(note){
       NoteStore.addNote(note);
@@ -40,20 +34,43 @@ NoteStore.filterNotes = function(notebooks){
 
 NoteStore.addNote = function(note) {
   _notesArr.unshift(note);
-  _notes[note.id] = note;
+  // _notes[note.id] = note;
 };
 
 NoteStore.updateNote = function(updatedNote) {
   //to update the _notesArr array, need to iterate through to find it
-
-  _notes[updatedNote.id] = updatedNote;
+  var indx = NoteStore.findNote(updatedNote.id);
+  if (indx) {
+    _notesArr[indx] = updatedNote;
+  }
+  // _notes[updatedNote.id] = updatedNote;
 };
 
 NoteStore.find = function(noteId) {
-  var id = parseInt(noteId);
+  var note;
+  var indx = NoteStore.findNote(parseInt(noteId));
+  if (indx >= 0) {
+    note = _notesArr[indx];
+  }
 
-  //copies values from _notes[id] into an empty object
-  return Object.assign({}, _notes[id]);
+  return note;
+  // var id = parseInt(noteId);
+  //
+  // //copies values from _notes[id] into an empty object
+  // return Object.assign({}, _notes[id]);
+};
+
+//Iterate through _notesArr and return the index in _notesArr of the note
+//which matches the given noteID
+NoteStore.findNote = function(noteId) {
+  var index;
+  for (var i = 0; i < _notesArr.length; i++) {
+    if (_notesArr[i].id === noteId ) {
+      return i;
+    }
+  }
+
+  return index;
 };
 
 NoteStore.__onDispatch = function(payload) {

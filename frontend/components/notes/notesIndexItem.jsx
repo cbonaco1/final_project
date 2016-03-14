@@ -24,7 +24,6 @@ var NotesIndexItem = React.createClass({
   },
 
   showNote: function(e) {
-    // this.props.active = true;
     this.setState({selected: true});
     //need to trigger a re-render of the item
 

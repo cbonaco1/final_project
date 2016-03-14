@@ -3,7 +3,9 @@ class Api::NotesController < ApplicationController
 
   def index
     #Note: only get the current user's notes
-    @notes = Note.where(author_id: current_user.id).order(updated_at: :desc)
+    # byebug
+    #note_params is saying params[:note_order] is not permitted, even tho it is in permit method
+    @notes = Note.where(author_id: current_user.id).order(params[:note_order])
   end
 
   #This retrieves all of the current users notes for a notebook
@@ -16,7 +18,6 @@ class Api::NotesController < ApplicationController
   end
 
   def show
-    #should this render show view?
     @note = Note.find(params[:id])
   end
 
@@ -47,6 +48,6 @@ class Api::NotesController < ApplicationController
 
   private
   def note_params
-    params.permit(:author_id, :notebook_id, :title, :body, :formatting)
+    params.permit(:author_id, :notebook_id, :title, :body, :formatting, :note_order)
   end
 end

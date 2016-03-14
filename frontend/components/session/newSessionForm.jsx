@@ -23,6 +23,8 @@ var NewSessionForm = React.createClass({
 
   submit: function(e) {
     e.preventDefault();
+    //serializeArray creates an array of Objects with name and value attributes
+    //These attributes contain the name/values of the form fields
     var fields = $(e.currentTarget).serializeArray();
     var credentials = {};
     fields.forEach(function(field){

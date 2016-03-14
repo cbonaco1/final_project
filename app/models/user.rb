@@ -92,17 +92,31 @@ class User < ActiveRecord::Base
   def set_up_user
     new_notebook = Notebook.create!(author_id: self.id, title:"First Notebook")
 
-    Note.create!(author_id: self.id,
-                title:"Welcome to FeatherNote!",
-    body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
-                notebook_id: new_notebook.id)
 
+
+    # Create extra note giving them instructions on Twitter features
+    if self.provider == "twitter"
+      Note.create!(author_id: self.id,
+                    title: "Twitter Instructions",
+                    body: "Thank you for creating an account using Twitter! " +
+                    "As a Twitter user, you can post new tweets, and convert " +
+                    "notes into Tweets! To post a new tweet, click the Twitter " +
+                    "logo on the sidebar. To tweet a note, highlight the text of the note you want to tweet, " +
+                    "and click the Twitter logo on the toolbar. If no text is highlighted, " +
+                    "the first 140 characters will be used as the tweet. Happy tweeting!",
+                    notebook_id: new_notebook.id)
+    end
 
     Note.create!(author_id: self.id,
                 title:"Instructions",
-    body:"Add a Note by clicking the plus sign in the top left. " +
-        "Notes can be edited in the text editor, and deleted by clicking the garbage can",
+                body:"Add a Note by clicking the plus sign in the top left. " +
+                "Notes can be edited in the text editor, and deleted by clicking the garbage can",
                 notebook_id: new_notebook.id)
+
+    Note.create!(author_id: self.id,
+              title:"Welcome to FeatherNote!",
+              body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
+              notebook_id: new_notebook.id)
   end
 
 

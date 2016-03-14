@@ -1,9 +1,3 @@
-@media only screen and (max-width: 1024px) {
-  .note-detail {
-    /*max-width: 59%;*/
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .note-detail {
     width: 100%;
@@ -19,7 +13,6 @@
 
   .sidebar-component-list li {
     float:left;
-    /*font-size: 18px;*/
     padding:0;
   }
 }

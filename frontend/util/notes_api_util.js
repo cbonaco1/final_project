@@ -3,7 +3,12 @@ var CurrentUserActions = require('../actions/currentUserActions');
 
 var NotesAPIUtil = {
   //set default order to be updated_at => desc (most recently updated on top)
-  fetchAllNotes: function(order={"note_order":{"updated_at":"desc"}}) {
+  fetchAllNotes: function(order) {
+
+    if (typeof order === "undefined") {
+      order = { "note_order":{"updated_at":"desc"} };
+    }
+
     $.ajax({
       type: 'GET',
       url: '/api/notes',

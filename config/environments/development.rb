@@ -37,8 +37,8 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   #ADDED BY CB TO TRY TO MIMIC PROD environment
-  config.assets.js_compressor = :uglifier
-  config.assets.compile = false
+  # config.assets.js_compressor = :uglifier
+  # config.assets.compile = false
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

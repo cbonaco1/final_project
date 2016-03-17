@@ -45,8 +45,9 @@ can be viewed [here][docs].
 ## React/Flux
 This application was built using the React.js front-end library, along with the Flux
 design pattern. Using these two technologies together allows for UI components to be
-rendered efficiently, due to Reacts use of the virtual DOM, and the uni-directional
-flow of data provided by the Flux pattern.
+rendered efficiently due to Reacts use of the virtual DOM, and the uni-directional
+flow of data provided by the Flux pattern. The diagram below was taken from the Flux
+documentation and explains the flow of data.
 
 ![alt text][flux-diagram]
 
@@ -56,6 +57,20 @@ Stores also have views (which are React components) listening to them for when t
 A store will only let its views know to render based on the action it receives from the dispatcher.
 Since these views already define how they will render, the stores let them know when to render
 based on a action they are interested in.
+
+### React/Flux in FeatherNote
+React and Flux are both used throughout the FeatherNote application. This section
+will explain how these technologies were used when creating a note.
+
+1. User clicks Add Note button, sending an AJAX request to add the note to the database
+2. The success callback of the AJAX request calls the action method to
+let the dispatcher know that a note has been added
+3. The dispatcher tells the stores that a note has been added
+4. The NoteStore is interested in this event, so it updates itself to include the new note,
+and then calls emitChange() to notify its listeners.
+5. The NoteIndex React component (view) is listening to events on the NoteStore,
+so once the NoteStore updates, the view re-renders to include the new note
+
 
 
 [live-link]: http://feather-note.herokuapp.com/

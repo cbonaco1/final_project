@@ -1,4 +1,7 @@
 class Api::SessionsController < ApplicationController
+
+  # before_action :seed_data, :only => :create
+
   def new
   end
 
@@ -24,6 +27,11 @@ class Api::SessionsController < ApplicationController
     if @user
       sign_in_user(@user)
 
+      #re-seed data if user is guest user
+      if @user.username == "guest"
+        @user.set_up_user
+      end
+
       #returns the JSON of the new user
       render "api/users/show"
     else
@@ -37,4 +45,5 @@ class Api::SessionsController < ApplicationController
     sign_out_user(current_user)
     render json: {}
   end
+
 end

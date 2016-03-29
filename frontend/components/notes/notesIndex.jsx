@@ -10,7 +10,7 @@ var NotesIndex = React.createClass({
   mixins: [History],
 
   getInitialState: function() {
-    return { notes: NoteStore.all() };
+    return { notes: [] };
   },
 
   _onChange: function() {
@@ -27,12 +27,6 @@ var NotesIndex = React.createClass({
     this.listenerToken.remove();
   },
 
-  updateNoteOrder: function() {
-    //Get value selected
-    //Fetch notes in that order from NotesAPIUtil
-    //call setState { notes: newNotes }
-  },
-
   render: function() {
 
     var noteList = "";
@@ -40,7 +34,6 @@ var NotesIndex = React.createClass({
     if (this.state.notes.length > 0) {
       //order of this.state.notes might not be order needed
       noteList = this.state.notes.map(function(note, index){
-        //add active-note class to the first item in list
         var active = false;
         if (index === 0) {
           active = true;

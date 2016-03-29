@@ -90,9 +90,13 @@ class User < ActiveRecord::Base
 
   #create default note and Notebook for new user
   def set_up_user
+
+    # TRANSACTION??
+
+    #Deleting all notebooks for the user also deletes all their notes
+    Notebook.destroy_all(author_id: self.id)
+
     new_notebook = Notebook.create!(author_id: self.id, title:"First Notebook")
-
-
 
     # Create extra note giving them instructions on Twitter features
     if self.provider == "twitter"
@@ -108,17 +112,17 @@ class User < ActiveRecord::Base
     end
 
     Note.create!(author_id: self.id,
-                title:"Instructions",
-                body:"Add a Note by clicking the plus sign in the top left. " +
-                "Notes can be edited in the text editor, and deleted by clicking the garbage can",
-                notebook_id: new_notebook.id)
+    title:"Instructions",
+    body:"Add a Note by clicking the plus sign in the top left. " +
+    "Notes can be edited in the text editor, and deleted by clicking the garbage can",
+    notebook_id: new_notebook.id)
 
     Note.create!(author_id: self.id,
-              title:"Welcome to FeatherNote!",
-              body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
-              notebook_id: new_notebook.id)
-  end
+    title:"Welcome to FeatherNote!",
+    body:"FeatherNote allows you to store meaningful notes in order to simplify your life!",
+    notebook_id: new_notebook.id)
 
+  end
 
   private
   def ensure_session_token
